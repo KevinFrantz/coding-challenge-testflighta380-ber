@@ -8,7 +8,7 @@ use models\buildings\AbstractRunway;
  * @author kevinfrantz
  *        
  */
-class BerAirportRunway2 extends AbstractRunway
+final class BerAirportRunway2 extends AbstractRunway
 {
 }
 
