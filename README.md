@@ -28,3 +28,4 @@ Jede konkrete Klasse erbt von einer abstrakten Klasse, welche sich im entspreche
 
 ## Selbstkritik bzw. offene Fragen
 - Ist die hierachiche Organisation der Modelle in dieser Form sinnvoll?
+- Ich habe immer noch keine genaue Vorstellung davon was DDD ist. Wo spiegelt sich dies hier im Softwaredesign wieder und wo nicht.
