@@ -11,4 +11,13 @@ Nach erfolgreicher Landung und begeisternd klatschenden Fluggästen wird der A38
 Über das Gate können die Fluggäste nun den A380 verlassen und werden im Terminal vom Berliner Bürgermeister und der Presse empfangen.
 
 Bilde den Lande-Prozess inkl. Verlassen des Flugzeugs durch die Fluggäste mit Hilfe von OOP ab.
-Entwickle für mindestens einen relevanten Bereich die notwendigen Tests. 
+Entwickle für mindestens einen relevanten Bereich die notwendigen Tests.
+
+## Designhinweise
+### Modelle
+Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ordner ./tests abgelegt.
+
+Jede konkrete Klasse erbt von einer abstrakten Klasse, welche sich im entsprechenden Überordner befindet.
+
+## Selbstkritik bzw. offene Fragen
+- Ist die hierachiche Organisation der Modelle in dieser Form sinnvoll?
