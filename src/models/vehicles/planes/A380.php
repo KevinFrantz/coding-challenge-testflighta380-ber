@@ -1,7 +1,7 @@
 <?php
-namespace models\planes;
+namespace models\vehicles\planes;
 
-use models\AbstractPlane;
+use models\vehicles\AbstractPlane;
 
 class A380 extends AbstractPlane
 {
