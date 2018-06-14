@@ -1,7 +1,6 @@
 <?php
 namespace tests\unit\models\positions;
 
-use PHPUnit\Framework\TestCase;
 use models\locations\Sky;
 
 /**

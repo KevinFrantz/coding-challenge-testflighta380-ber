@@ -27,8 +27,8 @@ class GeoTest extends TestCase
     public function testLongitute():void{
         $this->position->setLongitute();
         $longitute = $this->position->getLongitute();
-        $this->assertGreaterThanOrEqual(-90.0, $longitute);
-        $this->assertGreaterThanOrEqual($longitute, 90.0);
+        $this->assertGreaterThanOrEqual(-180.0, $longitute);
+        $this->assertGreaterThanOrEqual($longitute, 180.0);
     }
 }
 
