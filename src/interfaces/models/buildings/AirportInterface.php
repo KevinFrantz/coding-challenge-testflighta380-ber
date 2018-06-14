@@ -3,6 +3,7 @@ namespace interfaces\models\buildings;
 
 use interfaces\models\collections\GateCollectionInterface;
 use interfaces\models\collections\RunwayCollectionInterface;
+use interfaces\models\positions\SkyInterface;
 
 /**
  *
@@ -18,5 +19,7 @@ interface AirportInterface
     public function getGates():GateCollectionInterface;
     
     public function getTower():TowerInterface;
+    
+    public function getPosition():SkyInterface;
 }
 

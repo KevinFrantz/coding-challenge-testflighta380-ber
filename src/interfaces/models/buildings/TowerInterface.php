@@ -1,6 +1,8 @@
 <?php
 namespace interfaces\models\buildings;
 
+use interfaces\models\positions\SkyInterface;
+
 /**
  *
  * @author kevinfrantz
@@ -8,5 +10,6 @@ namespace interfaces\models\buildings;
  */
 interface TowerInterface
 {
+    public function getPosition():SkyInterface;
 }
 

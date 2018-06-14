@@ -1,5 +1,5 @@
 <?php
-namespace interfaces\models\buildings;
+namespace interfaces\models\vehicles;
 
 use interfaces\models\positions\GeoInterface;
 
@@ -8,7 +8,7 @@ use interfaces\models\positions\GeoInterface;
  * @author kevinfrantz
  *        
  */
-interface TerminalInterface
+interface CarInterface
 {
     public function getPosition():GeoInterface;
 }

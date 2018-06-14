@@ -3,6 +3,7 @@ namespace interfaces\models\buildings;
 
 use interfaces\models\vehicles\PlaneInterface;
 use interfaces\models\collections\GuestCollectionInterface;
+use interfaces\models\positions\GeoInterface;
 
 /**
  *
@@ -18,5 +19,7 @@ interface GateInterface
     public function setGuests(GuestCollectionInterface $guest):void;
     
     public function getGuests():GuestCollectionInterface;
+    
+    public function getPosition():GeoInterface;
 }
 

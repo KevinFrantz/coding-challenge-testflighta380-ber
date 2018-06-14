@@ -1,6 +1,8 @@
 <?php
 namespace interfaces\models\vehicles;
 
+use interfaces\models\positions\SkyInterface;
+
 /**
  *
  * @author kevinfrantz
@@ -8,5 +10,6 @@ namespace interfaces\models\vehicles;
  */
 interface PlaneInterface
 {
+    public function getPosition():SkyInterface;
 }
 
