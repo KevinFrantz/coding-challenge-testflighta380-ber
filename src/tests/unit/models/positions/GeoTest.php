@@ -2,7 +2,7 @@
 namespace tests\unit\models\positions;
 
 use PHPUnit\Framework\TestCase;
-use models\locations\Geo;
+use models\positions\Geo;
 
 /**
  *
@@ -11,7 +11,7 @@ use models\locations\Geo;
  */
 class GeoTest extends TestCase
 {
-    private $position;
+    protected $position;
     
     protected function setUp():void{
         $this->position = new Geo();    

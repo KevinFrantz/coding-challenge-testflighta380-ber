@@ -8,8 +8,12 @@ namespace interfaces\models\positions;
  */
 interface GeoInterface
 {
+    public function setLatitude(float $latitude):void;
+    
+    public function setLongitude(float $longitude):void;
+    
     public function getLatitude():float;
     
-    public function getLongitute():float;
+    public function getLongitude():float;
 }
 

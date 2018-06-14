@@ -8,6 +8,8 @@ namespace interfaces\models\positions;
  */
 interface HightInterface
 {
+    public function setHightOverSealevelInMeters(float $hight):void;
+    
     public function getHightOverSealevelInMeters():float;
 }
 

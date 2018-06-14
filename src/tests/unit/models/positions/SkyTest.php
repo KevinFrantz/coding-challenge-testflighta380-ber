@@ -1,7 +1,7 @@
 <?php
 namespace tests\unit\models\positions;
 
-use models\locations\Sky;
+use models\positions\Sky;
 
 /**
  *
