@@ -6,6 +6,7 @@ use models\buildings\runways\BerAirportRunway2;
 use models\vehicles\planes\A380;
 use models\vehicles\cars\AircraftTractor;
 use models\collections\VehicleCollection;
+use models\locations\Sky;
 
 /**
  * BerAirportRunway2Test test case.
@@ -31,6 +32,10 @@ class BerAirportRunway2Test extends TestCase
     public function testVehiclesAccessors():void{
         $this->berAirportRunway2->setVehicles(new VehicleCollection());
         $this->assertInstanceOf(VehicleCollection::class,$this->berAirportRunway2->getVehicles());
+    }
+    
+    public function testPositionAccessor():void{
+        $this->assertInstanceOf(Sky::class,$this->berAirportRunway2->getPosition());
     }
 }
 

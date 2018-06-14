@@ -10,6 +10,7 @@ use models\buildings\gates\BerAirportGate1;
 use models\buildings\towers\BerAirportTower;
 use models\collections\GateCollection;
 use models\collections\RunwayCollection;
+use models\locations\Sky;
 /**
  *
  * @author kevinfrantz
@@ -47,6 +48,10 @@ class BERTest extends TestCase
     public function testTower(): void
     {
         $this->assertInstanceOf(BerAirportTower::class, $this->ber->getTower());
+    }
+    
+    public function testPositionAccessor():void{
+        $this->assertInstanceOf(Sky::class,$this->ber->getPosition());
     }
 }
 

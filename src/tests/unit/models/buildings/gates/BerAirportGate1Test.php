@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use models\vehicles\planes\A380;
 use models\collections\GuestCollection;
 use models\vehicles\AbstractPlane;
+use models\locations\Geo;
 
 /**
  * BerAirportGate1 test case.
@@ -37,5 +38,8 @@ class BerAirportGate1Test extends TestCase
         $this->assertInstanceOf(GuestCollection::class,$this->berAirportGate1->getGuests());
     }
     
+    public function testPositionAccessor():void{
+        $this->assertInstanceOf(Geo::class,$this->berAirportGate1->getPosition());
+    }
 }
 
