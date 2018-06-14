@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 use models\vehicles\planes\A380;
 use models\collections\GuestCollection;
 use models\vehicles\AbstractPlane;
-use models\locations\Geo;
+use models\positions\Geo;
 
 /**
  * BerAirportGate1 test case.

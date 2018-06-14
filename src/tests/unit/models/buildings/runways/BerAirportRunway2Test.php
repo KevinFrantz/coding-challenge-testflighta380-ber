@@ -4,7 +4,7 @@ namespace tests\unit\models\buildings\runways;
 use PHPUnit\Framework\TestCase;
 use models\buildings\runways\BerAirportRunway2;
 use models\collections\VehicleCollection;
-use models\locations\Sky;
+use models\positions\Sky;
 
 /**
  * BerAirportRunway2Test test case.

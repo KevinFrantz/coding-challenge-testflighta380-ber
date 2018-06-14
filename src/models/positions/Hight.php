@@ -1,5 +1,5 @@
 <?php
-namespace models\locations;
+namespace models\positions;
 
 use models\AbstractPosition;
 use interfaces\models\positions\HightInterface;
@@ -13,7 +13,7 @@ class Hight extends AbstractPosition implements HightInterface
 {
     protected $hight;
     
-    public function __construct($hight=0.0){
+    public function __construct(float $hight=0.0){
         $this->setHightOverSealevelInMeters($hight);
     }
     

@@ -3,7 +3,6 @@ namespace models\positions;
 
 use models\AbstractPosition;
 use interfaces\models\positions\SkyInterface;
-use models\locations\Hight;
 
 /**
  *
@@ -16,7 +15,7 @@ final class Sky extends AbstractPosition implements SkyInterface
     
     protected $geo;
     
-    public function __construct($longitude=0.0,$latitude=0.0,$hight){
+    public function __construct(float $longitude=0.0,float $latitude=0.0,float $hight=0.0){
         $this->hight = new Hight($hight);
         $this->geo= new Geo($longitude,$latitude);
     }

@@ -15,7 +15,7 @@ final class Geo extends AbstractPosition implements GeoInterface
     
     private $longitude;
     
-    public function __construct($longitude=0.0,$latitude=0.0){
+    public function __construct(float $longitude=0.0,float $latitude=0.0){
         $this->setLatitude($latitude);
         $this->setLongitude($longitude);
     }

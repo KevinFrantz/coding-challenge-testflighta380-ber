@@ -3,7 +3,7 @@ namespace tests\unit\models\buildings\towers;
 
 use PHPUnit\Framework\TestCase;
 use models\buildings\towers\BerAirportTower;
-use models\locations\Sky;
+use models\positions\Sky;
 
 
 /**

@@ -18,15 +18,15 @@ class GeoTest extends TestCase
     }
     
     public function testLatitude():void{
-        $this->position->setLatitude();
+        $this->position->setLatitude(80);
         $latitude = $this->position->getLatitude();
         $this->assertGreaterThanOrEqual(-90.0, $latitude);
         $this->assertGreaterThanOrEqual($latitude, 90.0);
     }
     
     public function testLongitute():void{
-        $this->position->setLongitute();
-        $longitute = $this->position->getLongitute();
+        $this->position->setLongitude(80);
+        $longitute = $this->position->getLongitude();
         $this->assertGreaterThanOrEqual(-180.0, $longitute);
         $this->assertGreaterThanOrEqual($longitute, 180.0);
     }

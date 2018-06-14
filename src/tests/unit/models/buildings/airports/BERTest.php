@@ -3,14 +3,12 @@ namespace tests\unit\models\buildings\airports;
 
 use PHPUnit\Framework\TestCase;
 
-use \models\buildings\airports\BER;
+use models\buildings\airports\BER;
 use models\buildings\terminals\BerAirportTerminal;
-use models\buildings\runways\BerAirportRunway2;
-use models\buildings\gates\BerAirportGate1;
 use models\buildings\towers\BerAirportTower;
 use models\collections\GateCollection;
 use models\collections\RunwayCollection;
-use models\locations\Sky;
+use models\positions\Sky;
 /**
  *
  * @author kevinfrantz

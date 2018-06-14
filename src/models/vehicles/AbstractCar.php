@@ -17,5 +17,9 @@ abstract class AbstractCar extends AbstractVehicle implements CarInterface
         return $this->position;
     }
 
+    public function setPosition(GeoInterface $geo): void
+    {
+        $this->position = $geo;
+    }
 }
 

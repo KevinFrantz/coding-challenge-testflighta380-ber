@@ -11,5 +11,6 @@ use interfaces\models\positions\GeoInterface;
 interface CarInterface
 {
     public function getPosition():GeoInterface;
+    public function setPosition(GeoInterface $geo):void;
 }
 

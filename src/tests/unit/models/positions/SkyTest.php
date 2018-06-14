@@ -15,8 +15,8 @@ class SkyTest extends GeoTest
     }
     
     public function testHight():void{
-        $this->position->setHigh(100.0);
-        $this->assertEquals(100.0, $this->position->getHigh());
+        $this->position->setHightOverSealevelInMeters(100.0);
+        $this->assertEquals(100.0, $this->position->getHightOverSealevelInMeters());
     }
 }
 

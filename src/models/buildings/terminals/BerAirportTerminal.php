@@ -2,6 +2,7 @@
 namespace models\buildings\terminals;
 
 use models\buildings\AbstractTerminal;
+use models\positions\Geo;
 
 /**
  *
@@ -10,6 +11,8 @@ use models\buildings\AbstractTerminal;
  */
 final class BerAirportTerminal extends AbstractTerminal
 {
-
+    public function __construct(){
+        $this->position = new Geo();
+    }
 }
 

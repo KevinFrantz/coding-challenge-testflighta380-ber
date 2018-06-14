@@ -4,7 +4,7 @@ namespace tests\unit\models\vehicles;
 use PHPUnit\Framework\TestCase;
 use models\vehicles\cars\AircraftTractor;
 use models\vehicles\planes\A380;
-use models\locations\Geo;
+use models\positions\Geo;
 
 /**
  *
