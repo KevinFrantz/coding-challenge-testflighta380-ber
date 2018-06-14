@@ -1,9 +1,9 @@
 <?php
-namespace models\airports;
+namespace models\buildings\airports;
 
 use models\buildings\AbstractAirport;
 
-abstract class BER extends AbstractAirport
+class BER extends AbstractAirport
 {
 }
 
