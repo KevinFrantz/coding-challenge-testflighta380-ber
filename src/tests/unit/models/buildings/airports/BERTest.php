@@ -18,14 +18,29 @@ class BERTest extends TestCase
      */
     private $ber;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->ber = new BER();
     }
 
-    public function testTerminal(): void
+    protected function testTerminal(): void
     {
-        $this->assertInstanceOf('Terminal', $actual, $this->ber->getTerminal());
+        $this->assertInstanceOf('Terminal', $this->ber->getTerminal());
+    }
+    
+    protected function testRunway(): void
+    {
+        $this->assertInstanceOf('Runway', $this->ber->getRunway());
+    }
+    
+    protected function testGate(): void
+    {
+        $this->assertInstanceOf('Gate', $this->ber->getGate());
+    }
+    
+    protected function testTower(): void
+    {
+        $this->assertInstanceOf('Tower', $this->ber->getTower());
     }
 }
 
