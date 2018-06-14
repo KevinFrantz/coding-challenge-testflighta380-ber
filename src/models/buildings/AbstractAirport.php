@@ -8,7 +8,7 @@ use interfaces\models\buildings\TowerInterface;
 use interfaces\models\collections\GateCollectionInterface;
 use interfaces\models\collections\RunwayCollectionInterface;
 
-class AbstractAirport extends AbstractBuilding implements AirportInterface
+abstract class AbstractAirport extends AbstractBuilding implements AirportInterface
 {
     protected $terminal;
     

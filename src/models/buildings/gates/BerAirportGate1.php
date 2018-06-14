@@ -8,7 +8,7 @@ use models\buildings\AbstractGate;
  * @author kevinfrantz
  *        
  */
-class BerAirportGate1 extends AbstractGate
+final class BerAirportGate1 extends AbstractGate
 {
 }
 

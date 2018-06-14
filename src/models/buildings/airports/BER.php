@@ -9,7 +9,7 @@ use models\buildings\towers\BerAirportTower;
 use models\collections\GateCollection;
 use models\collections\RunwayCollection;
 
-class BER extends AbstractAirport
+final class BER extends AbstractAirport
 {
 
     public function __construct()

@@ -1,6 +1,9 @@
 <?php
 namespace interfaces\models\buildings;
 
+use interfaces\models\vehicles\PlaneInterface;
+use interfaces\models\collections\GuestCollectionInterface;
+
 /**
  *
  * @author kevinfrantz
@@ -8,5 +11,12 @@ namespace interfaces\models\buildings;
  */
 interface GateInterface
 {
+    public function getPlane():?PlaneInterface;
+    
+    public function setPlane(PlaneInterface $plane):void;
+    
+    public function setGuests(GuestCollectionInterface $guest):void;
+    
+    public function getGuests():GuestCollectionInterface;
 }
 
