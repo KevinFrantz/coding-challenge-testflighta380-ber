@@ -10,7 +10,7 @@ use interfaces\models\positions\GeoInterface;
  * @author kevinfrantz
  *        
  */
-class AbstractTerminal extends AbstractBuilding implements TerminalInterface{
+abstract class AbstractTerminal extends AbstractBuilding implements TerminalInterface{
     public function getPosition(): GeoInterface
     {
         return $this->position;

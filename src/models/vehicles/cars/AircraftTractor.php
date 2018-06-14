@@ -8,7 +8,7 @@ use models\vehicles\AbstractCar;
  * @author kevinfrantz
  *        
  */
-class AircraftTractor extends AbstractCar
+final class AircraftTractor extends AbstractCar
 {
 }
 

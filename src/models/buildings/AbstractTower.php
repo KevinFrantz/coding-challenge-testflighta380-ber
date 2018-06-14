@@ -10,7 +10,7 @@ use interfaces\models\positions\SkyInterface;
  * @author kevinfrantz
  *        
  */
-class AbstractTower extends AbstractBuilding implements TowerInterface
+abstract class AbstractTower extends AbstractBuilding implements TowerInterface
 {
     public function getPosition(): SkyInterface
     {

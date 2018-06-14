@@ -1,7 +1,6 @@
 <?php
 namespace models\buildings\terminals;
 
-use interfaces\models\positions\GeoInterface;
 use models\buildings\AbstractTerminal;
 
 /**
