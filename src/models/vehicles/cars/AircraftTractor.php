@@ -16,12 +16,12 @@ final class AircraftTractor extends AbstractCar implements AircraftTractorInterf
     
     public function setPlane(PlaneInterface $plane): void
     {
-        $this->setPlane($plane);   
+        $this->plane = $plane;   
     }
 
     public function getPlane(): ?PlaneInterface
     {
-        return $this->getPlane();
+        return $this->plane;
     }
 
 }
