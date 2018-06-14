@@ -13,6 +13,13 @@ Nach erfolgreicher Landung und begeisternd klatschenden Fluggästen wird der A38
 Bilde den Lande-Prozess inkl. Verlassen des Flugzeugs durch die Fluggäste mit Hilfe von OOP ab.
 Entwickle für mindestens einen relevanten Bereich die notwendigen Tests.
 
+### Designanforderungen
+- SOLID
+- Clean Code
+- Wiederspiegeln der Domäne im Code
+- automatisierte Unit und Functional Tests
+- Service Layers
+
 ## Designhinweise
 ### Modelle
 Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ordner ./tests abgelegt.
