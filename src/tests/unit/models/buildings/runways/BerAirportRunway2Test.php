@@ -28,7 +28,7 @@ class BerAirportRunway2Test extends TestCase
         $this->berAirportRunway2 = new BerAirportRunway2();
     }
     
-    protected function testVehiclesAccessors():void{
+    public function testVehiclesAccessors():void{
         $this->berAirportRunway2->setCar(new VehicleCollection());
         $this->assertInstanceOf("VehiclesCollection",$this->berAirportRunway2->getVehicle());
     }

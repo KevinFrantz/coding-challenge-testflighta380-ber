@@ -26,12 +26,12 @@ class BerAirportGate1Test extends TestCase
         $this->berAirportGate1 = new BerAirportGate1();
     }
     
-    protected function testPlaneAccessors():void{
+    public function testPlaneAccessors():void{
         $this->berAirportGate1->setPlane(new A380());
         $this->assertInstanceOf("AbstractPlane",$this->berAirportGate1->getPlane());
     }
     
-    protected function testGuestAccessors():void{
+    public function testGuestAccessors():void{
         $this->berAirportGate1->setGuests(new GuestCollection());
         $this->assertInstanceOf("GuestCollection",$this->berAirportGate1->getGuests());
     }

@@ -22,7 +22,7 @@ class BerAirportTowerTest extends TestCase
        $this->berAirportTower = new BerAirportTower();
     }
     
-    protected function testPermissionAccessors():void{
+    public function testPermissionAccessors():void{
         $a380=new A380();
         $this->berAirportTower->setPermission(new PermissionToLand($a380));
         $this->assertEquals("AbstractPermission",$this->berAirportTower->getPermission($a380));
