@@ -8,7 +8,7 @@ use models\buildings\AbstractTower;
  * @author kevinfrantz
  *        
  */
-class BerAirportTower extends AbstractTower
+final class BerAirportTower extends AbstractTower
 {
 }
 

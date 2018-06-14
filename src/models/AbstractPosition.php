@@ -6,7 +6,7 @@ namespace models;
  * @author kevinfrantz
  *        
  */
-class AbstractPosition
+abstract class AbstractPosition
 {
 }
 

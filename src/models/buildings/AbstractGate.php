@@ -4,6 +4,7 @@ namespace models\buildings;
 use models\AbstractBuilding;
 use interfaces\models\buildings\GateInterface;
 use interfaces\models\collections\GuestCollectionInterface;
+use interfaces\models\positions\GeoInterface;
 use interfaces\models\vehicles\PlaneInterface;
 use models\collections\GuestCollection;
 
@@ -41,6 +42,9 @@ abstract class AbstractGate extends AbstractBuilding implements GateInterface
     {
         return $this->guests;
     }
-
+    public function getPosition(): GeoInterface
+    {
+        return $this->position;
+    }
 }
 

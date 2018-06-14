@@ -6,7 +6,7 @@ namespace models;
  * @author kevinfrantz
  *        
  */
-class AbstractBuilding
+abstract class AbstractBuilding extends AbstractMaterialModel
 {
 }
 

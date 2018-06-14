@@ -7,8 +7,9 @@ use interfaces\models\buildings\TerminalInterface;
 use interfaces\models\buildings\TowerInterface;
 use interfaces\models\collections\GateCollectionInterface;
 use interfaces\models\collections\RunwayCollectionInterface;
+use interfaces\models\positions\SkyInterface;
 
-abstract class AbstractAirport extends AbstractBuilding implements AirportInterface
+final class AbstractAirport extends AbstractBuilding implements AirportInterface
 {
     protected $terminal;
     
@@ -37,6 +38,9 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
     {
         return $this->runways;
     }
-
+    public function getPosition(): SkyInterface
+    {
+        return $this->position;
+    }
 }
 

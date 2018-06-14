@@ -6,7 +6,7 @@ namespace models;
  * @author kevinfrantz
  *        
  */
-class AbstractVehicle
+abstract class AbstractVehicle extends AbstractMaterialModel
 {
 }
 

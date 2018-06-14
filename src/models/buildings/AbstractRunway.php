@@ -4,6 +4,7 @@ namespace models\buildings;
 use models\AbstractBuilding;
 use interfaces\models\buildings\RunwayInterface;
 use interfaces\models\collections\VehicleCollectionInterface;
+use interfaces\models\positions\SkyInterface;
 
 /**
  *
@@ -23,6 +24,9 @@ abstract class AbstractRunway extends AbstractBuilding implements RunwayInterfac
     {
         $this->vehicles = $vehicles;
     }
-
+    public function getPosition(): SkyInterface
+    {
+        return $this->position;
+    }
 }
 

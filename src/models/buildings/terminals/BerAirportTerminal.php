@@ -1,6 +1,7 @@
 <?php
 namespace models\buildings\terminals;
 
+use interfaces\models\positions\GeoInterface;
 use models\buildings\AbstractTerminal;
 
 /**
@@ -8,7 +9,8 @@ use models\buildings\AbstractTerminal;
  * @author kevinfrantz
  *        
  */
-class BerAirportTerminal extends AbstractTerminal
+final class BerAirportTerminal extends AbstractTerminal
 {
+
 }
 

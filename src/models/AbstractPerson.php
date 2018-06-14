@@ -1,7 +1,7 @@
 <?php
 namespace models;
 
-class AbstractPerson
+abstract class AbstractPerson extends AbstractMaterialModel
 {
 }
 
