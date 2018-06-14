@@ -26,6 +26,10 @@ Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ord
 
 Jede konkrete Klasse erbt von einer abstrakten Klasse, welche sich im entsprechenden Überordner befindet.
 
+### Tests
+Für folgende Modelle wurden keine Tests geschrieben:
+- Collections
+
 ## Selbstkritik bzw. offene Fragen
 - Ist die hierachiche Organisation der Modelle in dieser Form sinnvoll?
 - Ich habe immer noch keine genaue Vorstellung davon was DDD ist. Wo spiegelt sich dies hier im Softwaredesign wieder und wo nicht.
