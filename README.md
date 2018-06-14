@@ -30,8 +30,8 @@ Jede konkrete Klasse erbt von einer abstrakten Klasse, welche sich im entspreche
 Für folgende Modelle wurden keine Tests geschrieben:
 - Collections
 
-
 ## Selbstkritik bzw. offene Fragen
 - Ist die hierachiche Organisation der Modelle in dieser Form sinnvoll?
 - Ich habe immer noch keine genaue Vorstellung davon was DDD ist. Wo spiegelt sich dies hier im Softwaredesign wieder und wo nicht.
-- Ich denke, dass manchmal die Bezeichnung der Namespaces\\Ordner nicht den Best Practices entspricht. Für Anregungen bin ich offen ;) 
+- Ich denke, dass manchmal die Bezeichnung der Namespaces\\Ordner nicht den Best Practices entspricht. Für Anregungen bin ich offen ;)
+- Wie detailliert müssen die UnitTests sein?

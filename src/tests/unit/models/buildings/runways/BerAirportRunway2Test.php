@@ -3,8 +3,6 @@ namespace tests\unit\models\buildings\runways;
 
 use PHPUnit\Framework\TestCase;
 use models\buildings\runways\BerAirportRunway2;
-use models\vehicles\planes\A380;
-use models\vehicles\cars\AircraftTractor;
 use models\collections\VehicleCollection;
 use models\locations\Sky;
 
