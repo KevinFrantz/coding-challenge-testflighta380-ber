@@ -10,7 +10,7 @@ use interfaces\model\data\DataInterface;
  * @author kevinfrantz
  *        
  */
-abstract class AbstractMaterialModel implements MaterialInterface,DataInterface
+abstract class AbstractMaterialModel implements MaterialInterface
 {
 
     /**

@@ -10,7 +10,7 @@ use interfaces\model\data\DataInterface;
  * @author kevinfrantz
  *        
  */
-abstract class AbstractCollection extends ArrayCollection implements CollectionInterface,DataInterface
+abstract class AbstractCollection extends ArrayCollection implements CollectionInterface
 {
 }
 
