@@ -1,6 +1,8 @@
 <?php
 namespace scenario;
 
+use model\gui\cli\material\person\Major;
+
 /**
  *
  * @author kevinfrantz
@@ -23,8 +25,14 @@ final class TestflightA380Ber extends AbstractScenario
     private $gate; 
     
     public function __construct(){
-
+       $this->setCliObjects();
     }
+    
+    private function setCliObjects(){
+        $this->major = new Major();
+    }
+        
+    private function get 
        
     public function play(): void
     {
