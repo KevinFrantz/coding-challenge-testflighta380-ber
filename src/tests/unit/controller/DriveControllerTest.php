@@ -2,9 +2,10 @@
 namespace tests\unit\controller;
 
 use PHPUnit\Framework\TestCase;
-use model\data\collection\GuestCollection;
-use model\data\material\building\terminal\BerAirportTerminal;
+use model\method\collection\GuestCollection;
+use model\method\material\building\terminal\BerAirportTerminal;
 use controller\move\DriveController;
+use interfaces\model\method\move\MovingInterface;
 
 /**
  *
@@ -25,6 +26,10 @@ class DriveControllerTest extends TestCase
         $this->movingElement = new GuestCollection();
         $this->target = new BerAirportTerminal();
         $this->controller = new DriveController($this->movingElement);
+    }
+    
+    public function testGetter(){
+        $this->assertInstanceOf(MovingInterface::class, $this->controller->getMovingElement());
     }
 
     public function testMove(): void
