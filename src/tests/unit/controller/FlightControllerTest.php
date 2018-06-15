@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
  * @author kevinfrantz
  *        
  */
-class FlightControllerTest extends TestCase
+class FlightControllerTest extends MoveControllerTest
 {
     protected $controller;
     
