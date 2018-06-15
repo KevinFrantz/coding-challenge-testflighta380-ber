@@ -11,7 +11,7 @@ use model\data\position\Sky;
 final class BerAirportRunway2 extends AbstractRunway
 {
     public function __construct(){
-        $this->position = new Sky();
+        $this->position = new Sky(13.02,53.02,0.0);
     }
 }
 

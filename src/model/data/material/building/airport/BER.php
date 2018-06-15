@@ -22,7 +22,7 @@ final class BER extends AbstractAirport
         ]);
         $this->terminal = new BerAirportTerminal();
         $this->tower = new BerAirportTower();
-        $this->position = new Sky();
+        $this->position = new Sky(13.00,52.00,0);
     }
 }
 

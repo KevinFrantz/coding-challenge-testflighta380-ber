@@ -11,7 +11,7 @@ use model\data\position\Geo;
 final class BerAirportTerminal extends AbstractTerminal
 {
     public function __construct(){
-        $this->position = new Geo();
+        $this->position = new Geo(13.03,53.03,0.0);
     }
 }
 

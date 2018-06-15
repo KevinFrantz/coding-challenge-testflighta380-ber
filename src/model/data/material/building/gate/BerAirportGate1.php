@@ -11,7 +11,7 @@ use model\data\position\Geo;
 final class BerAirportGate1 extends AbstractGate
 {
     public function __construct(){
-        $this->position = new Geo();
+        $this->position = new Geo(13.01,52.01);
     }
 }
 
