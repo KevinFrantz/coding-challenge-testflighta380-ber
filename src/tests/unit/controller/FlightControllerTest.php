@@ -3,7 +3,7 @@ namespace tests\unit\controller;
 
 use model\data\material\vehicle\plane\A380;
 use model\data\material\building\runway\BerAirportRunway2;
-use controller\FlightController;
+use controller\move\FlightController;
 
 /**
  *

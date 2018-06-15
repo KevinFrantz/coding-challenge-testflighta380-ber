@@ -1,7 +1,7 @@
 <?php
 namespace tests\unit\controller;
 
-use controller\MoveController;
+use controller\move\MoveController;
 use PHPUnit\Framework\TestCase;
 use model\data\collection\GuestCollection;
 use model\data\material\building\terminal\BerAirportTerminal;
@@ -31,5 +31,10 @@ class MoveControllerTest extends TestCase
     {
         $this->controller->moveTo($this->target);
         $this->assertEquals($this->target->getPosition(), $this->movingElement->getPosition());
+    }
+    
+    public function testMovingElementGetter(): void
+    {
+        $this->assertEquals($this->movingElement,$this->controller->getMovingElement());
     }
 }
