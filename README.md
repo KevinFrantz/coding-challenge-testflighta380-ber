@@ -31,6 +31,10 @@ Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ord
 
 Jede konkrete Klasse erbt von einer abstrakten Klasse, welche sich im entsprechenden Überordner befindet.
 
+### Architektur
+Unter ./src/Model findet sich ein Datalayer.
+Auf die Implementierung eines seperaten Functional-Layers wurde aus Zeitgründen verzichtet. 
+
 ### Tests
 Für folgende Modelle wurden keine Tests geschrieben:
 - Collections

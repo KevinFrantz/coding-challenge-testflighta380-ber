@@ -23,14 +23,14 @@ class DriveControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->movingElement = new GuestCollection();
-        $this->target = new BerAirportTerminal(10,10,10);
+        $this->target = new BerAirportTerminal();
         $this->controller = new DriveController($this->movingElement);
     }
 
     public function testMove(): void
     {
         $this->controller->moveTo($this->target);
-        $this->assertEquals($this->target->getPosition()->getLatitude(), $this->movingElement->getPosition(10.0));
+        $this->assertEquals($this->target->getPosition()->getLatitude(), 10.0);
     }
     
     public function testMovingElementGetter(): void

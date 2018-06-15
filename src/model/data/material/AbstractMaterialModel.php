@@ -3,15 +3,18 @@ namespace model\data\material;
 
 use model\data\position\AbstractPosition;
 use interfaces\model\data\material\MaterialInterface;
+use interfaces\model\data\DataInterface;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-abstract class AbstractMaterialModel implements MaterialInterface
+abstract class AbstractMaterialModel implements MaterialInterface,DataInterface
 {
+
     /**
+     *
      * @var AbstractPosition
      */
     protected $position;

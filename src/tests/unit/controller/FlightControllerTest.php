@@ -1,7 +1,7 @@
 <?php
 namespace tests\unit\controller;
 
-use model\data\material\vehicle\plane\A380;
+use model\method\material\vehicle\plane\A380;
 use model\data\material\building\runway\BerAirportRunway2;
 use controller\move\FlightController;
 
@@ -17,7 +17,7 @@ class FlightControllerTest extends DriveControllerTest
     {
         $this->movingElement = new A380();
         $this->target = new BerAirportRunway2();
-        $this->controller = new FlightController();
+        $this->controller = new FlightController($this->movingElement);
     }
 }
 
