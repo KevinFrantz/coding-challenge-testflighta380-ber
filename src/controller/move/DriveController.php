@@ -1,7 +1,7 @@
 <?php
 namespace controller\move;
 
-use interfaces\model\method\controller\move\target\TargetInterface;
+use interfaces\model\method\controller\move\TargetInterface;
 
 /**
  *
