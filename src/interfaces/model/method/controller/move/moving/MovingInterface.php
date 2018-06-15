@@ -11,5 +11,5 @@ use interfaces\model\method\controller\move\target\TargetInterface;
  */
 interface MovingInterface extends TargetInterface
 {
-    public function setPosition(PositionInterface $position):void;
+    //public function setPosition(PositionInterface $position):void;
 }

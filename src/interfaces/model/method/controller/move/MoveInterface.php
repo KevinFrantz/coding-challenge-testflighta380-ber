@@ -11,6 +11,6 @@ use interfaces\model\data\position\PositionInterface;
  */
 interface MoveInterface extends ControllerInterface
 {
-    public function getPosition():PositionInterface;
+    //public function getPosition():PositionInterface;
 }
 

@@ -10,7 +10,7 @@ use controller\move\FlightController;
  * @author kevinfrantz
  *        
  */
-class FlightControllerTest extends MoveControllerTest
+class FlightControllerTest extends DriveControllerTest
 {
 
     protected function setUp(): void

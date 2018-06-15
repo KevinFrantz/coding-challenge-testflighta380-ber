@@ -8,7 +8,6 @@ use interfaces\controller\move\FlightControllerInterface;
  * @author kevinfrantz
  *        
  */
-class FlightController extends MoveController implements FlightControllerInterface
-{
-}
+class FlightController extends MoveController
+{}
 
