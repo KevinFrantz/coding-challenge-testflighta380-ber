@@ -44,6 +44,8 @@ Der Code wurde hauptsächlich nach TDD entwickelt
 - Ich habe immer noch keine genaue Vorstellung davon was DDD ist. Wo spiegelt sich dies hier im Softwaredesign wieder und wo nicht.
 - Ich denke, dass manchmal die Bezeichnung der Namespaces\\Ordner nicht den Best Practices entspricht. Für Anregungen bin ich offen ;)
 - Wie detailliert müssen die UnitTests sein?
+- Ist es ok, dass UnitTests von anderen UnitTests erben?
 ### Selbstkritik
 - PHPDocs wurden nicht verwendet, auch wenn diese für die automatische Generation von Dokumentationen sehr hilfreich sind.
 - Im Regelfall arbeite ich mit PHPStorm und kann mir sicher sein, dass den aktuellen PSR-Standarts gefolgt wird. In diesem Fall verwendete ich Eclipse und hab das ganze nicht noch einmal manuell auf PSR Standarts gegengecheckt.
+- Auf der Model-Ebene erben Gui und Functions von data bzw. method. Dies ist keine gute Kapselung. Diese Vererbung wurde lediglich aus Zeitgründen gewählt.  
