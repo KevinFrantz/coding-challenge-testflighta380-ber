@@ -1,7 +1,9 @@
 <?php
 namespace tests\unit\controller;
 
-use PHPUnit\Framework\TestCase;
+use model\data\material\vehicle\plane\A380;
+use model\data\material\building\runway\BerAirportRunway2;
+use controller\FlightController;
 
 /**
  *
@@ -10,10 +12,10 @@ use PHPUnit\Framework\TestCase;
  */
 class FlightControllerTest extends MoveControllerTest
 {
-    protected $controller;
-    
     protected function setUp(){
-        
+        $this->movingElement = new A380();
+        $this->target = new BerAirportRunway2();
+        $this->controller = new FlightController();
     }
 }
 
