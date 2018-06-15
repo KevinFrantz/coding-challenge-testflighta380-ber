@@ -1,5 +1,5 @@
 <?php
-namespace model\data;
+namespace model\data\material\person;
 
 use model\data\material\AbstractMaterialModel;
 

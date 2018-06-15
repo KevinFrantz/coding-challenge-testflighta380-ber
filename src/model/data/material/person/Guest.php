@@ -1,7 +1,5 @@
 <?php
-namespace model\data\persons;
-
-use model\data\AbstractPerson;
+namespace model\data\material\person;
 
 class Guest extends AbstractPerson
 {
