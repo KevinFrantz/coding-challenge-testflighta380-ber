@@ -10,17 +10,19 @@ use interfaces\model\method\controller\move\MovingInterface;
  * @author kevinfrantz
  *        
  */
-abstract class MoveController extends AbstractController implements MoveControllerInterface
-{
+abstract class AbstractMoveController extends AbstractController{
+    
     protected $movingElement;
     
     protected $target;
     
-    public function __construct(MovingInterface $movingElement){
+    public function __controller($movingElement){
         $this->movingElement = $movingElement;
     }
     
-    public function getMovingElement(): MovingInterface
+    abstract public function moveTo($target):void;
+    
+    public function getMovingElement()
     {
         return $this->movingElement;
     }

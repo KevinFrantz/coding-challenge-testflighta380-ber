@@ -1,16 +1,14 @@
 <?php
 namespace controller\move;
 
-use interfaces\model\method\controller\move\TargetInterface;
-
 /**
  *
  * @author kevinfrantz
  *        
  */
-class FlightController extends MoveController
-{
-    public function moveTo(TargetInterface $target): void
+class FlightController extends AbstractMoveController
+{   
+    public function moveTo($target): void
     {}
 }
 
