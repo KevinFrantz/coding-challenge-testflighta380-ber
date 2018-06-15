@@ -21,6 +21,11 @@ Entwickle für mindestens einen relevanten Bereich die notwendigen Tests.
 - Service Layers
 
 ## Designhinweise
+
+### Programmiersprache
+Als Programmiersprache wurde PHP verwendet. Um die PHP Skills zu zeigen.
+In Python wäre das ganze einfacher und schneller gegangen z.B. da Python keine Interfaces kennt und ich nur abstrakte Klassen verwendet hätte.
+
 ### Modelle
 Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ordner ./tests abgelegt.
 
@@ -33,8 +38,11 @@ Für folgende Modelle wurden keine Tests geschrieben:
 ## Methodische Erläuterung
 Der Code wurde hauptsächlich nach TDD entwickelt
 
-## Selbstkritik bzw. offene Fragen
+## Reflektion
+### Offene Fragen
 - Ist die hierachiche Organisation der Modelle in dieser Form sinnvoll?
 - Ich habe immer noch keine genaue Vorstellung davon was DDD ist. Wo spiegelt sich dies hier im Softwaredesign wieder und wo nicht.
 - Ich denke, dass manchmal die Bezeichnung der Namespaces\\Ordner nicht den Best Practices entspricht. Für Anregungen bin ich offen ;)
 - Wie detailliert müssen die UnitTests sein?
+### Selbstkritik
+- PHPDocs wurden nicht verwendet, auch wenn diese für die automatische Generation von Dokumentationen sehr hilfreich sind. 
