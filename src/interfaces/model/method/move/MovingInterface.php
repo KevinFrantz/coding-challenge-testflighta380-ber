@@ -8,8 +8,10 @@ use model\data\position\Geo;
  * @author kevinfrantz
  *        
  */
-interface MovingInterface extends TargetInterface
+interface MovingInterface
 {
-    public function setMovingObjectPosition(Geo $position):void;
+    public function setMovingPosition(Geo $position):void;
+    
+    public function getMovingPosition() :Geo;
 }
 

@@ -10,6 +10,6 @@ use model\data\position\Geo;
  */
 interface TargetInterface
 {
-    public function getMovingObjectPosition() :Geo;
+    public function getTargetPosition() :Geo;
 }
 
