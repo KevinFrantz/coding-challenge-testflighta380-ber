@@ -24,7 +24,7 @@ class Controllers
         $this->flightController = new FlightController($actors->plane);
         $this->driveController = new DriveController($actors->airTractor);
         $this->moveController = new DriveController($actors->guests);
-        $this->applaudController = new ApplaudController($actor->guests);
+        $this->applaudController = new ApplaudController($actors->guests);
         $this->tower = $actors->airport->getTower();
     }
 }

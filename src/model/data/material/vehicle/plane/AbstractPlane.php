@@ -10,6 +10,8 @@ abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
 {
     private $passengers;
     
+    private $name;
+    
     public function getPosition(): SkyInterface
     {
         return $this->position;
@@ -26,5 +28,15 @@ abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
     public function getPassengers():PassengerCollection{
         return $this->passengers;
     }
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
 }
 

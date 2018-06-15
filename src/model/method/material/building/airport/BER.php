@@ -13,7 +13,7 @@ use controller\airport\AirportController;
 class BER extends BEROrigin
 {
     public function __construct(){
-        parent::__contruct();
+        parent::__construct();
         $this->tower = new BerAirportTower($this, new AirportController($this));
     }
 }

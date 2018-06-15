@@ -55,9 +55,14 @@ class CLIActors
         $this->major = new Major();
         $this->initGuestCollection();
         $this->initJournalistCollection();
+        $this->initPlane();
         $this->airTractor = new AircraftTractor();
-        $this->plane = new A380();
         $this->airport = new BER();
+    }
+    
+    private function initPlane():void{
+        $this->plane = new A380();
+        $this->plane->setName('Wright Brothers Flight');
     }
     
     private function initJournalistCollection(){

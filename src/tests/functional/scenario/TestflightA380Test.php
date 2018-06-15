@@ -2,7 +2,7 @@
 namespace tests\functional;
 
 use PHPUnit\Framework\TestCase;
-use scenario\TestflightA380Ber;
+use scenario\TestflightA380Ber\TestflightA380Ber;
 
 /**
  *

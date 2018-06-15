@@ -4,6 +4,7 @@ namespace tests\unit\model\data\material\building\tower;
 use PHPUnit\Framework\TestCase;
 use model\data\material\building\tower\BerAirportTower;
 use model\data\position\Sky;
+use model\data\material\building\airport\BER;
 
 
 /**
@@ -19,7 +20,7 @@ class BerAirportTowerTest extends TestCase
     private $berAirportTower;
     
     protected function setUp():void{
-       $this->berAirportTower = new BerAirportTower();
+       $this->berAirportTower = new BerAirportTower(new BER());
     }
     
     /**

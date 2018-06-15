@@ -16,7 +16,7 @@ final class TestflightA380Ber extends AbstractScenario
     
     public function __construct(){
         $this->actors = new CLIActors();
-        $this->controllers = new Controllers($actors);
+        $this->controllers = new Controllers($this->actors);
     }
        
     public function play(): void
@@ -30,12 +30,11 @@ final class TestflightA380Ber extends AbstractScenario
     
     private function waitForLandingPermission():void{
         do{
-            echo "Plane ". $this->plane->getName()." is waiting for permission to land...";   
+            echo "Plane ". $this->actors->plane->getName()." is waiting for permission to land...";   
         }while(!$this->actors->tower->getPermission());
     }
     
     private function land():void{
-        $this->controllers->flightController
     }
     
     private function moveToGate():void
