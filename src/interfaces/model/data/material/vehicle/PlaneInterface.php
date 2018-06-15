@@ -3,6 +3,7 @@ namespace interfaces\model\data\material\vehicle;
 
 use interfaces\model\data\position\SkyInterface;
 use model\data\collection\PassengerCollection;
+use interfaces\model\data\material\MaterialInterface;
 
 /**
  *
