@@ -12,7 +12,9 @@ use controller\FlightController;
  */
 class FlightControllerTest extends MoveControllerTest
 {
-    protected function setUp(){
+
+    protected function setUp(): void
+    {
         $this->movingElement = new A380();
         $this->target = new BerAirportRunway2();
         $this->controller = new FlightController();
