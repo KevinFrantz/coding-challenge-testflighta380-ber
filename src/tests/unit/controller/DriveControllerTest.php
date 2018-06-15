@@ -6,6 +6,7 @@ use model\method\collection\GuestCollection;
 use model\method\material\building\terminal\BerAirportTerminal;
 use controller\move\DriveController;
 use interfaces\model\method\move\MovingInterface;
+use model\data\position\Geo;
 
 /**
  *
@@ -24,6 +25,7 @@ class DriveControllerTest extends TestCase
     protected function setUp(): void
     {
         $this->movingElement = new GuestCollection();
+        $this->movingElement->setMovingPosition(new Geo());
         $this->target = new BerAirportTerminal();
         $this->controller = new DriveController($this->movingElement);
     }
@@ -35,7 +37,7 @@ class DriveControllerTest extends TestCase
     public function testMove(): void
     {
         $this->controller->moveTo($this->target);
-        $this->assertEquals($this->target->getPosition()->getLatitude(), 10.0);
+        $this->assertEquals($this->target->getPosition()->getLatitude(), $this->movingElement->getMovingPosition()->getLatitude());
     }
     
     public function testMovingElementGetter(): void

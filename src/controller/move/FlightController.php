@@ -1,6 +1,10 @@
 <?php
 namespace controller\move;
 
+use interfaces\model\method\move\MovingInterface;
+use model\data\position\Sky;
+use interfaces\model\method\move\TargetInterface;
+
 /**
  *
  * @author kevinfrantz
@@ -8,7 +12,15 @@ namespace controller\move;
  */
 class FlightController extends AbstractMoveController
 {   
-    public function moveTo($target): void
-    {}
+    public function moveTo(TargetInterface $target): void
+    {
+        $this->movingElement->setMovingPosition(
+            new Sky(
+                $target->getTargetPosition()->getLongitude(),
+                $target->getTargetPosition()->getLatitude(),
+                $target->getTargetPosition()->getHightOverSealevelInMeters()
+                )
+            );
+    }
 }
 
