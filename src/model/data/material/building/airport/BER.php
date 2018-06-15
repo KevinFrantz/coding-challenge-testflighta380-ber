@@ -9,7 +9,7 @@ use model\data\collection\GateCollection;
 use model\data\collection\RunwayCollection;
 use model\data\position\Sky;
 
-final class BER extends AbstractAirport
+class BER extends AbstractAirport
 {
 
     public function __construct()
@@ -21,7 +21,7 @@ final class BER extends AbstractAirport
             new BerAirportGate1()
         ]);
         $this->terminal = new BerAirportTerminal();
-        $this->tower = new BerAirportTower();
+        $this->tower = new BerAirportTower($this);
         $this->position = new Sky(13.00,52.00,0);
     }
 }

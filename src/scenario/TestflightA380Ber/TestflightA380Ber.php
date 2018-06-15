@@ -1,7 +1,7 @@
 <?php
-namespace scenario;
+namespace scenario\TestflightA380Ber;
 
-use model\gui\cli\material\person\Major;
+use scenario\AbstractScenario;
 
 /**
  *
@@ -10,29 +10,14 @@ use model\gui\cli\material\person\Major;
  */
 final class TestflightA380Ber extends AbstractScenario
 {
-    private $major;
+    protected $actors;
     
-    private $guests;
-    
-    private $journalists;
-    
-    private $airTractor;
-    
-    private $plane;
-    
-    private $tower;
-    
-    private $gate; 
+    protected $controllers;
     
     public function __construct(){
-       $this->setCliObjects();
+        $this->actors = new CLIActors();
+        $this->controllers = new Controllers($actors);
     }
-    
-    private function setCliObjects(){
-        $this->major = new Major();
-    }
-        
-    private function get 
        
     public function play(): void
     {
@@ -44,11 +29,13 @@ final class TestflightA380Ber extends AbstractScenario
     }
     
     private function waitForLandingPermission():void{
-        
+        do{
+            echo "Plane ". $this->plane->getName()." is waiting for permission to land...";   
+        }while(!$this->actors->tower->getPermission());
     }
     
     private function land():void{
-        
+        $this->controllers->flightController
     }
     
     private function moveToGate():void

@@ -9,8 +9,11 @@ use interfaces\model\data\material\vehicle\car\AircraftTractorInterface;
  * @author kevinfrantz
  *        
  */
-final class AircraftTractor extends AbstractCar implements AircraftTractorInterface
+class AircraftTractor extends AbstractCar implements AircraftTractorInterface
 {
+    /**
+     * @var PlaneInterface
+     */
     private $plane;
     
     public function setPlane(PlaneInterface $plane): void
