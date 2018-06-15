@@ -6,7 +6,8 @@ namespace scenario;
  * @author kevinfrantz
  *        
  */
-class AbstractScenario
+abstract class AbstractScenario
 {
+    abstract function play():void;
 }
 
