@@ -27,7 +27,7 @@ class MoveControllerTest extends TestCase
         $this->controller = new MoveController($this->movingElement);
     }
 
-    public function testMove()
+    public function testMove(): void
     {
         $this->controller->moveTo($this->target);
         $this->assertEquals($this->target->getPosition(), $this->movingElement->getPosition());
