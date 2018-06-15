@@ -21,6 +21,7 @@ final class TestflightA380Ber extends AbstractScenario
        
     public function play(): void
     {
+        $this->flyToAirport();
         $this->waitForLandingPermission();
         $this->land(); 
         $this->moveToGate();
@@ -28,10 +29,16 @@ final class TestflightA380Ber extends AbstractScenario
         $this->publicWelcome();
     }
     
+    private function flyToAirport():void{
+        $this->controllers->flight->moveTo(
+            $this->actors->airport
+            );
+    }
+    
     private function waitForLandingPermission():void{
         do{
             echo "Plane ". $this->actors->plane->getName()." is waiting for permission to land...";   
-        }while(!$this->actors->tower->getPermission());
+        }while(!$this->controllers->tower->getPermissionToLand());
     }
     
     private function land():void{

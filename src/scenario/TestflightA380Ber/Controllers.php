@@ -3,6 +3,9 @@ namespace scenario\TestflightA380Ber;
 use controller\move\FlightController;
 use controller\move\DriveController;
 use controller\applaud\ApplaudController;
+use interfaces\controller\move\MoveControllerInterface;
+use interfaces\controller\applaud\ApplaudControllerInterface;
+use interfaces\controller\aiport\AirportControllerInterface;
 /**
  *
  * @author kevinfrantz
@@ -10,21 +13,36 @@ use controller\applaud\ApplaudController;
  */
 class Controllers
 {
+    /**
+     * @var MoveControllerInterface
+     */
     public $flight;
     
+    /**
+     * @var MoveControllerInterface
+     */
     public $drive;
     
+    /**
+     * @var MoveControllerInterface
+     */
     public $move;
     
+    /**
+     * @var ApplaudControllerInterface
+     */
     public $applaud;
     
+    /**
+     * @var AirportControllerInterface
+     */
     public $tower;
     
     public function __construct(CLIActors $actors){
-        $this->flightController = new FlightController($actors->plane);
-        $this->driveController = new DriveController($actors->airTractor);
-        $this->moveController = new DriveController($actors->guests);
-        $this->applaudController = new ApplaudController($actors->guests);
+        $this->flight = new FlightController($actors->plane);
+        $this->drive = new DriveController($actors->airTractor);
+        $this->walk = new DriveController($actors->guests);
+        $this->applaud = new ApplaudController($actors->guests);
         $this->tower = $actors->airport->getTower();
     }
 }

@@ -4,13 +4,14 @@ namespace controller\move;
 use controller\AbstractController;
 use interfaces\model\method\move\MovingInterface;
 use interfaces\model\method\move\TargetInterface;
+use interfaces\controller\move\MoveControllerInterface;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-abstract class AbstractMoveController extends AbstractController{
+abstract class AbstractMoveController extends AbstractController implements MoveControllerInterface{
     
     protected $movingElement;
     
