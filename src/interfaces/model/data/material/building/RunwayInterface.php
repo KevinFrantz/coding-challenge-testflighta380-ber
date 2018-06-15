@@ -9,12 +9,13 @@ use interfaces\model\data\position\SkyInterface;
  * @author kevinfrantz
  *        
  */
-interface RunwayInterface
+interface RunwayInterface extends BuildingInterface
 {
-    public function setVehicles(VehicleCollectionInterface $vehicles):void;
-    
-    public function getVehicles():VehicleCollectionInterface;
-    
-    public function getPosition():SkyInterface;
+
+    public function setVehicles(VehicleCollectionInterface $vehicles): void;
+
+    public function getVehicles(): VehicleCollectionInterface;
+
+    public function getPosition(): SkyInterface;
 }
 

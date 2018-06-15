@@ -6,7 +6,7 @@ namespace interfaces\model\data\collection;
  * @author kevinfrantz
  *        
  */
-interface GuestCollectionInterface
+interface GuestCollectionInterface extends CollectionInterface
 {
 }
 

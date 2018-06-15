@@ -1,7 +1,7 @@
 <?php
 namespace model\data\material\vehicle\car;
 
-use interfaces\model\data\material\vehicle\PlaneInterface;
+use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use interfaces\model\data\material\vehicle\car\AircraftTractorInterface;
 
 /**

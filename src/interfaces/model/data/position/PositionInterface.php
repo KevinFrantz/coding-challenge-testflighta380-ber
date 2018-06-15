@@ -1,5 +1,5 @@
 <?php
-namespace interfaces\model\data\material;
+namespace interfaces\model\data\position;
 
 use interfaces\model\data\DataInterface;
 
@@ -8,7 +8,7 @@ use interfaces\model\data\DataInterface;
  * @author kevinfrantz
  *        
  */
-interface MaterialInterface extends DataInterface
+interface PositionInterface extends DataInterface
 {
 }
 

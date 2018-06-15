@@ -10,16 +10,17 @@ use interfaces\model\data\position\SkyInterface;
  * @author kevinfrantz
  *        
  */
-interface AirportInterface
+interface AirportInterface extends BuildingInterface
 {
-    public function getRunways():RunwayCollectionInterface;
-    
-    public function getTerminal():TerminalInterface;
-    
-    public function getGates():GateCollectionInterface;
-    
-    public function getTower():TowerInterface;
-    
-    public function getPosition():SkyInterface;
+
+    public function getRunways(): RunwayCollectionInterface;
+
+    public function getTerminal(): TerminalInterface;
+
+    public function getGates(): GateCollectionInterface;
+
+    public function getTower(): TowerInterface;
+
+    public function getPosition(): SkyInterface;
 }
 

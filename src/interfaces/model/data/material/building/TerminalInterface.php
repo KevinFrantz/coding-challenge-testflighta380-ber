@@ -8,8 +8,9 @@ use interfaces\model\data\position\GeoInterface;
  * @author kevinfrantz
  *        
  */
-interface TerminalInterface
+interface TerminalInterface extends BuildingInterface
 {
-    public function getPosition():GeoInterface;
+
+    public function getPosition(): GeoInterface;
 }
 

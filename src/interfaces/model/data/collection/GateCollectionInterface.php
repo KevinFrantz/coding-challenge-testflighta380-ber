@@ -6,7 +6,7 @@ namespace interfaces\model\data\collection;
  * @author kevinfrantz
  *        
  */
-interface GateCollectionInterface
+interface GateCollectionInterface extends CollectionInterface
 {
 }
 

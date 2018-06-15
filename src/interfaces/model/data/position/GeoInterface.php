@@ -6,7 +6,7 @@ namespace interfaces\model\data\position;
  * @author kevinfrantz
  *        
  */
-interface GeoInterface
+interface GeoInterface extends PositionInterface
 {
     public function setLatitude(float $latitude):void;
     

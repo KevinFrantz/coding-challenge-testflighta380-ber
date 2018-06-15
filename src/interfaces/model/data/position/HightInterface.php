@@ -6,7 +6,7 @@ namespace interfaces\model\data\position;
  * @author kevinfrantz
  *        
  */
-interface HightInterface
+interface HightInterface extends PositionInterface
 {
     public function setHightOverSealevelInMeters(float $hight):void;
     

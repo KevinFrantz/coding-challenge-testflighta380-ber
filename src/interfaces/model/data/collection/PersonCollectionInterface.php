@@ -6,7 +6,7 @@ namespace interfaces\model\data\collection;
  * @author kevinfrantz
  *        
  */
-interface PersonCollectionInterface
+interface PersonCollectionInterface extends CollectionInterface
 {
 }
 

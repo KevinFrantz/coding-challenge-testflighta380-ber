@@ -6,7 +6,7 @@ namespace interfaces\model\data\collection;
  * @author kevinfrantz
  *        
  */
-interface RunwayCollectionInterface
+interface RunwayCollectionInterface extends CollectionInterface
 {
 }
 

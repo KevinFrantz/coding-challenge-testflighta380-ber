@@ -2,7 +2,7 @@
 namespace model\data\material\vehicle\plane;
 
 use interfaces\model\data\position\SkyInterface;
-use interfaces\model\data\material\vehicle\PlaneInterface;
+use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use model\data\collection\PassengerCollection;
 use model\data\material\vehicle\AbstractVehicle;
 

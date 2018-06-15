@@ -8,7 +8,7 @@ use interfaces\model\data\position\SkyInterface;
  * @author kevinfrantz
  *        
  */
-interface TowerInterface
+interface TowerInterface extends BuildingInterface
 {
     public function getPosition():SkyInterface;
 }
