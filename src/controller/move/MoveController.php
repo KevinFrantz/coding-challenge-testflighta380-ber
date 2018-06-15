@@ -19,7 +19,7 @@ abstract class MoveController extends AbstractController implements MoveControll
     
     protected $target;
     
-    public function __construct(AbstractMaterialModel $movingElement){
+    public function __construct(MovingInterface $movingElement){
         $this->movingElement = $movingElement;
     }
     

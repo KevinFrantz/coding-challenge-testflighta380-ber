@@ -2,7 +2,7 @@
 namespace tests\unit\controller;
 
 use PHPUnit\Framework\TestCase;
-use model\data\collection\GuestCollection;
+use model\method\collection\GuestCollection;
 use model\data\material\building\terminal\BerAirportTerminal;
 use controller\move\DriveController;
 

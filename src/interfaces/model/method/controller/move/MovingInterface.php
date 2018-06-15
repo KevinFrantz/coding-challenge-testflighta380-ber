@@ -1,8 +1,7 @@
 <?php
-namespace interfaces\model\method\controller\move\moving;
+namespace interfaces\model\method\controller\move;
 
 use interfaces\model\data\position\PositionInterface;
-use interfaces\model\method\controller\move\target\TargetInterface;
 
 /**
  *
@@ -11,5 +10,5 @@ use interfaces\model\method\controller\move\target\TargetInterface;
  */
 interface MovingInterface extends TargetInterface
 {
-    //public function setPosition(PositionInterface $position):void;
+    public function setPosition(PositionInterface $position):void;
 }
