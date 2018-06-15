@@ -1,7 +1,7 @@
 <?php
 namespace controller\move;
 
-use interfaces\controller\move\FlightControllerInterface;
+use interfaces\model\method\controller\move\target\TargetInterface;
 
 /**
  *
@@ -9,5 +9,8 @@ use interfaces\controller\move\FlightControllerInterface;
  *        
  */
 class FlightController extends MoveController
-{}
+{
+    public function moveTo(TargetInterface $target): void
+    {}
+}
 

@@ -12,10 +12,9 @@ use interfaces\model\method\controller\move\target\TargetInterface;
  */
 interface MoveControllerInterface extends ControllerInterface
 {
-    public function __construct(MovingInterface $movingElement);
-    
-    public function moveTo(TargetInterface $target):void;
-    
-    public function getMovingElement():MovingInterface;
+
+    public function moveTo(TargetInterface $target): void;
+
+    public function getMovingElement(): MovingInterface;
 }
 

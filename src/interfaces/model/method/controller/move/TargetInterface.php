@@ -9,7 +9,7 @@ use interfaces\model\data\position\PositionInterface;
  * @author kevinfrantz
  *        
  */
-interface TargetInterface extends MoveInterface, PositionInterface
+interface TargetInterface extends TargetInterface
 {
-
+    public function getPosition():PositionInterface;
 }
