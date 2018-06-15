@@ -11,4 +11,5 @@ use interfaces\model\data\position\PositionInterface;
  */
 interface TargetInterface extends MoveInterface, PositionInterface
 {
+
 }

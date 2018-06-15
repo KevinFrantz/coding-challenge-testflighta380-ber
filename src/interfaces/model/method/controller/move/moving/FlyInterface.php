@@ -9,7 +9,7 @@ use interfaces\model\method\controller\move\target\SkyTargetInterface;
  * @author kevinfrantz
  *        
  */
-interface SkyMovingInterface extends SkyTargetInterface
+interface FlyInterface extends SkyTargetInterface
 {
     public function setPosition(SkyInterface $position):void;
 }

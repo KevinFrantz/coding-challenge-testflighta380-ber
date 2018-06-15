@@ -9,8 +9,7 @@ use interfaces\model\method\controller\move\target\GeoTargetInterface;
  * @author kevinfrantz
  *        
  */
-interface GeoMovingInterface extends MovingInterface,GeoTargetInterface
+interface DriveInterface extends MovingInterface,GeoTargetInterface
 {
     public function setPosition(GeoInterface $position):void;
 }
-
