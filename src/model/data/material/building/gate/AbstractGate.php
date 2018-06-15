@@ -5,7 +5,7 @@ use model\data\material\building\AbstractBuilding;
 use interfaces\model\data\material\building\GateInterface;
 use interfaces\model\data\collection\GuestCollectionInterface;
 use interfaces\model\data\position\GeoInterface;
-use interfaces\model\data\material\vehicle\PlaneInterface;
+use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use model\data\collection\GuestCollection;
 
 /**
