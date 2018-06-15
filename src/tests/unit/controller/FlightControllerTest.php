@@ -2,7 +2,7 @@
 namespace tests\unit\controller;
 
 use model\method\material\vehicle\plane\A380;
-use model\data\material\building\runway\BerAirportRunway2;
+use model\method\material\building\runway\BerAirportRunway2;
 use controller\move\FlightController;
 
 /**

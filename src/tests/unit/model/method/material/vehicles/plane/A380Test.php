@@ -17,7 +17,7 @@ class A380Test extends TestCase
     protected function setUp(){
         $this->a380 = new A380();
     }
-    protected function testMovingInterface(){
+    public function testMovingInterface(){
         $position = new Sky();
         $this->a380->setMovingPosition($position);
         $this->assertEquals($this->a380->getMovingPosition(), $position);
