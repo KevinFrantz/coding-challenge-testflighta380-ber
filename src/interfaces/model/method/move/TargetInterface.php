@@ -1,7 +1,7 @@
 <?php
 namespace interfaces\model\method\move;
 
-use model\data\position\Geo;
+use model\data\position\AbstractPosition;
 
 /**
  *
@@ -10,6 +10,6 @@ use model\data\position\Geo;
  */
 interface TargetInterface
 {
-    public function getTargetPosition() :Geo;
+    public function getTargetPosition() :AbstractPosition;
 }
 

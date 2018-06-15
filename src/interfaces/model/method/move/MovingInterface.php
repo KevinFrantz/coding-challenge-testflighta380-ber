@@ -1,7 +1,7 @@
 <?php
 namespace interfaces\model\method\move;
 
-use model\data\position\Geo;
+use model\data\position\AbstractPosition;
 
 /**
  *
@@ -10,8 +10,8 @@ use model\data\position\Geo;
  */
 interface MovingInterface
 {
-    public function setMovingPosition(Geo $position):void;
+    public function setMovingPosition(AbstractPosition $position):void;
     
-    public function getMovingPosition() :Geo;
+    public function getMovingPosition() :AbstractPosition;
 }
 
