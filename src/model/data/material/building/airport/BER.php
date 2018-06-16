@@ -8,6 +8,7 @@ use model\data\material\building\tower\BerAirportTower;
 use model\data\collection\GateCollection;
 use model\data\collection\RunwayCollection;
 use model\data\position\Sky;
+use model\data\material\building\airport\attribute\Name;
 
 class BER extends AbstractAirport
 {
@@ -23,6 +24,7 @@ class BER extends AbstractAirport
         $this->terminal = new BerAirportTerminal();
         $this->tower = new BerAirportTower($this);
         $this->position = new Sky(13.00,52.00,0);
+        $this->name = new Name('Flughafen Berlin Brandenburg','BER','EDDB');
     }
 }
 

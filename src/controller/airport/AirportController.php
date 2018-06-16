@@ -22,11 +22,18 @@ class AirportController extends AbstractController
      */
     protected $airport;
 
+    /**
+     * @param AbstractAirport $airport
+     */
     public function __construct(AbstractAirport $airport)
     {
         $this->airport = $airport;
     }
 
+    /**
+     * @throws NoFreeRunwayException
+     * @return RunwayInterface
+     */
     public function getFreeRunway(): RunwayInterface
     {
         /**
@@ -55,6 +62,10 @@ class AirportController extends AbstractController
         return false;
     }
 
+    /**
+     * @throws NoFreeGateException
+     * @return GateInterface
+     */
     public function getFreeGate(): GateInterface
     {
         /**

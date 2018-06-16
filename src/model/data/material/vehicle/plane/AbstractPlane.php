@@ -8,14 +8,20 @@ use model\data\material\vehicle\AbstractVehicle;
 
 abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
 {
+    /**
+     * @var PassengerCollection
+     */
     private $passengers;
     
-    private $name;
-    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPosition()
+     */
     public function getPosition(): SkyInterface
     {
         return $this->position;
     }
+    
     public function setPosition(SkyInterface $position): void
     {
         $this->position = $position;
@@ -25,18 +31,12 @@ abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
         $this->passengers= $passengers;
     }
     
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPassengers()
+     */
     public function getPassengers():PassengerCollection{
         return $this->passengers;
     }
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
 }
 
