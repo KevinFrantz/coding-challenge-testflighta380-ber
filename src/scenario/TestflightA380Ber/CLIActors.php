@@ -65,14 +65,14 @@ class CLIActors
         $this->plane->setName('Wright Brothers Flight');
     }
     
-    private function initJournalistCollection(){
+    private function initJournalistCollection():void{
         $this->journalists = new PersonCollection();
         for ($i=1;$i<=rand(1,500);$i++){
             $this->journalists->add(new Journalist());
         }
     }
     
-    private function initGuestCollection(){
+    private function initGuestCollection():void{
         $this->guests = new GuestCollection();
         for ($i=1;$i<=50;$i++){
             $this->guests->add(new Guest());
