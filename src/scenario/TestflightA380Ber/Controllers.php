@@ -38,6 +38,9 @@ class Controllers
      */
     public $tower;
     
+    /**
+     * @param CLIActors $actors
+     */
     public function __construct(CLIActors $actors){
         $this->flight = new FlightController($actors->plane);
         $this->drive = new DriveController($actors->airTractor);
