@@ -4,6 +4,7 @@ namespace model\gui\cli\material;
 use model\gui\cli\AbstractCli;
 use interfaces\model\data\material\MaterialInterface;
 use interfaces\model\data\position\PositionInterface;
+use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
  *
@@ -16,6 +17,14 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      * @var MaterialInterface
      */
     protected $origin;
+    
+    /**
+     * @param MaterialInterface $origin
+     * @param PrintRepositoryInterface $repository
+     */
+    public function __construct(MaterialInterface $origin, ?PrintRepositoryInterface $repository){
+        parent::__construct($origin, $repository);
+    }
     
     /**
      * {@inheritDoc}

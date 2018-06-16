@@ -4,6 +4,7 @@ namespace model\gui\cli\material\vehicle;
 use model\gui\cli\material\AbstractMaterial;
 use interfaces\model\data\material\vehicle\VehicleInterface;
 use interfaces\model\data\position\PositionInterface;
+use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
  *
@@ -12,6 +13,19 @@ use interfaces\model\data\position\PositionInterface;
  */
 class AbstractVehicle extends AbstractMaterial implements VehicleInterface
 {
+    /**
+     * @var VehicleInterface
+     */
+    protected $origin;
+    
+    /**
+     * @param VehicleInterface $origin
+     * @param PrintRepositoryInterface $repository
+     */
+    public function __construct(VehicleInterface $origin, ?PrintRepositoryInterface $repository){
+        parent::__construct($origin, $repository);
+    }
+    
     /**
      * @param PositionInterface $position
      */
