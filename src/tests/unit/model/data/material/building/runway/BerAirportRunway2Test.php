@@ -5,6 +5,7 @@ use PHPUnit\Framework\TestCase;
 use model\data\material\building\runway\BerAirportRunway2;
 use model\data\collection\VehicleCollection;
 use model\data\position\Sky;
+use model\data\material\building\airport\BER;
 
 /**
  * BerAirportRunway2Test test case.
@@ -24,7 +25,7 @@ class BerAirportRunway2Test extends TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->berAirportRunway2 = new BerAirportRunway2();
+        $this->berAirportRunway2 = new BerAirportRunway2(new BER());
     }
     
     public function testVehiclesAccessors():void{

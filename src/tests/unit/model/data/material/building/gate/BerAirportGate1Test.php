@@ -7,6 +7,7 @@ use model\data\material\vehicle\plane\A380;
 use model\data\collection\GuestCollection;
 use model\data\material\vehicle\plane\AbstractPlane;
 use model\data\position\Geo;
+use model\data\material\building\airport\BER;
 
 /**
  * BerAirportGate1 test case.
@@ -25,7 +26,7 @@ class BerAirportGate1Test extends TestCase
      */
     protected function setUp():void
     {
-        $this->berAirportGate1 = new BerAirportGate1();
+        $this->berAirportGate1 = new BerAirportGate1(new BER());
     }
     
     public function testPlaneAccessors():void{
