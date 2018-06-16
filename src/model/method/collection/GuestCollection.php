@@ -1,19 +1,18 @@
 <?php
 namespace model\method\collection;
 
-use model\data\collection\GuestCollection as GuestCollectionOrigin;
-use model\data\position\AbstractPosition;
 use interfaces\model\method\move\MovingInterface;
 use interfaces\model\method\applaud\ApplaudInterface;
 use interfaces\model\data\collection\GuestCollectionInterface;
 use interfaces\model\data\position\PositionInterface;
+use model\data\collection\PersonCollection;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-class GuestCollection extends GuestCollectionOrigin implements MovingInterface,ApplaudInterface
+class GuestCollection extends PersonCollection implements ApplaudInterface,MovingInterface
 {
     /**
      * @var GuestCollectionInterface
