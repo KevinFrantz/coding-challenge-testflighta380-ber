@@ -52,4 +52,8 @@ final class TestflightA380Ber extends AbstractScenario
     private function moveOverGateToTerminal():void{
         
     }
+    
+    private function publicWelcome():void{
+        
+    }
 }
