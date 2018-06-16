@@ -8,6 +8,6 @@ use model\data\material\building\AbstractBuilding;
  * @author kevinfrantz
  *        
  */
-class BerAirportRunway extends AbstractBuilding
+class AirportRunway extends AbstractBuilding
 {}
 
