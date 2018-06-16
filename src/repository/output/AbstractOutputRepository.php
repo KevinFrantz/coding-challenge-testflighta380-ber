@@ -21,13 +21,23 @@ class AbstractOutputRepository extends AbstractRepository implements OutputRepos
         $this->outputElements = new ArrayCollection();    
     }
     
-    public function addOutput($output)
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\repository\output\OutputRepositoryInterface::addOutput()
+     */
+    public function addOutput($output):void
     {
         $this->outputElements->add($output);
     }
-
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\repository\output\OutputRepositoryInterface::getOutput()
+     * @return ArrayCollection|string[]
+     */
     public function getOutput()
-    {}
-
+    {
+        return $this->outputElements;
+    }
 }
 

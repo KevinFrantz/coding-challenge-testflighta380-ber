@@ -10,7 +10,7 @@ use interfaces\repository\RepositoryInterface;
  */
 interface OutputRepositoryInterface extends RepositoryInterface
 {
-    public function addOutput($output);
+    public function addOutput($output):void;
  
     public function getOutput();
 }
