@@ -4,6 +4,7 @@ namespace model\gui\cli\material\vehicle\car;
 use interfaces\model\data\material\vehicle\car\AircraftTractorInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use model\gui\cli\material\vehicle\AbstractVehicle;
+use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
  *
@@ -16,6 +17,10 @@ class AircraftTractor extends AbstractVehicle implements AircraftTractorInterfac
      * @var AircraftTractorInterface
      */
     protected $origin;
+    
+    public function __construct(AircraftTractorInterface $origin, ?PrintRepositoryInterface$repository){
+        parent::__construct($origin, $repository);    
+    }
     
     public function setPlane(PlaneInterface $plane): void
     {
