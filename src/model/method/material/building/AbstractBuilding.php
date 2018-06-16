@@ -16,13 +16,5 @@ abstract class AbstractBuilding extends AbstractMaterial implements BuildingInte
      * @var BuildingInterface
      */
     protected $origin;
-    
-    /**
-     * @return AbstractPosition
-     */
-    public function getPosition(): AbstractPosition
-    {
-        return $this->origin->getPostion();
-    }
 }
 

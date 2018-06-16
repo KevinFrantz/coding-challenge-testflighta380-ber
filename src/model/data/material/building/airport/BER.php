@@ -16,12 +16,12 @@ class BER extends AbstractAirport
     public function __construct()
     {
         $this->runways = new RunwayCollection([
-            new BerAirportRunway2()
+            new BerAirportRunway2($this)
         ]);
         $this->gates = new GateCollection([
-            new BerAirportGate1()
+            new BerAirportGate1($this)
         ]);
-        $this->terminal = new BerAirportTerminal();
+        $this->terminal = new BerAirportTerminal($this);
         $this->tower = new BerAirportTower($this);
         $this->position = new Sky(13.00,52.00,0);
         $this->name = new Name('Flughafen Berlin Brandenburg','BER','EDDB');
