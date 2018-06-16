@@ -10,6 +10,6 @@ use model\data\position\AbstractPosition;
  */
 interface TargetInterface
 {
-    public function getTargetPosition() :AbstractPosition;
+    public function getPosition() :AbstractPosition;
 }
 

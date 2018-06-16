@@ -1,12 +1,14 @@
 <?php
 namespace model\method\material\person;
 
+use model\method\material\AbstractMaterial;
+
 /**
  *
  * @author kevinfrantz
  *        
  */
-class Major extends Person
+class Person extends AbstractMaterial
 {
 }
 

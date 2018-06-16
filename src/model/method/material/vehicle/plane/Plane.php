@@ -1,11 +1,14 @@
 <?php
 namespace model\method\material\vehicle\plane;
 
+use model\method\material\vehicle\AbstractVehicle;
+
 /**
  *
  * @author kevinfrantz
  *        
  */
-class A380 extends Plane
-{}
+class Plane extends AbstractVehicle
+{
+}
 

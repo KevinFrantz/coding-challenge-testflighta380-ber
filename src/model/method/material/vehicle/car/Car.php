@@ -1,11 +1,14 @@
 <?php
 namespace model\method\material\vehicle\car;
 
+use model\method\material\AbstractMaterial;
+
 /**
  *
  * @author kevinfrantz
  *        
  */
-class AircraftTractor extends Car
-{}
+class Car extends AbstractMaterial
+{
+}
 

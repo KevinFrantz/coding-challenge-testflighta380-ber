@@ -32,14 +32,6 @@ abstract class AbstractTower extends AbstractBuilding implements TowerInterface
      * @see \model\data\material\AbstractMaterialModel::getName()
      */
     public function getName():string{
-        return $this->airport->getName().' Tower';
-    }
-    
-    /**
-     * {@inheritDoc}
-     * @see \model\data\material\AbstractMaterialModel::getName()
-     */
-    public function getName():string{
         if($this->name){
             return $this->name;
         }

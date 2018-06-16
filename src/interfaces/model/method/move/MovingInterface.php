@@ -10,8 +10,8 @@ use model\data\position\AbstractPosition;
  */
 interface MovingInterface
 {
-    public function setMovingPosition(AbstractPosition $position):void;
+    public function setPosition(AbstractPosition $position):void;
     
-    public function getMovingPosition() :AbstractPosition;
+    public function getPosition() :AbstractPosition;
 }
 
