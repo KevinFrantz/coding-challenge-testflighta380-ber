@@ -22,4 +22,3 @@ class PrintRepository extends AbstractOutputRepository implements PrintRepositor
     }
 
 }
-
