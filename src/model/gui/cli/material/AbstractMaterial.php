@@ -24,6 +24,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function __construct(MaterialInterface $origin, ?PrintRepositoryInterface $repository){
         parent::__construct($origin, $repository);
+        $this->repository->addOutput('Material "'.$this->origin->getName().'" initialized.');
     }
     
     /**

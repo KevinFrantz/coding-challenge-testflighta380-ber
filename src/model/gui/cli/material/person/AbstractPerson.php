@@ -2,9 +2,9 @@
 namespace model\gui\cli\material\person;
 
 use model\gui\cli\material\AbstractMaterial;
-use interfaces\model\data\material\person\PersonInterface;
 use interfaces\model\data\position\PositionInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
+use interfaces\model\method\person\PersonInterface;
 
 /**
  *
@@ -35,4 +35,3 @@ class AbstractPerson extends AbstractMaterial implements PersonInterface
         return $this->origin->getPosition();
     }
 }
-
