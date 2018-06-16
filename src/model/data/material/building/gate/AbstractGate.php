@@ -77,13 +77,5 @@ abstract class AbstractGate extends AbstractBuilding implements GateInterface
     {
         return $this->position;
     }
-    
-    /**
-     * {@inheritDoc}
-     * @see \model\data\material\AbstractMaterialModel::getName()
-     */
-    public function getName():string{
-        return "Gate ".$this->name;
-    }
 }
 

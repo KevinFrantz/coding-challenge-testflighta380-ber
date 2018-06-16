@@ -13,17 +13,33 @@ use interfaces\model\data\position\SkyInterface;
  */
 abstract class AbstractRunway extends AbstractBuilding implements RunwayInterface
 {
+    /**
+     * @var VehicleCollectionInterface
+     */
     protected $vehicles;
     
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\building\RunwayInterface::getVehicles()
+     */
     public function getVehicles(): VehicleCollectionInterface
     {
         return $this->vehicles;
     }
 
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\building\RunwayInterface::setVehicles()
+     */
     public function setVehicles(VehicleCollectionInterface $vehicles): void
     {
         $this->vehicles = $vehicles;
     }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\building\RunwayInterface::getPosition()
+     */
     public function getPosition(): SkyInterface
     {
         return $this->position;
