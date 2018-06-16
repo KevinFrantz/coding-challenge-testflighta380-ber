@@ -1,13 +1,13 @@
 <?php
 namespace scenario;
 
+use interfaces\scenario\ScenarioInterface;
+
 /**
  *
  * @author kevinfrantz
- *        
+ *
  */
-abstract class AbstractScenario
+abstract class AbstractScenario implements ScenarioInterface
 {
-    abstract function play():void;
 }
-

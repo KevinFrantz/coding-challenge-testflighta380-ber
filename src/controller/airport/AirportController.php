@@ -5,6 +5,8 @@ use controller\AbstractController;
 use model\data\material\building\airport\AbstractAirport;
 use interfaces\model\data\material\building\RunwayInterface;
 use interfaces\model\data\material\building\GateInterface;
+use controller\airport\exception\NoFreeRunwayException;
+use controller\airport\exception\NoFreeGateException;
 
 /**
  *
@@ -13,52 +15,58 @@ use interfaces\model\data\material\building\GateInterface;
  */
 class AirportController extends AbstractController
 {
+
     /**
+     *
      * @var AbstractAirport
      */
     protected $airport;
-    
-    public function __construct(AbstractAirport $airport){
+
+    public function __construct(AbstractAirport $airport)
+    {
         $this->airport = $airport;
     }
-    
-    public function getFreeRunway(): RunwayInterface{
+
+    public function getFreeRunway(): RunwayInterface
+    {
         /**
          * @var RunwayInterface $runway
          */
-        foreach ($this->airport->getRunways()->getValues() as $runway){
-            if($runway->getVehicles()->isEmpty()){
-               return $runway; 
+        foreach ($this->airport->getRunways()->getValues() as $runway) {
+            if ($runway->getVehicles()->isEmpty()) {
+                return $runway;
             }
         }
-        throw new \Exception("Ther's no free runway!");
+        throw new NoFreeRunwayException();
     }
-    
-    public function getPermissionToLand():bool{
-        try{
-            if($this->getFreeRunway() && $this->getFreeGate){
+
+    /**
+     * The Exception catching is just implemented to don't repeat the called functions
+     *
+     * @return bool
+     */
+    public function getPermissionToLand(): bool
+    {
+        try {
+            if ($this->getFreeRunway() && $this->getFreeGate()) {
                 return true;
             }
-        }catch (\Exception $exception){
-            /**
-             * This Exception catching is just implemented, so that I don't have to duplicate the used functions 
-             */
-        }
+        } catch (NoFreeRunwayException $exception) {} catch (NoFreeGateException $exception) {}
         return false;
     }
-    
-    public function getFreeGate():GateInterface{
+
+    public function getFreeGate(): GateInterface
+    {
         /**
          * @var GateInterface $gate
          */
-        foreach ($this->airport->getGates()->getValues() as $gate){
-            if(!$gate->getPlane()){
+        foreach ($this->airport->getGates()->getValues() as $gate) {
+            if (! $gate->getPlane()) {
                 return $gate;
             }
         }
-        throw new \Exception("Ther's no free gate!");
+        throw new NoFreeGateException();
     }
-    
 }
 
 
