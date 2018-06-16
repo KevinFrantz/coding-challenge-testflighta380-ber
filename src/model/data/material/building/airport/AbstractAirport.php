@@ -2,7 +2,7 @@
 namespace model\data\material\building\airport;
 
 use model\data\material\building\AbstractBuilding;
-use interfaces\model\data\material\building\AirportInterface;
+use interfaces\model\data\material\building\airport\AirportInterface;
 use interfaces\model\data\material\building\TerminalInterface;
 use interfaces\model\data\material\building\TowerInterface;
 use interfaces\model\data\collection\GateCollectionInterface;
@@ -40,7 +40,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\AirportInterface::getTerminal()
+     * @see \interfaces\model\data\material\building\airport\AirportInterface::getTerminal()
      */
     public function getTerminal(): TerminalInterface
     {
@@ -49,7 +49,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\AirportInterface::getTower()
+     * @see \interfaces\model\data\material\building\airport\AirportInterface::getTower()
      */
     public function getTower(): TowerInterface
     {
@@ -58,7 +58,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\AirportInterface::getGates()
+     * @see \interfaces\model\data\material\building\airport\AirportInterface::getGates()
      */
     public function getGates(): GateCollectionInterface
     {
@@ -67,7 +67,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\AirportInterface::getRunways()
+     * @see \interfaces\model\data\material\building\airport\AirportInterface::getRunways()
      */
     public function getRunways(): RunwayCollectionInterface
     {
@@ -76,7 +76,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\AirportInterface::getPosition()
+     * @see \interfaces\model\data\material\building\airport\AirportInterface::getPosition()
      */
     public function getPosition(): SkyInterface
     {

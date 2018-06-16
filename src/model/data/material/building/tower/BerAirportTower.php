@@ -11,8 +11,6 @@ use model\data\material\building\airport\AbstractAirport;
  */
 class BerAirportTower extends AbstractTower
 {
-    protected $airport; 
-    
     public function __construct(AbstractAirport $airport){
         $this->position = new Sky(13.04,53.04,0.0);
         $this->airport = $airport;

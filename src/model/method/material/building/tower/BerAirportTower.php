@@ -6,7 +6,7 @@ use interfaces\controller\aiport\AirportControllerInterface;
 use interfaces\model\data\material\building\GateInterface;
 use interfaces\model\data\material\building\RunwayInterface;
 use controller\airport\AirportController;
-use interfaces\model\data\material\building\AirportInterface;
+use interfaces\model\data\material\building\airport\AirportInterface;
 
 /**
  *
