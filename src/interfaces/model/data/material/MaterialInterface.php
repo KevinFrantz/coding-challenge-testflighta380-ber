@@ -8,5 +8,8 @@ namespace interfaces\model\data\material;
  */
 interface MaterialInterface
 {
+    public function setName(string $name):void;
+    
+    public function getName():string;
 }
 
