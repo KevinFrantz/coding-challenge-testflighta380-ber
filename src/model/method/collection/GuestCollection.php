@@ -1,8 +1,8 @@
 <?php
 namespace model\method\collection;
 
-use interfaces\model\method\move\MovingInterface;
-use interfaces\model\method\applaud\ApplaudInterface;
+use interfaces\model\method\action\move\MovingInterface;
+use interfaces\model\method\action\applaud\ApplaudInterface;
 use interfaces\model\data\collection\GuestCollectionInterface;
 use interfaces\model\data\position\PositionInterface;
 use model\data\collection\PersonCollection;
@@ -21,7 +21,7 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Movin
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\method\applaud\ApplaudInterface::applaud()
+     * @see \interfaces\model\method\action\applaud\ApplaudInterface::applaud()
      */
     public function applaud(): void
     {
@@ -32,7 +32,7 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Movin
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\method\move\MovingInterface::setPosition()
+     * @see \interfaces\model\method\action\move\MovingInterface::setPosition()
      */
     public function setPosition(PositionInterface $position): void
     {
@@ -47,7 +47,7 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Movin
     /**
      * Returns the Position of the first guest
      * {@inheritDoc}
-     * @see \interfaces\model\method\move\TargetInterface::getPosition()
+     * @see \interfaces\model\method\action\move\TargetInterface::getPosition()
      */
     public function getPosition(): PositionInterface
     {

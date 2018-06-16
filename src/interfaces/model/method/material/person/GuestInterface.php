@@ -1,8 +1,8 @@
 <?php
-namespace interfaces\model\method\person;
+namespace interfaces\model\method\material\person;
 
 use interfaces\model\data\material\person\PersonInterface;
-use interfaces\model\method\applaud\ApplaudInterface;
+use interfaces\model\method\action\applaud\ApplaudInterface;
 
 /**
  *

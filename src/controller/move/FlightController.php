@@ -2,7 +2,7 @@
 namespace controller\move;
 
 use model\data\position\Sky;
-use interfaces\model\method\move\TargetInterface;
+use interfaces\model\method\action\move\TargetInterface;
 
 /**
  *

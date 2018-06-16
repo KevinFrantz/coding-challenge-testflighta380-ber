@@ -3,7 +3,7 @@ namespace interfaces\model\data\material;
 
 use interfaces\model\data\DataInterface;
 use interfaces\model\data\position\PositionInterface;
-use interfaces\model\method\move\TargetInterface;
+use interfaces\model\method\action\move\TargetInterface;
 
 /**
  *

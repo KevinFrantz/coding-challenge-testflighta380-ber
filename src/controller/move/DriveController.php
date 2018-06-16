@@ -1,7 +1,7 @@
 <?php
 namespace controller\move;
 
-use interfaces\model\method\move\TargetInterface;
+use interfaces\model\method\action\move\TargetInterface;
 use model\data\position\Geo;
 
 /**

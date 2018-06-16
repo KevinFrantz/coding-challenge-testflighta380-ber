@@ -2,7 +2,7 @@
 namespace model\method\material\vehicle;
 
 use model\method\material\AbstractMaterial;
-use interfaces\model\method\move\MovingInterface;
+use interfaces\model\method\action\move\MovingInterface;
 use interfaces\model\data\material\vehicle\VehicleInterface;
 use interfaces\model\data\position\PositionInterface;
 
@@ -20,7 +20,7 @@ class AbstractVehicle extends AbstractMaterial implements MovingInterface,Vehicl
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\method\move\MovingInterface::getPosition()
+     * @see \interfaces\model\method\action\move\MovingInterface::getPosition()
      */
     public function getPosition():PositionInterface
     {
@@ -29,7 +29,7 @@ class AbstractVehicle extends AbstractMaterial implements MovingInterface,Vehicl
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\method\move\MovingInterface::setPosition()
+     * @see \interfaces\model\method\action\move\MovingInterface::setPosition()
      */
     public function setPosition(PositionInterface $position):void
     {

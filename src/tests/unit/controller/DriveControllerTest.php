@@ -6,7 +6,7 @@ use model\method\collection\GuestCollection;
 use model\method\material\building\terminal\BerAirportTerminal as BerAirportTerminalOrigin;
 use model\method\material\building\terminal\BerAirportTerminal;
 use controller\move\DriveController;
-use interfaces\model\method\move\MovingInterface;
+use interfaces\model\method\action\move\MovingInterface;
 use model\data\position\Geo;
 use model\data\material\building\airport\BER;
 

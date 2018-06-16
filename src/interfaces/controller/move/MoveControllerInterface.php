@@ -2,8 +2,8 @@
 namespace interfaces\controller\move;
 
 use interfaces\controller\ControllerInterface;
-use interfaces\model\method\move\TargetInterface;
-use interfaces\model\method\move\MovingInterface;
+use interfaces\model\method\action\move\TargetInterface;
+use interfaces\model\method\action\move\MovingInterface;
 
 /**
  *

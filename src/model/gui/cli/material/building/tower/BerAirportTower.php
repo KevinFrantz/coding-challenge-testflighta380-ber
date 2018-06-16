@@ -1,15 +1,16 @@
 <?php
 namespace model\gui\cli\material\building\tower;
 
-use model\method\material\building\tower\BerAirportTower as BerAirportTowerOrigin;
 use interfaces\model\data\material\building\RunwayInterface;
 use interfaces\model\data\material\building\gate\GateInterface;
+use model\gui\cli\material\building\AbstractBuilding;
+use interfaces\model\method\material\building\tower\TowerInterface;
 /**
  *
  * @author kevinfrantz
  *        
  */
-class BerAirportTower extends BerAirportTowerOrigin
+class BerAirportTower extends AbstractBuilding implements TowerInterface
 {
     
     public function getPermissionToLand(): bool

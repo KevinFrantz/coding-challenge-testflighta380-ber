@@ -1,5 +1,5 @@
 <?php
-namespace interfaces\model\method\applaud;
+namespace interfaces\model\method\action\applaud;
 
 /**
  *

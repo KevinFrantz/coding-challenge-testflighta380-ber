@@ -1,7 +1,7 @@
 <?php
 namespace model\gui\cli\material\person;
 
-use interfaces\model\method\person\GuestInterface;
+use interfaces\model\method\material\person\GuestInterface;
 use model\method\material\person\Guest as MethodGuest;
 use interfaces\repository\output\PrintRepositoryInterface;
 

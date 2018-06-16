@@ -14,7 +14,7 @@ abstract class AbstractVehicle extends AbstractMaterialModel implements VehicleI
 {
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\method\move\MovingInterface::setPosition()
+     * @see \interfaces\model\method\action\move\MovingInterface::setPosition()
      */
     public function setPosition(PositionInterface $position): void
     {

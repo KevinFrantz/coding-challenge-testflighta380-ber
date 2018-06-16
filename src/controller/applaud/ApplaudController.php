@@ -4,7 +4,7 @@ namespace controller\applaud;
 use controller\AbstractController;
 
 use interfaces\controller\applaud\ApplaudControllerInterface;
-use interfaces\model\method\applaud\ApplaudInterface;
+use interfaces\model\method\action\applaud\ApplaudInterface;
 
 /**
  *

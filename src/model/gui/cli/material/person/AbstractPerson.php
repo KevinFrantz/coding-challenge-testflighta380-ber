@@ -4,7 +4,7 @@ namespace model\gui\cli\material\person;
 use model\gui\cli\material\AbstractMaterial;
 use interfaces\model\data\position\PositionInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
-use interfaces\model\method\person\PersonInterface;
+use interfaces\model\method\material\person\PersonInterface;
 
 /**
  *

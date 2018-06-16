@@ -2,7 +2,7 @@
 namespace interfaces\controller\applaud;
 
 use interfaces\controller\ControllerInterface;
-use interfaces\model\method\applaud\ApplaudInterface;
+use interfaces\model\method\action\applaud\ApplaudInterface;
 
 /**
  *

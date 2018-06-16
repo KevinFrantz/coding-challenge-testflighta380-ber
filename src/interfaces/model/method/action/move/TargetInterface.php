@@ -1,5 +1,5 @@
 <?php
-namespace interfaces\model\method\move;
+namespace interfaces\model\method\action\move;
 
 use interfaces\model\data\position\PositionInterface;
 
