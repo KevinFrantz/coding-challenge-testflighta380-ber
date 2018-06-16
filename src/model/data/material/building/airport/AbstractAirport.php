@@ -7,7 +7,6 @@ use interfaces\model\data\material\building\TerminalInterface;
 use interfaces\model\data\material\building\TowerInterface;
 use interfaces\model\data\collection\GateCollectionInterface;
 use interfaces\model\data\collection\RunwayCollectionInterface;
-use interfaces\model\data\position\SkyInterface;
 use interfaces\model\data\material\building\airport\attribute\NameInterface;
 use model\data\material\building\airport\attribute\Name;
 use interfaces\model\data\position\PositionInterface;

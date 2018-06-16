@@ -2,7 +2,6 @@
 namespace interfaces\model\data\material\building;
 
 use interfaces\model\data\collection\VehicleCollectionInterface;
-use interfaces\model\data\position\SkyInterface;
 
 /**
  *

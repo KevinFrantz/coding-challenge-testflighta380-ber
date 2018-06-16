@@ -3,7 +3,6 @@ namespace interfaces\model\data\material\building\gate;
 
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use interfaces\model\data\collection\GuestCollectionInterface;
-use interfaces\model\data\position\GeoInterface;
 use interfaces\model\data\material\building\BuildingInterface;
 
 /**

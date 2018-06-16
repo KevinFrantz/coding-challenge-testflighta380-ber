@@ -4,7 +4,6 @@ namespace model\data\material\building\runway;
 use model\data\material\building\AbstractBuilding;
 use interfaces\model\data\material\building\RunwayInterface;
 use interfaces\model\data\collection\VehicleCollectionInterface;
-use interfaces\model\data\position\SkyInterface;
 
 /**
  *

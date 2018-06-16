@@ -1,7 +1,6 @@
 <?php
 namespace controller\move;
 
-use interfaces\model\method\move\MovingInterface;
 use model\data\position\Sky;
 use interfaces\model\method\move\TargetInterface;
 

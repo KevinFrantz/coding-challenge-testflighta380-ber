@@ -3,7 +3,6 @@ namespace model\data\material\building\tower;
 
 use model\data\material\building\AbstractBuilding;
 use interfaces\model\data\material\building\TowerInterface;
-use interfaces\model\data\position\SkyInterface;
 use interfaces\model\data\material\building\airport\AirportInterface;
 
 /**
