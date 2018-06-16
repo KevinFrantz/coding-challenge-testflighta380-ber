@@ -5,7 +5,7 @@ use controller\move\DriveController;
 use controller\applaud\ApplaudController;
 use interfaces\controller\move\MoveControllerInterface;
 use interfaces\controller\applaud\ApplaudControllerInterface;
-use interfaces\controller\aiport\AirportControllerInterface;
+use interfaces\controller\airport\AirportControllerInterface;
 /**
  *
  * @author kevinfrantz

@@ -2,7 +2,7 @@
 namespace model\method\material\building\tower;
 
 use model\data\material\building\tower\BerAirportTower as BerAirportTowerOrigin;
-use interfaces\controller\aiport\AirportControllerInterface;
+use interfaces\controller\airport\AirportControllerInterface;
 use interfaces\model\data\material\building\gate\GateInterface;
 use interfaces\model\data\material\building\RunwayInterface;
 use controller\airport\AirportController;

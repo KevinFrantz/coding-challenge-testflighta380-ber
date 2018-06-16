@@ -1,5 +1,5 @@
 <?php
-namespace interfaces\controller\aiport;
+namespace interfaces\controller\airport;
 
 use interfaces\controller\ControllerInterface;
 use interfaces\model\data\material\building\RunwayInterface;
