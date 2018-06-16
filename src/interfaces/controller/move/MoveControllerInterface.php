@@ -2,7 +2,6 @@
 namespace interfaces\controller\move;
 
 use interfaces\controller\ControllerInterface;
-use interfaces\model\data\position\GeoInterface;
 use interfaces\model\method\move\TargetInterface;
 use interfaces\model\method\move\MovingInterface;
 

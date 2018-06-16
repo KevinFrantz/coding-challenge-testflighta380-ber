@@ -1,6 +1,8 @@
 <?php
 namespace interfaces\model\data\collection;
 
+use interfaces\model\data\material\person\GuestInterface;
+
 /**
  *
  * @author kevinfrantz
@@ -8,5 +10,11 @@ namespace interfaces\model\data\collection;
  */
 interface GuestCollectionInterface extends CollectionInterface
 {
+    /**
+     * {@inheritDoc}
+     * @see \Doctrine\Common\Collections\Collection::getValues()
+     * @return GuestInterface[]
+     */
+    public function getValues();
 }
 

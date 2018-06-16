@@ -3,6 +3,7 @@ namespace model\data\material;
 
 use model\data\position\AbstractPosition;
 use interfaces\model\data\material\MaterialInterface;
+use interfaces\model\data\position\PositionInterface;
 
 /**
  *
@@ -39,5 +40,15 @@ abstract class AbstractMaterialModel implements MaterialInterface
     {
         return $this->name;
     }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\MaterialInterface::getPosition()
+     */
+    public function getPosition(): PositionInterface
+    {
+        return $this->position;
+    }
+
 }
 

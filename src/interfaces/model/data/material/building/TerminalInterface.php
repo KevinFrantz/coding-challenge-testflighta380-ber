@@ -9,8 +9,5 @@ use interfaces\model\data\position\GeoInterface;
  *        
  */
 interface TerminalInterface extends BuildingInterface
-{
-
-    public function getPosition(): GeoInterface;
-}
+{}
 

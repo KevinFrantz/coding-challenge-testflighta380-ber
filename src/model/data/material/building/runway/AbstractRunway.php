@@ -35,14 +35,5 @@ abstract class AbstractRunway extends AbstractBuilding implements RunwayInterfac
     {
         $this->vehicles = $vehicles;
     }
-    
-    /**
-     * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\RunwayInterface::getPosition()
-     */
-    public function getPosition(): SkyInterface
-    {
-        return $this->position;
-    }
 }
 

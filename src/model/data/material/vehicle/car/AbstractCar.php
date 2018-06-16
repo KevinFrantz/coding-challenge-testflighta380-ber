@@ -1,7 +1,6 @@
 <?php
 namespace model\data\material\vehicle\car;
 
-use interfaces\model\data\position\GeoInterface;
 use interfaces\model\data\material\vehicle\car\CarInterface;
 use model\data\material\vehicle\AbstractVehicle;
 
@@ -11,16 +10,5 @@ use model\data\material\vehicle\AbstractVehicle;
  *        
  */
 abstract class AbstractCar extends AbstractVehicle implements CarInterface
-{
-
-    public function getPosition(): GeoInterface
-    {
-        return $this->position;
-    }
-
-    public function setPosition(GeoInterface $geo): void
-    {
-        $this->position = $geo;
-    }
-}
+{}
 

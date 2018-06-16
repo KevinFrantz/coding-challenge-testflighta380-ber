@@ -29,6 +29,4 @@ interface GateInterface extends BuildingInterface
      * @return GuestCollectionInterface
      */
     public function getGuests(): GuestCollectionInterface;
-
-    public function getPosition(): GeoInterface;
 }

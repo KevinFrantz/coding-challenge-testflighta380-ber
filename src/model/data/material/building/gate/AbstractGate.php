@@ -4,7 +4,6 @@ namespace model\data\material\building\gate;
 use model\data\material\building\AbstractBuilding;
 use interfaces\model\data\material\building\gate\GateInterface;
 use interfaces\model\data\collection\GuestCollectionInterface;
-use interfaces\model\data\position\GeoInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use model\data\collection\GuestCollection;
 
@@ -67,15 +66,6 @@ abstract class AbstractGate extends AbstractBuilding implements GateInterface
     public function getGuests(): GuestCollectionInterface
     {
         return $this->guests;
-    }
-    
-    /**
-     * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\gate\GateInterface::getPosition()
-     */
-    public function getPosition(): GeoInterface
-    {
-        return $this->position;
     }
 }
 

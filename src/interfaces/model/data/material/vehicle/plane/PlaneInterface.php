@@ -11,11 +11,7 @@ use interfaces\model\data\material\vehicle\VehicleInterface;
  *        
  */
 interface PlaneInterface extends VehicleInterface
-{
-    public function setPosition(SkyInterface $position):void;
-    
-    public function getPosition():SkyInterface;
-    
+{   
     public function setPassengers(PassengerCollection $passengers):void;
     
     public function getPassengers():PassengerCollection;

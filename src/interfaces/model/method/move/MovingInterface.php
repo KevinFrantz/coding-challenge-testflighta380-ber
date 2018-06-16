@@ -1,17 +1,16 @@
 <?php
 namespace interfaces\model\method\move;
 
-use model\data\position\AbstractPosition;
+use interfaces\model\data\position\PositionInterface;
 
 /**
- *
+ * This Interface allows to move Objects.
+ * Therefore you need to know where it is, so it extends TargetInterface
  * @author kevinfrantz
  *        
  */
-interface MovingInterface
+interface MovingInterface extends TargetInterface
 {
-    public function setPosition(AbstractPosition $position):void;
-    
-    public function getPosition() :AbstractPosition;
+    public function setPosition(PositionInterface $position):void;
 }
 

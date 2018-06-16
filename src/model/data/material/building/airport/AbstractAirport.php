@@ -10,6 +10,7 @@ use interfaces\model\data\collection\RunwayCollectionInterface;
 use interfaces\model\data\position\SkyInterface;
 use interfaces\model\data\material\building\airport\attribute\NameInterface;
 use model\data\material\building\airport\attribute\Name;
+use interfaces\model\data\position\PositionInterface;
 
 abstract class AbstractAirport extends AbstractBuilding implements AirportInterface
 {
@@ -76,9 +77,9 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
 
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\airport\AirportInterface::getPosition()
+     * @see \interfaces\model\data\material\MaterialInterface::getPosition()
      */
-    public function getPosition(): SkyInterface
+    public function getPosition(): PositionInterface
     {
         return $this->position;
     }

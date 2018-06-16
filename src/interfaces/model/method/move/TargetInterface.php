@@ -1,15 +1,15 @@
 <?php
 namespace interfaces\model\method\move;
 
-use model\data\position\AbstractPosition;
+use interfaces\model\data\position\PositionInterface;
 
 /**
- *
+ * This interface allows to get the position of an object
  * @author kevinfrantz
  *        
  */
 interface TargetInterface
 {
-    public function getPosition() :AbstractPosition;
+    public function getPosition() :PositionInterface;
 }
 

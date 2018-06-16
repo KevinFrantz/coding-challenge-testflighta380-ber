@@ -20,15 +20,6 @@ abstract class AbstractTower extends AbstractBuilding implements TowerInterface
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\TowerInterface::getPosition()
-     */
-    public function getPosition(): SkyInterface
-    {
-        return $this->position;
-    }
-    
-    /**
-     * {@inheritDoc}
      * @see \model\data\material\AbstractMaterialModel::getName()
      */
     public function getName():string{

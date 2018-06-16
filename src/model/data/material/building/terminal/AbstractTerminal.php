@@ -27,15 +27,6 @@ abstract class AbstractTerminal extends AbstractBuilding implements TerminalInte
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\data\material\building\TerminalInterface::getPosition()
-     */
-    public function getPosition(): GeoInterface
-    {
-        return $this->position;
-    }
-    
-    /**
-     * {@inheritDoc}
      * @see \model\data\material\AbstractMaterialModel::getName()
      */
     public function getName():string{

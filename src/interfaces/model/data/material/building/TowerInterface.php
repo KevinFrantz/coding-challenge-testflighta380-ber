@@ -10,6 +10,5 @@ use interfaces\model\data\position\SkyInterface;
  */
 interface TowerInterface extends BuildingInterface
 {
-    public function getPosition():SkyInterface;
 }
 

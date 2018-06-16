@@ -23,7 +23,5 @@ interface AirportInterface extends BuildingInterface
     public function getGates(): GateCollectionInterface;
 
     public function getTower(): TowerInterface;
-
-    public function getPosition(): SkyInterface;
 }
 
