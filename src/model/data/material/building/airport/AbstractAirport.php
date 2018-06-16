@@ -96,7 +96,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
      * @see \model\data\material\AbstractMaterialModel::setName()
      * @todo Implement the setting of iata and icao! It work's but it should work better!
      */
-    public function setName(string $name){
+    public function setName(string $name):void{
        $this->name = new Name();
        $this->name->setName($name);
     }
