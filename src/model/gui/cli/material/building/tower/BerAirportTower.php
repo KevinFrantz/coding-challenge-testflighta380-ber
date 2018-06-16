@@ -3,7 +3,7 @@ namespace model\gui\cli\material\building\tower;
 
 use model\method\material\building\tower\BerAirportTower as BerAirportTowerOrigin;
 use interfaces\model\data\material\building\RunwayInterface;
-use interfaces\model\data\material\building\GateInterface;
+use interfaces\model\data\material\building\gate\GateInterface;
 /**
  *
  * @author kevinfrantz

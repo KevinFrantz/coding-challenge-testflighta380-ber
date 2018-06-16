@@ -3,7 +3,7 @@ namespace interfaces\controller\aiport;
 
 use interfaces\controller\ControllerInterface;
 use interfaces\model\data\material\building\RunwayInterface;
-use interfaces\model\data\material\building\GateInterface;
+use interfaces\model\data\material\building\gate\GateInterface;
 
 /**
  *

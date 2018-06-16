@@ -3,7 +3,7 @@ namespace model\method\material\building\tower;
 
 use model\data\material\building\tower\BerAirportTower as BerAirportTowerOrigin;
 use interfaces\controller\aiport\AirportControllerInterface;
-use interfaces\model\data\material\building\GateInterface;
+use interfaces\model\data\material\building\gate\GateInterface;
 use interfaces\model\data\material\building\RunwayInterface;
 use controller\airport\AirportController;
 use interfaces\model\data\material\building\airport\AirportInterface;

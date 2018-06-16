@@ -4,7 +4,7 @@ namespace controller\airport;
 use controller\AbstractController;
 use model\data\material\building\airport\AbstractAirport;
 use interfaces\model\data\material\building\RunwayInterface;
-use interfaces\model\data\material\building\GateInterface;
+use interfaces\model\data\material\building\gate\GateInterface;
 use controller\airport\exception\NoFreeRunwayException;
 use controller\airport\exception\NoFreeGateException;
 
