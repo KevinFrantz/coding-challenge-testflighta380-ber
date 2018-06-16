@@ -5,6 +5,7 @@ use PHPUnit\Framework\TestCase;
 use model\data\position\AbstractPosition;
 use model\method\material\building\runway\AirportRunway;
 use model\data\material\building\runway\BerAirportRunway2 as BerAirportRunwayOrigin;
+use model\data\material\building\airport\BER;
 
 /**
  *
@@ -19,7 +20,7 @@ class AirportRunwayTest extends TestCase
     protected $runway;
     
     protected function setUp(){
-        $this->runway= new AirportRunway(new BerAirportRunwayOrigin());
+        $this->runway= new AirportRunway(new BerAirportRunwayOrigin(new BER()));
     }
     
     public function testTargetInterface(){
