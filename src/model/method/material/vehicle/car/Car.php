@@ -1,14 +1,14 @@
 <?php
 namespace model\method\material\vehicle\car;
 
-use model\method\material\AbstractMaterial;
+use model\method\material\vehicle\AbstractVehicle;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-class Car extends AbstractMaterial
+class Car extends AbstractVehicle
 {
 }
 

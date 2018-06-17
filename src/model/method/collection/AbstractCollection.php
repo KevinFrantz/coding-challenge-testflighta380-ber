@@ -15,9 +15,11 @@ abstract class AbstractCollection extends ArrayCollection implements CollectionI
     /**
      * @param CollectionInterface $origin
      */
-    public function __construct(DataInterface $origin)
+    public function __construct(DataInterface $origin=NULL)
     {
-        $this->initOriginCollection($origin);
+        if($origin){
+            $this->initOriginCollection($origin);
+        }
     }
 }
 

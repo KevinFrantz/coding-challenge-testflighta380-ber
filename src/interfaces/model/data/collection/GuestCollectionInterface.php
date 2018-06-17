@@ -8,7 +8,7 @@ use interfaces\model\data\material\person\GuestInterface;
  * @author kevinfrantz
  *        
  */
-interface GuestCollectionInterface extends CollectionInterface
+interface GuestCollectionInterface extends CollectionInterface, PersonCollectionInterface
 {
     /**
      * {@inheritDoc}

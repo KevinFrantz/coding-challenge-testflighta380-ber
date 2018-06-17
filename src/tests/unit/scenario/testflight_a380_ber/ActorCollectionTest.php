@@ -4,25 +4,32 @@ namespace tests\unit\scenario\testflight_a380_ber;
 use scenario\TestflightA380Ber\ActorCollection;
 use interfaces\model\method\material\person\MajorInterface;
 use model\method\collection\JournalistCollection;
-use model\method\material\vehicle\plane\A380;
 use model\method\material\vehicle\car\AircraftTractor;
 use interfaces\model\method\material\building\airport\AirportInterface;
 use interfaces\model\method\collection\GuestCollectionInterface;
+use interfaces\model\method\material\vehicle\plane\PlaneInterface;
+use PHPUnit\Framework\TestCase;
+use scenario\TestflightA380Ber\DataCollection;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-class ActorCollectionTest extends DataCollectionTest
+class ActorCollectionTest extends TestCase
 {
     /**
      * @var ActorCollection
      */
     protected $actors;
     
+    /**
+     * @var DataCollection
+     */
+    protected $data;
+    
     protected function setUp():void{
-        parent::setUp();
+        $this->data = new DataCollection();
         $this->actors = new ActorCollection($this->data);
     }
     
@@ -39,7 +46,7 @@ class ActorCollectionTest extends DataCollectionTest
     }
     
     public function testPlane():void{
-        $this->assertInstanceOf(A380::class, $this->actors->getPlane());
+        $this->assertInstanceOf(PlaneInterface::class, $this->actors->getPlane());
     }
     
     public function testAircraftTractor():void{

@@ -8,7 +8,6 @@ use interfaces\model\data\material\person\MajorInterface;
 use interfaces\model\data\material\vehicle\car\AircraftTractorInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use interfaces\scenario\model\actor\TestflightA380Ber;
-use model\data\collection\GuestCollection;
 use model\data\material\person\Major;
 use model\data\material\person\Guest;
 use model\data\material\building\airport\BER;
@@ -16,6 +15,8 @@ use model\data\material\vehicle\plane\A380;
 use model\data\collection\JournalistCollection;
 use model\data\material\person\Journalist;
 use model\data\material\vehicle\car\AircraftTractor;
+use interfaces\model\data\collection\GuestCollectionInterface;
+use model\data\collection\GuestCollection;
 
 /**
  *
@@ -117,7 +118,7 @@ class DataCollection extends AbstractDataCollection implements TestflightA380Ber
      * {@inheritdoc}
      * @see \interfaces\scenario\model\actor\TestflightA380Ber::getGuests()
      */
-    public function getGuests(): GuestCollection
+    public function getGuests(): GuestCollectionInterface
     {
         return $this->get(self::GUESTS);
     }

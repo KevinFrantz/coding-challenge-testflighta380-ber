@@ -7,7 +7,7 @@ use model\method\material\vehicle\car\AircraftTractor;
 use model\method\material\building\airport\Airport;
 use model\method\collection\JournalistCollection;
 use model\method\collection\GuestCollection;
-use model\gui\cli\material\vehicle\plane\Plane;
+use model\method\material\vehicle\plane\Plane;
 
 /**
  *
