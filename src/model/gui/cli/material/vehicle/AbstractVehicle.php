@@ -32,7 +32,7 @@ class AbstractVehicle extends AbstractMaterial implements VehicleInterface
     public function setPosition(PositionInterface $position): void
     {
         $this->repository->addOutput('Set Position for '.$this->origin->getName().'.');
-        return $this->origin->getPosition();
+        $this->origin->setPosition($position);
     }
 }
 
