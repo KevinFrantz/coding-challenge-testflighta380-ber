@@ -13,6 +13,11 @@ use interfaces\repository\output\PrintRepositoryInterface;
 class AbstractBuilding extends AbstractMaterial implements BuildingInterface
 {
     /**
+     * @var string
+     */
+    protected $initializationMessage = 'Building created';
+    
+    /**
      * @var BuildingInterface
      */
     protected $origin;

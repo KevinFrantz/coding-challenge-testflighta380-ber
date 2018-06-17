@@ -21,7 +21,7 @@ class Plane extends AbstractVehicle implements PlaneInterface
     /**
      * @var string
      */
-    protected $initializationMessage = 'Plane initialized';
+    protected $initializationMessage = 'Plane created';
     
     /**
      * @param PlaneInterface $origin

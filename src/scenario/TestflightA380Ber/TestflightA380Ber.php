@@ -4,6 +4,7 @@ namespace scenario\TestflightA380Ber;
 use scenario\AbstractScenario;
 use interfaces\scenario\model\actor\TestflightA380Ber as ActorsTestflightA380Ber;
 use repository\output\GlobalPrintRepository;
+use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
  *
@@ -17,7 +18,14 @@ final class TestflightA380Ber extends AbstractScenario
      */
     protected $actors;
     
+    /**
+     * @var PrintRepositoryInterface
+     */
+    protected $repository;
+    
     public function __construct(){
+        $this->repository = new GlobalPrintRepository();
+        $this->repository->addOutput('Initialization of objects...');
         $data = new DataCollection();
         $actors = new ActorCollection($data);
         $this->actors = new CliCollection($actors);
@@ -25,6 +33,7 @@ final class TestflightA380Ber extends AbstractScenario
        
     public function play(): void
     {
+        $this->repository->addOutput('Play Testflight A30 BER starts.');
         $this->flyToAirport();
         $this->waitForLandingPermission();
         $this->land(); 
@@ -35,8 +44,7 @@ final class TestflightA380Ber extends AbstractScenario
     }
     
     public function print():void{
-        $repository = new GlobalPrintRepository();
-        $repository->printOutput();
+        $this->repository->printOutput();
     }
     
     private function flyToAirport():void{
@@ -44,9 +52,9 @@ final class TestflightA380Ber extends AbstractScenario
     }
     
     private function waitForLandingPermission():void{
-        #do{
-        #    echo "Plane ". $this->actors->plane->getName()." is waiting for permission to land...";   
-        #}while(!$this->controllers->tower->getPermissionToLand());
+        do{
+            $this->repository->addOutput("Plane ". $this->actors->getPlane()->getName()." is waiting for permission to land...");   
+        }while(!$this->actors->getAirport()->getTower()->getPermissionToLand());
     }
     
     private function land():void{
