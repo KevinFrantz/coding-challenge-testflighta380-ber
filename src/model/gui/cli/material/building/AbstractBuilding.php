@@ -21,7 +21,7 @@ class AbstractBuilding extends AbstractMaterial implements BuildingInterface
      * @param BuildingInterface $origin
      * @param PrintRepositoryInterface $repository
      */
-    public function __construct(BuildingInterface $origin, ?PrintRepositoryInterface $repository){
+    public function __construct(BuildingInterface $origin, ?PrintRepositoryInterface $repository=NULL){
         parent::__construct($origin, $repository);
     }
 }

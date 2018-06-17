@@ -22,7 +22,7 @@ class AbstractVehicle extends AbstractMaterial implements VehicleInterface
      * @param VehicleInterface $origin
      * @param PrintRepositoryInterface $repository
      */
-    public function __construct(VehicleInterface $origin, ?PrintRepositoryInterface $repository){
+    public function __construct(VehicleInterface $origin, ?PrintRepositoryInterface $repository=NULL){
         parent::__construct($origin, $repository);
     }
     

@@ -18,19 +18,31 @@ class Plane extends AbstractVehicle implements PlaneInterface
      */
     protected $origin;
     
+    /**
+     * @param PlaneInterface $origin
+     * @param PrintRepositoryInterface $repository
+     */
     public function __construct(PlaneInterface $origin, ?PrintRepositoryInterface $repository=null){
         parent::__construct($origin, $repository);    
     }
     
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPassengers()
+     */
     public function getPassengers(): PassengerCollection
     {
-        $this->repository->addOutput('Passengers for '.$this->origin->getName().' requested.');
+        $this->repository->addOutput('Passengers requested.');
         return $this->origin->getPassengers();
     }
 
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::setPassengers()
+     */
     public function setPassengers(PassengerCollection $passengers): void
     {
-        $this->repository->addOutput('Set Passengers for '.$this->origin->getName().'.');
+        $this->repository->addOutput('Set Passengers.');
         $this->origin->setPassengers($passengers);
     }
 }

@@ -5,6 +5,7 @@ use interfaces\model\data\material\vehicle\car\AircraftTractorInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 use model\gui\cli\material\vehicle\AbstractVehicle;
 use interfaces\repository\output\PrintRepositoryInterface;
+use phpDocumentor\Reflection\Types\Null_;
 
 /**
  *
@@ -18,7 +19,7 @@ class AircraftTractor extends AbstractVehicle implements AircraftTractorInterfac
      */
     protected $origin;
     
-    public function __construct(AircraftTractorInterface $origin, ?PrintRepositoryInterface$repository){
+    public function __construct(AircraftTractorInterface $origin, ?PrintRepositoryInterface$repository=NULL){
         parent::__construct($origin, $repository);    
     }
     
