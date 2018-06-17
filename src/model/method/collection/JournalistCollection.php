@@ -20,7 +20,7 @@ class JournalistCollection extends AbstractCollection implements JournalistColle
     {
         $this->clear();
         foreach ($origin->getValues() as $journalist){
-            $journalists->add(new Journalist($journalist));
+            $this->add(new Journalist($journalist));
         }
     }
 }

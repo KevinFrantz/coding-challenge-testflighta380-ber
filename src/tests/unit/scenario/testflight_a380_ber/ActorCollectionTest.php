@@ -3,11 +3,11 @@ namespace tests\unit\scenario\testflight_a380_ber;
 
 use scenario\TestflightA380Ber\ActorCollection;
 use interfaces\model\method\material\person\MajorInterface;
-use model\method\collection\GuestCollection;
 use model\method\collection\JournalistCollection;
 use model\method\material\vehicle\plane\A380;
 use model\method\material\vehicle\car\AircraftTractor;
 use interfaces\model\method\material\building\airport\AirportInterface;
+use interfaces\model\method\collection\GuestCollectionInterface;
 
 /**
  *
@@ -31,7 +31,7 @@ class ActorCollectionTest extends DataCollectionTest
     }
     
     public function testGuest():void{
-        $this->assertInstanceOf(GuestCollection::class, $this->actors->getGuests());
+        $this->assertInstanceOf(GuestCollectionInterface::class, $this->actors->getGuests());
     }
     
     public function testJournalists():void{

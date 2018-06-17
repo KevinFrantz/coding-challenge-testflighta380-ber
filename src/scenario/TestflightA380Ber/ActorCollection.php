@@ -31,6 +31,6 @@ class ActorCollection extends DataCollection implements TestflightA380Ber
        $this->set(self::AIRPORT,new Airport($origin->getAirport()));
        $this->set(self::PLANE,new Plane($origin->getPlane()));
        $this->set(self::GUESTS, new GuestCollection($this->origin->getGuests()));
-       $this->get(self::JOURNALISTS, new JournalistCollection($origin));
+       $this->set(self::JOURNALISTS, new JournalistCollection($origin));
     }
 }

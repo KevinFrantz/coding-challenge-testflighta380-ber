@@ -3,7 +3,7 @@ namespace model\method\material;
 
 use model\method\AbstractMethod;
 use model\data\material\AbstractMaterialModel;
-use interfaces\model\data\material\MaterialInterface;
+use interfaces\model\method\material\MaterialInterface;
 use interfaces\model\data\position\PositionInterface;
 
 /**

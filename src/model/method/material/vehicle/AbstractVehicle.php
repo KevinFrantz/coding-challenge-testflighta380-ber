@@ -2,8 +2,7 @@
 namespace model\method\material\vehicle;
 
 use model\method\material\AbstractMaterial;
-use interfaces\model\method\action\move\MovingInterface;
-use interfaces\model\data\material\vehicle\VehicleInterface;
+use interfaces\model\method\material\vehicle\VehicleInterface;
 use interfaces\model\data\position\PositionInterface;
 
 /**
@@ -11,7 +10,7 @@ use interfaces\model\data\position\PositionInterface;
  * @author kevinfrantz
  *        
  */
-class AbstractVehicle extends AbstractMaterial implements MovingInterface,VehicleInterface
+class AbstractVehicle extends AbstractMaterial implements VehicleInterface
 {
     /**
      * @var VehicleInterface
