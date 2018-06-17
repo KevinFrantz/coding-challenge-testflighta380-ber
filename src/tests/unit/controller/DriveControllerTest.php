@@ -10,6 +10,7 @@ use controller\move\DriveController;
 use interfaces\model\method\action\move\MovingInterface;
 use model\data\position\Geo;
 use model\data\material\building\airport\BER;
+use model\data\material\person\Guest;
 
 /**
  *
@@ -39,7 +40,9 @@ class DriveControllerTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->movingElement = new GuestCollection(new DataGuestCollection());
+        $this->movingElement = new GuestCollection(new DataGuestCollection([
+            new Guest(),new Guest(),new Guest()
+        ]));
         $this->movingElement->setPosition(new Geo());
         $this->target = new BerAirportTerminal(new BerAirportTerminalOrigin(new BER()));
         $this->controller = new DriveController($this->movingElement);
