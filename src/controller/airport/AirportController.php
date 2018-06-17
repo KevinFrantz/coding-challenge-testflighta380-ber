@@ -2,11 +2,11 @@
 namespace controller\airport;
 
 use controller\AbstractController;
-use model\data\material\building\airport\AbstractAirport;
 use interfaces\model\data\material\building\RunwayInterface;
 use interfaces\model\data\material\building\gate\GateInterface;
 use controller\airport\exception\NoFreeRunwayException;
 use controller\airport\exception\NoFreeGateException;
+use interfaces\model\method\material\building\airport\AirportInterface;
 
 /**
  *
@@ -18,14 +18,14 @@ class AirportController extends AbstractController
 
     /**
      *
-     * @var AbstractAirport
+     * @var AirportInterface
      */
     protected $airport;
 
     /**
-     * @param AbstractAirport $airport
+     * @param AirportInterface $airport
      */
-    public function __construct(AbstractAirport $airport)
+    public function __construct(AirportInterface $airport)
     {
         $this->airport = $airport;
     }
