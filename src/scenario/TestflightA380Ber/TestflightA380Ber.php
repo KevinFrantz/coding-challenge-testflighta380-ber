@@ -65,6 +65,7 @@ final class TestflightA380Ber extends AbstractScenario
             $this->actors->getPlane()->moveTo($landingTarget);
         }while($this->actors->getPlane()->getPosition() != $landingTarget->getPosition());
         $this->repository->addOutput('Plane landet.');
+        $this->actors->getGuests()->applaud();
     }
     
     private function moveToGate():void

@@ -5,6 +5,7 @@ use interfaces\model\data\collection\CollectionInterface;
 use interfaces\model\method\collection\GuestCollectionInterface;
 use model\gui\cli\material\person\Guest;
 
+
 /**
  *
  * @author kevinfrantz
@@ -26,6 +27,16 @@ final class GuestCollection extends AbstractCollection implements GuestCollectio
             $this->add(new Guest($guest, $this->getGuiRepository()));
         }
         $this->origin= $origin;
+    }
+    
+    public function applaud(): void
+    {
+        /**
+         * @var Guest $guest
+         */
+        foreach ($this->getValues() as $guest){
+            $guest->applaud();
+        }
     }
 }
 
