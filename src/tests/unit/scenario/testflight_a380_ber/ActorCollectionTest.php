@@ -7,7 +7,7 @@ use model\method\collection\GuestCollection;
 use model\method\collection\JournalistCollection;
 use model\method\material\vehicle\plane\A380;
 use model\method\material\vehicle\car\AircraftTractor;
-use model\method\material\building\airport\Airport;
+use interfaces\model\method\material\building\airport\AirportInterface;
 
 /**
  *
@@ -47,7 +47,7 @@ class ActorCollectionTest extends DataCollectionTest
     }
     
     public function testAirport():void{
-        $this->assertInstanceOf(Airport::class, $this->actors->getAirport());
+        $this->assertInstanceOf(AirportInterface::class, $this->actors->getAirport());
     }
 }
 

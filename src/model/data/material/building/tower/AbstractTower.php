@@ -2,7 +2,7 @@
 namespace model\data\material\building\tower;
 
 use model\data\material\building\AbstractBuilding;
-use interfaces\model\data\material\building\TowerInterface;
+use interfaces\model\data\material\building\tower\AirportTowerInterface;
 use interfaces\model\data\material\building\airport\AirportInterface;
 
 /**
@@ -10,7 +10,7 @@ use interfaces\model\data\material\building\airport\AirportInterface;
  * @author kevinfrantz
  *        
  */
-abstract class AbstractTower extends AbstractBuilding implements TowerInterface
+abstract class AbstractTower extends AbstractBuilding implements AirportTowerInterface
 {
     /**
      * @var AirportInterface

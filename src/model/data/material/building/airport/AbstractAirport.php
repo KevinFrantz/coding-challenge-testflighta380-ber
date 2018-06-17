@@ -4,7 +4,7 @@ namespace model\data\material\building\airport;
 use model\data\material\building\AbstractBuilding;
 use interfaces\model\data\material\building\airport\AirportInterface;
 use interfaces\model\data\material\building\TerminalInterface;
-use interfaces\model\data\material\building\TowerInterface;
+use interfaces\model\data\material\building\tower\AirportTowerInterface;
 use interfaces\model\data\collection\GateCollectionInterface;
 use interfaces\model\data\collection\RunwayCollectionInterface;
 use interfaces\model\data\material\building\airport\attribute\NameInterface;
@@ -19,7 +19,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
     protected $terminal;
 
     /**
-     * @var TowerInterface
+     * @var AirportTowerInterface
      */
     protected $tower;
 
@@ -51,7 +51,7 @@ abstract class AbstractAirport extends AbstractBuilding implements AirportInterf
      * {@inheritDoc}
      * @see \interfaces\model\data\material\building\airport\AirportInterface::getTower()
      */
-    public function getTower(): TowerInterface
+    public function getTower(): AirportTowerInterface
     {
         return $this->tower;
     }
