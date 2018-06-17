@@ -6,7 +6,6 @@ use interfaces\model\method\action\applaud\ApplaudInterface;
 use interfaces\model\data\collection\CollectionInterface as DataCollectionInterface;
 use interfaces\model\method\collection\GuestCollectionInterface;
 use interfaces\model\data\position\PositionInterface;
-use model\data\collection\PersonCollection;
 use model\method\material\person\Guest;
 
 /**
