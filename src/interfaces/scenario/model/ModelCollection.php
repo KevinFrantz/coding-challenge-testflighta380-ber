@@ -1,5 +1,5 @@
 <?php
-namespace interfaces\scenario\actors;
+namespace interfaces\scenario\model;
 
 use interfaces\model\data\collection\CollectionInterface;
 
@@ -8,7 +8,7 @@ use interfaces\model\data\collection\CollectionInterface;
  * @author kevinfrantz
  *        
  */
-interface ActorCollectionInterface extends CollectionInterface
+interface ModelCollection extends CollectionInterface
 {
 }
 
