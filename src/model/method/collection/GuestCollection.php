@@ -3,22 +3,19 @@ namespace model\method\collection;
 
 use interfaces\model\method\action\move\MovingInterface;
 use interfaces\model\method\action\applaud\ApplaudInterface;
-use interfaces\model\data\collection\GuestCollectionInterface;
+use interfaces\model\data\collection\CollectionInterface as DataCollectionInterface;
+use interfaces\model\method\collection\GuestCollectionInterface;
 use interfaces\model\data\position\PositionInterface;
 use model\data\collection\PersonCollection;
+use model\method\material\person\Guest;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-class GuestCollection extends PersonCollection implements ApplaudInterface,MovingInterface
+class GuestCollection extends PersonCollection implements ApplaudInterface,MovingInterface,GuestCollectionInterface
 {
-    /**
-     * @var GuestCollectionInterface
-     */
-    protected $origin;
-    
     /**
      * {@inheritDoc}
      * @see \interfaces\model\method\action\applaud\ApplaudInterface::applaud()
@@ -53,6 +50,12 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Movin
     {
         return $this->get(0)->getPosition();
     }
-
+    
+    protected function initOriginCollection(DataCollectionInterface $origin)
+    {
+        foreach($origin->getValues() as $guest){
+            $this->add(new Guest($guest));
+        }
+    }
 }
 
