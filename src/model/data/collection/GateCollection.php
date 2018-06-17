@@ -8,7 +8,7 @@ use interfaces\model\data\collection\GateCollectionInterface;
  * @author kevinfrantz
  *        
  */
-class GateCollection extends AbstractCollection implements GateCollectionInterface
+final class GateCollection extends AbstractCollection implements GateCollectionInterface
 {
 }
 

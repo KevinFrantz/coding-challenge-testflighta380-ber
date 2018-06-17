@@ -8,7 +8,7 @@ use interfaces\model\data\collection\JournalistCollectionInterface;
  * @author kevinfrantz
  *        
  */
-class JournalistCollection extends PersonCollection implements JournalistCollectionInterface
+final class JournalistCollection extends PersonCollection implements JournalistCollectionInterface
 {
 }
 

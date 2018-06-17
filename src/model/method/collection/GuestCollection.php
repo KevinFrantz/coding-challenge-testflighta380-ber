@@ -34,6 +34,7 @@ final class GuestCollection extends PersonCollection implements ApplaudInterface
         foreach($origin->getValues() as $guest){
             $this->add(new Guest($guest));
         }
+        $this->origin = $origin;
     }
 }
 

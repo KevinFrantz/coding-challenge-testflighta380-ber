@@ -24,6 +24,7 @@ class PersonCollection extends AbstractCollection implements PersonCollectionInt
         foreach ($origin->getValues() as $person){
             $this->add(new Person($person));
         }
+        $this->origin = $origin;
     }
 
     /**

@@ -8,7 +8,7 @@ use interfaces\model\data\collection\GuestCollectionInterface;
  * @author kevinfrantz
  *        
  */
-class GuestCollection extends PersonCollection implements GuestCollectionInterface
+final class GuestCollection extends PersonCollection implements GuestCollectionInterface
 {
 }
 
