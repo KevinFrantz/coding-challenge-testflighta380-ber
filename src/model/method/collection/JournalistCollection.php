@@ -1,7 +1,7 @@
 <?php
 namespace model\method\collection;
 
-use interfaces\model\method\collection\CollectionInterface as DataCollectionInterface;
+use interfaces\model\data\collection\CollectionInterface as DataCollectionInterface;
 use interfaces\model\method\collection\JournalistCollectionInterface;
 use model\method\material\person\Journalist;
 
