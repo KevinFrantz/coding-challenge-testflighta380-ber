@@ -1,8 +1,8 @@
 <?php
 namespace model\gui\cli\material\vehicle\car;
 
-use model\method\material\vehicle\AbstractVehicle;
 use interfaces\model\method\material\vehicle\VehicleInterface;
+use model\gui\cli\material\vehicle\AbstractVehicle;
 
 /**
  *
