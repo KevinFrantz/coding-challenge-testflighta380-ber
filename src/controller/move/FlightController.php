@@ -13,11 +13,11 @@ class FlightController extends AbstractMoveController
 {   
     public function moveTo(TargetInterface $target): void
     {
-        $this->movingElement->setMovingPosition(
+        $this->movingElement->setPosition(
             new Sky(
-                $target->getTargetPosition()->getLongitude(),
-                $target->getTargetPosition()->getLatitude(),
-                $target->getTargetPosition()->getHightOverSealevelInMeters()
+                $target->getPosition()->getLongitude(),
+                $target->getPosition()->getLatitude(),
+                $target->getPosition()->getHightOverSealevelInMeters()
                 )
             );
     }

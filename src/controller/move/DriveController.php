@@ -22,8 +22,8 @@ class DriveController extends AbstractMoveController
      */
     private function teleportationShortcut(TargetInterface $target): void
     {
-        $this->movingElement->setMovingPosition(new Geo($target->getTargetPosition()
-            ->getLongitude(), $target->getTargetPosition()
+        $this->movingElement->setPosition(new Geo($target->getPosition()
+            ->getLongitude(), $target->getPosition()
             ->getLatitude()));
     }
 }

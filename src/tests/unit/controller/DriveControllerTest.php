@@ -17,18 +17,22 @@ use model\data\material\building\airport\BER;
  */
 class DriveControllerTest extends TestCase
 {
+
     /**
+     *
      * @var DriveController
      */
     protected $controller;
 
     /**
+     *
      * @var BerAirportTerminal
      */
     protected $target;
 
     /**
-     * @var GuestCollection 
+     *
+     * @var GuestCollection
      */
     protected $movingElement;
 
@@ -36,26 +40,25 @@ class DriveControllerTest extends TestCase
     {
         $this->movingElement = new GuestCollection();
         $this->movingElement->setPosition(new Geo());
-        $this->target = new BerAirportTerminal(
-            new BerAirportTerminalOrigin(
-                new BER()
-                )
-            );
+        $this->target = new BerAirportTerminal(new BerAirportTerminalOrigin(new BER()));
         $this->controller = new DriveController($this->movingElement);
     }
-    
-    public function testGetter():void{
+
+    public function testGetter(): void
+    {
         $this->assertInstanceOf(MovingInterface::class, $this->controller->getMovingElement());
     }
 
     public function testMove(): void
     {
         $this->controller->moveTo($this->target);
-        $this->assertEquals($this->target->getPosition()->getLatitude(), $this->movingElement->getMovingPosition()->getLatitude());
+        $this->assertEquals($this->target->getPosition()
+            ->getLatitude(), $this->movingElement->getPosition()
+            ->getLatitude());
     }
-    
+
     public function testMovingElementGetter(): void
     {
-        $this->assertEquals($this->movingElement,$this->controller->getMovingElement());
+        $this->assertEquals($this->movingElement, $this->controller->getMovingElement());
     }
 }
