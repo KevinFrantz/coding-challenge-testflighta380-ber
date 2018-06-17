@@ -17,6 +17,8 @@ use model\data\material\person\Journalist;
 use model\data\material\vehicle\car\AircraftTractor;
 use interfaces\model\data\collection\GuestCollectionInterface;
 use model\data\collection\GuestCollection;
+use interfaces\model\data\material\person\PilotInterface;
+use model\data\material\person\Pilot;
 
 /**
  *
@@ -52,9 +54,19 @@ class DataCollection extends AbstractDataCollection implements TestflightA380Ber
     {
         $plane = new A380();
         $plane->setName('Wright Brothers Flight');
+        $plane->setPilot($this->generatePilot());
         $this->set(self::PLANE, $plane);
     }
 
+    /**
+     * @return PilotInterface
+     */
+    private function generatePilot():PilotInterface{
+       $pilot = new Pilot();
+       $pilot->setName('Alexander Gerst');
+       return $pilot;
+    }
+    
     private function initJournalistCollection(): void
     {
         $journalists = new JournalistCollection();
