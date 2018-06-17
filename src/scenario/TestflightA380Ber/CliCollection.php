@@ -2,6 +2,7 @@
 namespace scenario\TestflightA380Ber;
 
 use model\gui\cli\material\person\Major;
+use model\gui\cli\collection\GuestCollection;
 
 /**
  *
@@ -24,7 +25,7 @@ class CliCollection extends ActorCollection
         #$this->set(self::AIRCRAFT_TRACTOR,new AircraftTractor($origin->getAircraftTractor()));
         #$this->set(self::AIRPORT,new Airport($origin->getAirport()));
         #$this->set(self::PLANE,new Plane($origin->getPlane()));
-        #$this->set(self::GUESTS, new GuestCollection($this->origin->getGuests()));
+        $this->set(self::GUESTS, new GuestCollection($this->origin->getGuests()));
         #$this->set(self::JOURNALISTS, new JournalistCollection($origin));
     }
 }

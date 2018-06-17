@@ -7,6 +7,7 @@ use interfaces\model\gui\cli\CliInterface;
 use interfaces\repository\RepositoryInterface;
 use interfaces\model\method\MethodInterface;
 use repository\output\GlobalPrintRepository;
+use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
  * @author kevinfrantz
@@ -15,7 +16,7 @@ use repository\output\GlobalPrintRepository;
 abstract class AbstractCollection extends ArrayCollection implements CollectionInterface, CliInterface
 {
     /**
-     * @var RepositoryInterface
+     * @var PrintRepositoryInterface
      */
     protected $repository;
     
@@ -30,18 +31,26 @@ abstract class AbstractCollection extends ArrayCollection implements CollectionI
      */
     public function __construct(MethodInterface $origin, ?RepositoryInterface $repository=NULL){
         if(!$repository){
-            $this->setRepository(new GlobalPrintRepository());
+            $this->setGuiRepository(new GlobalPrintRepository());
         }
         $this->initOriginCollection($origin);
     }
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\gui\GuiInterface::setRepository()
+     * @see \interfaces\model\gui\GuiInterface::setGuiRepository()
      */
-    public function setRepository(RepositoryInterface $repository)
+    public function setGuiRepository(RepositoryInterface $repository):void
     {
         $this->repository = $repository;
+    }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\gui\GuiInterface::getGuiRepository()
+     */
+    public function getGuiRepository(): RepositoryInterface{
+        return $this->repository;
     }
 }
 

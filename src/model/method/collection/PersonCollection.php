@@ -5,6 +5,7 @@ use interfaces\model\data\collection\PersonCollectionInterface;
 use interfaces\model\data\position\PositionInterface;
 use interfaces\model\data\collection\CollectionInterface as DataCollectionInterface;
 use interfaces\model\method\action\move\MovingInterface;
+use model\method\material\person\Person;
 
 /**
  *
@@ -21,7 +22,7 @@ class PersonCollection extends AbstractCollection implements PersonCollectionInt
     {
         $this->clear();
         foreach ($origin->getValues() as $person){
-            $this->add($person);
+            $this->add(new Person($person));
         }
     }
 

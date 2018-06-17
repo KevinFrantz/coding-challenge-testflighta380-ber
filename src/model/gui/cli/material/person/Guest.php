@@ -10,7 +10,7 @@ use interfaces\repository\output\PrintRepositoryInterface;
  * @author kevinfrantz
  *        
  */
-class Guest extends AbstractPerson implements GuestInterface
+class Guest extends Person implements GuestInterface
 {
     /**
      * @var MethodGuest

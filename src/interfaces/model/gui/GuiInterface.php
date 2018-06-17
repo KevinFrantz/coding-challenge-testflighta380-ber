@@ -11,6 +11,8 @@ use interfaces\repository\RepositoryInterface;
  */
 interface GuiInterface extends MethodInterface
 {
-    public function setRepository(RepositoryInterface $repository);
+    public function setGuiRepository(RepositoryInterface $repository):void;
+    
+    public function getGuiRepository(): RepositoryInterface;
 }
 

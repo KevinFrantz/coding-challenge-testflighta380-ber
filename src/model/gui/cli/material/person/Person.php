@@ -11,7 +11,7 @@ use interfaces\model\method\material\person\PersonInterface;
  * @author kevinfrantz
  *        
  */
-class AbstractPerson extends AbstractMaterial implements PersonInterface
+class Person extends AbstractMaterial implements PersonInterface
 {
     /** 
      * @var PersonInterface

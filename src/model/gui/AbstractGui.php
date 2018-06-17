@@ -31,17 +31,25 @@ class AbstractGui extends AbstractMethod implements GuiInterface
     public function __construct(DataInterface $origin, ?RepositoryInterface $repository=NULL){
         parent::__construct($origin);
         if(!$repository){
-            $this->setRepository(new GlobalPrintRepository());
+            $this->setGuiRepository(new GlobalPrintRepository());
         }
     }
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\model\gui\GuiInterface::setRepository()
+     * @see \interfaces\model\gui\GuiInterface::setGuiRepository()
      */
-    public function setRepository(RepositoryInterface $repository)
+    public function setGuiRepository(RepositoryInterface $repository):void
     {
         $this->repository = $repository;    
+    }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\gui\GuiInterface::getGuiRepository()
+     */
+    public function getGuiRepository(): RepositoryInterface{
+        return $this->repository;
     }
 }
 

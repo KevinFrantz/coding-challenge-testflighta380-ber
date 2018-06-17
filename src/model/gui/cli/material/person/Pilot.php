@@ -6,7 +6,7 @@ namespace model\gui\cli\material\person;
  * @author kevinfrantz
  *        
  */
-class Pilot extends AbstractPerson
+class Pilot extends Person
 {
 }
 

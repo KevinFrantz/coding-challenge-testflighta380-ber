@@ -7,6 +7,7 @@ use scenario\AbstractScenario;
  *
  * @author kevinfrantz
  * @todo Implement Pilot as flight controller
+ * @todo Set origin at method and cli collections
  */
 final class TestflightA380Ber extends AbstractScenario
 {

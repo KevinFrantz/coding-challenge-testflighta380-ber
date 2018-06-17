@@ -8,7 +8,7 @@ use interfaces\model\method\material\person\MajorInterface;
  * @author kevinfrantz
  *        
  */
-class Major extends AbstractPerson implements MajorInterface
+class Major extends Person implements MajorInterface
 {
 }
 
