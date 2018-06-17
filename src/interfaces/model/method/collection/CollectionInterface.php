@@ -11,6 +11,6 @@ use interfaces\model\method\MethodInterface;
  */
 interface CollectionInterface extends DataCollectionInterface, MethodInterface
 {
-    public function initOriginCollection(DataCollectionInterface $origin); 
+    public function initOriginCollection(DataCollectionInterface $origin):void; 
 }
 

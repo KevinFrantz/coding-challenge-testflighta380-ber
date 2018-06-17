@@ -11,7 +11,7 @@ use model\method\material\person\Guest;
  * @author kevinfrantz
  *        
  */
-class GuestCollection extends PersonCollection implements ApplaudInterface,GuestCollectionInterface
+final class GuestCollection extends PersonCollection implements ApplaudInterface,GuestCollectionInterface
 {
     /**
      * {@inheritDoc}
@@ -28,7 +28,7 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Guest
      * {@inheritDoc}
      * @see \interfaces\model\method\collection\CollectionInterface::initOriginCollection()
      */
-    public function initOriginCollection(DataCollectionInterface $origin)
+    public function initOriginCollection(DataCollectionInterface $origin):void
     {
         $this->clear();
         foreach($origin->getValues() as $guest){

@@ -32,6 +32,8 @@ class AbstractGui extends AbstractMethod implements GuiInterface
         parent::__construct($origin);
         if(!$repository){
             $this->setGuiRepository(new GlobalPrintRepository());
+        }else{
+            $this->repository = $repository;
         }
     }
     

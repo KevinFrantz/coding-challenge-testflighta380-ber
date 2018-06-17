@@ -18,7 +18,7 @@ class PersonCollection extends AbstractCollection implements PersonCollectionInt
      * {@inheritDoc}
      * @see \interfaces\model\method\collection\CollectionInterface::initOriginCollection()
      */
-    public function initOriginCollection(DataCollectionInterface $origin)
+    public function initOriginCollection(DataCollectionInterface $origin):void
     {
         $this->clear();
         foreach ($origin->getValues() as $person){

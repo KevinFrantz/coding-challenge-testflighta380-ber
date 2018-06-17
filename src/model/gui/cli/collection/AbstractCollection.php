@@ -10,46 +10,57 @@ use repository\output\GlobalPrintRepository;
 use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
+ *
  * @author kevinfrantz
  *        
  */
 abstract class AbstractCollection extends ArrayCollection implements CollectionInterface, CliInterface
 {
+
     /**
+     *
      * @var PrintRepositoryInterface
      */
     protected $repository;
-    
+
     /**
+     *
      * @var MethodInterface
      */
     protected $origin;
-    
+
     /**
      * Set origin source and define an standart repository
+     *
      * @param MethodInterface $origin
      */
-    public function __construct(MethodInterface $origin, ?RepositoryInterface $repository=NULL){
-        if(!$repository){
+    public function __construct(MethodInterface $origin, ?RepositoryInterface $repository = NULL)
+    {
+        if (! $repository) {
             $this->setGuiRepository(new GlobalPrintRepository());
+        } else {
+            $this->repository = $repository;
         }
         $this->initOriginCollection($origin);
     }
-    
+
     /**
-     * {@inheritDoc}
+     *
+     * {@inheritdoc}
      * @see \interfaces\model\gui\GuiInterface::setGuiRepository()
      */
-    public function setGuiRepository(RepositoryInterface $repository):void
+    public function setGuiRepository(RepositoryInterface $repository): void
     {
         $this->repository = $repository;
     }
-    
+
     /**
-     * {@inheritDoc}
+     *
+     * {@inheritdoc}
      * @see \interfaces\model\gui\GuiInterface::getGuiRepository()
      */
-    public function getGuiRepository(): RepositoryInterface{
+    public function getGuiRepository(): RepositoryInterface
+    {
         return $this->repository;
     }
 }
