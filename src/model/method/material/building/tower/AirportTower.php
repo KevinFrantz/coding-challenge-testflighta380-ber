@@ -7,7 +7,7 @@ use interfaces\model\data\material\building\RunwayInterface;
 use controller\airport\AirportController;
 use interfaces\model\data\material\building\airport\AirportInterface;
 use model\method\material\building\AbstractBuilding;
-use interfaces\model\method\material\building\tower\TowerInterface;
+use interfaces\model\method\material\building\tower\AirportTowerInterface as MethodAirportTower;
 use interfaces\model\data\material\building\tower\AirportTowerInterface;
 
 /**
@@ -15,7 +15,7 @@ use interfaces\model\data\material\building\tower\AirportTowerInterface;
  * @author kevinfrantz
  *        
  */
-class AirportTower extends AbstractBuilding implements TowerInterface
+class AirportTower extends AbstractBuilding implements MethodAirportTower
 {
     /**
      * This Tower is acting as the airport controller because it's descriped like this in the task ;)
