@@ -37,37 +37,41 @@ class DataCollection extends AbstractDataCollection implements TestflightA380Ber
 
     const AIRPORT = 6;
 
-    public function __construct(){
-        $this->set(self::MAJOR,new Major());
-        $this->set(self::AIRCRAFT_TRACTOR,new AircraftTractor());
-        $this->set(self::AIRPORT,new BER());
+    public function __construct()
+    {
+        $this->set(self::MAJOR, new Major());
+        $this->set(self::AIRCRAFT_TRACTOR, new AircraftTractor());
+        $this->set(self::AIRPORT, new BER());
         $this->initPlane();
         $this->initJournalistCollection();
         $this->initGuestCollection();
     }
-    
-    private function initPlane():void{
+
+    private function initPlane(): void
+    {
         $plane = new A380();
         $plane->setName('Wright Brothers Flight');
-        $this->set(self::PLANE,$plane);
+        $this->set(self::PLANE, $plane);
     }
-    
-    private function initJournalistCollection():void{
+
+    private function initJournalistCollection(): void
+    {
         $journalists = new JournalistCollection();
-        for ($i=1;$i<=rand(1,500);$i++){
+        for ($i = 1; $i <= rand(1, 500); $i ++) {
             $journalists->add(new Journalist());
         }
-        $this->set(self::JOURNALISTS,$journalists);
+        $this->set(self::JOURNALISTS, $journalists);
     }
-    
-    private function initGuestCollection():void{
+
+    private function initGuestCollection(): void
+    {
         $guests = new GuestCollection();
-        for ($i=1;$i<=50;$i++){
+        for ($i = 1; $i <= 50; $i ++) {
             $guests->add(new Guest());
         }
-        $this->set(self::GUESTS,$guests);
+        $this->set(self::GUESTS, $guests);
     }
-    
+
     /**
      *
      * {@inheritdoc}
