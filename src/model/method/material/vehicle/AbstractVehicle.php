@@ -57,6 +57,6 @@ abstract class AbstractVehicle extends AbstractMaterial implements VehicleInterf
      */
     public function moveTo(TargetInterface $target): void
     {
-        $this->moveTo->moveTo($target);   
+        $this->moveController->moveTo($target);   
     }
 }
