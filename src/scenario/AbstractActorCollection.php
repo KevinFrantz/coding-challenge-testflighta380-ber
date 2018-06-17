@@ -1,13 +1,12 @@
 <?php
 namespace scenario;
 
-use interfaces\scenario\actors\ActorCollectionInterface;
-use Doctrine\Common\Collections\ArrayCollection;
+use interfaces\scenario\model\actor\ActorCollectionInterface;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-abstract class AbstractActorCollection extends ArrayCollection implements ActorCollectionInterface
+abstract class AbstractActorCollection extends AbstractDataCollection implements ActorCollectionInterface
 {}

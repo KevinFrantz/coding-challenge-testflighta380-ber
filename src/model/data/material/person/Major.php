@@ -1,7 +1,9 @@
 <?php
 namespace model\data\material\person;
 
-class Major extends AbstractPerson
+use interfaces\model\data\material\person\MajorInterface;
+
+class Major extends AbstractPerson implements MajorInterface
 {
 }
 

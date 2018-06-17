@@ -11,6 +11,9 @@ use scenario\TestflightA380Ber\TestflightA380Ber;
  */
 class TestflightA380Test extends TestCase
 {
+    /**
+     * @var TestflightA380Ber
+     */
     protected $testflight;
     
     public function setUp():void{

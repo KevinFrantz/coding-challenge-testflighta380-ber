@@ -1,7 +1,9 @@
 <?php
 namespace model\data\material\person;
 
-class Guest extends AbstractPerson
+use interfaces\model\data\material\person\GuestInterface;
+
+class Guest extends AbstractPerson implements GuestInterface
 {
 }
 
