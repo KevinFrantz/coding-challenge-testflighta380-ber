@@ -9,10 +9,12 @@ use interfaces\repository\output\PrintRepositoryInterface;
 /**
  *
  * @author kevinfrantz
- * @todo Implement Pilot as flight controller
+ * @todo Implement Pilot for permission to land.
  */
 final class TestflightA380Ber extends AbstractScenario
 {
+    const PLAY_NAME = 'Testflight A390 BER';
+    
     /**
      * @var ActorsTestflightA380Ber
      */
@@ -33,7 +35,7 @@ final class TestflightA380Ber extends AbstractScenario
        
     public function play(): void
     {
-        $this->repository->addOutput('Play Testflight A30 BER starts.');
+        $this->repository->addVarOutput('Play {0} starts.',[self::PLAY_NAME]);
         $this->flyToAirport();
         $this->waitForLandingPermission();
         $this->land(); 
@@ -53,7 +55,7 @@ final class TestflightA380Ber extends AbstractScenario
     
     private function waitForLandingPermission():void{
         do{
-            $this->repository->addOutput("Plane ". $this->actors->getPlane()->getName()." is waiting for permission to land...");   
+            $this->repository->addOutput("Plane {0} is waiting for permission to land...",[$this->actors->getPlane()->getName()]);   
         }while(!$this->actors->getAirport()->getTower()->getPermissionToLand());
     }
     
@@ -70,7 +72,17 @@ final class TestflightA380Ber extends AbstractScenario
     
     private function moveToGate():void
     {
+        $this->repository->addOutput('Moving procedure starts...');
+        $plane = $this->actors->getPlane();
+        $aircraftTractor = $this->actors->getAircraftTractor();
+        $aircraftTractor->setPlane($plane);
+        $movingTarget = $this->actors->getAirport()->getTower()->getFreeGate();
         
+        $aircraftTractor->moveTo($movingTarget);
+        do{
+            $aircraftTractor->moveTo($movingTarget);
+        }while($plane->getPosition() != $movingTarget->getPosition());
+        $this->repository->addVarOutput('Plane "{0}" arrived at Terminal',[$plane->getName()]);
     }
     
     private function moveOverGateToTerminal():void{

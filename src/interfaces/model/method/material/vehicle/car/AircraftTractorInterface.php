@@ -10,4 +10,8 @@ use interfaces\model\data\material\vehicle\car\AircraftTractorInterface as DataA
  */
 interface AircraftTractorInterface extends CarInterface, DataAircraftTractorInterface
 {
+    /**
+     * @return bool
+     */
+    public function hasPlane():bool;
 }

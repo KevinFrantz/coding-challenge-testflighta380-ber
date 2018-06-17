@@ -3,6 +3,7 @@ namespace model\gui\cli\material\vehicle\plane;
 
 use model\data\collection\PassengerCollection;
 use model\gui\cli\material\vehicle\AbstractVehicle;
+use interfaces\controller\move\MoveControllerInterface;
 use interfaces\model\data\material\person\PilotInterface;
 use interfaces\model\method\material\vehicle\plane\PlaneInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
@@ -70,6 +71,16 @@ class Plane extends AbstractVehicle implements PlaneInterface
     {
         $this->repository->addOutput('Pilot requested.');
         return $this->origin->getPilot();
+    }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\method\material\vehicle\plane\PlaneInterface::setMoveController()
+     */
+    public function setMoveController(MoveControllerInterface $controller): void
+    {
+        $this->repository->addVarOutput('Plane changes movement controller to: {0}', [(new \ReflectionClass($controller))->getShortName()]);
+        $this->origin->setMoveController($controller);   
     }
 }
 

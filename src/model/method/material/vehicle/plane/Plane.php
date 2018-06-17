@@ -5,6 +5,7 @@ use model\data\collection\PassengerCollection;
 use model\method\material\vehicle\AbstractVehicle;
 use interfaces\model\data\material\vehicle\VehicleInterface as DataVehicleInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface as DataPlaneInterface;
+use interfaces\controller\move\MoveControllerInterface;
 use interfaces\model\data\material\person\PilotInterface;
 use interfaces\model\method\material\vehicle\plane\PlaneInterface;
 use controller\move\FlightController;
@@ -70,5 +71,15 @@ class Plane extends AbstractVehicle implements PlaneInterface
     {
         return $this->origin->getPilot();
     }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\method\material\vehicle\plane\PlaneInterface::setMoveController()
+     */
+    public function setMoveController(MoveControllerInterface $controller):void
+    {
+        $this->moveController = $controller;
+    }
+
 }
 

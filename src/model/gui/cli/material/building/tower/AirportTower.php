@@ -54,7 +54,7 @@ class AirportTower extends AbstractBuilding implements AirportTowerInterface
     public function getFreeGate(): GateInterface
     {
         $this->repository->addOutput('Free gate requested.');
-        return $this->origin->getGate();
+        return $this->origin->getFreeGate();
     }
 }
 
