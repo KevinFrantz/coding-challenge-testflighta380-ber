@@ -8,6 +8,7 @@ use controller\airport\AirportController;
 use interfaces\model\data\material\building\airport\AirportInterface;
 use model\method\material\building\AbstractBuilding;
 use interfaces\model\method\material\building\tower\TowerInterface;
+use interfaces\model\data\material\building\tower\AirportTowerInterface;
 
 /**
  *
@@ -23,11 +24,11 @@ class AirportTower extends AbstractBuilding implements TowerInterface
     protected $airportController;
     
     /**
-     * @param TowerInterface $tower
+     * @param AirportTowerInterface $tower
      * @param AirportInterface $airport
      * @param AirportController $airportController
      */
-    public function __construct(TowerInterface $tower, AirportInterface $airport, AirportController $airportController){
+    public function __construct(AirportTowerInterface $tower, AirportInterface $airport, AirportController $airportController){
         parent::__construct($airport);
         $this->airportController = $airportController;
     }

@@ -8,7 +8,7 @@ use interfaces\model\data\collection\RunwayCollectionInterface;
  * @author kevinfrantz
  *        
  */
-class RunwayCollection extends AbstractCollection implements RunwayCollectionInterface
+final class RunwayCollection extends AbstractCollection implements RunwayCollectionInterface
 {
 }
 

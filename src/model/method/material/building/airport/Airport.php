@@ -16,7 +16,7 @@ use interfaces\model\data\material\building\tower\AirportTowerInterface;
  * @author kevinfrantz
  *        
  */
-class Airport extends AbstractBuilding implements AirportInterface
+final class Airport extends AbstractBuilding implements AirportInterface
 {   
     /**
      * @var DataAirportInterface
@@ -27,7 +27,8 @@ class Airport extends AbstractBuilding implements AirportInterface
      * @param DataAirportInterface $origin
      */
     public function __construct(DataAirportInterface $origin){
-        $this->tower = new AirportTower($this->origin, $this, new AirportController($this));
+        $this->tower = new AirportTower($origin->getTower(), $this, new AirportController($this));
+        $this->origin = $origin;
     }
     
     /**
@@ -59,7 +60,7 @@ class Airport extends AbstractBuilding implements AirportInterface
      * @see \interfaces\model\data\material\building\airport\AirportInterface::getTower()
      */
     public function getTower(): AirportTowerInterface{
-        return $this->getTower();
+        return $this->tower;
     }
 }
 
