@@ -67,7 +67,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function getPosition(): PositionInterface
     {
-        $this->repository->addOutput('Position requested.');
+        $this->repository->addVarOutput('Position of "{0} {1}" requested.',[$this->getClassShortName(),$this->origin->getName()]);
         return $this->origin->getPosition();
     }
 }

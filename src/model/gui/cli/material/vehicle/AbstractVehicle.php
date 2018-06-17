@@ -58,7 +58,7 @@ class AbstractVehicle extends AbstractMaterial implements VehicleInterface
         $this->repository->addVarOutput('Move for vehicle {0} to "{1}{2}" requested.',
             [
                 $this->getName(),
-                (new \ReflectionClass($target))->getShortname(),
+                $this->getClassShortName($target),
                 method_exists($target, 'getName') ? ' '.$target->getName():''
             ]
             );
