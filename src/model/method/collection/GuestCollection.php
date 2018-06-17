@@ -1,7 +1,6 @@
 <?php
 namespace model\method\collection;
 
-use interfaces\model\method\action\move\MovingInterface;
 use interfaces\model\method\action\applaud\ApplaudInterface;
 use interfaces\model\data\collection\CollectionInterface as DataCollectionInterface;
 use interfaces\model\method\collection\GuestCollectionInterface;
@@ -13,7 +12,7 @@ use model\method\material\person\Guest;
  * @author kevinfrantz
  *        
  */
-class GuestCollection extends PersonCollection implements ApplaudInterface,MovingInterface,GuestCollectionInterface
+class GuestCollection extends PersonCollection implements ApplaudInterface,GuestCollectionInterface
 {
     /**
      * {@inheritDoc}
@@ -24,30 +23,6 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Movin
         foreach ($this->getValues() as $guest){
             $guest->applaud();
         }
-    }
-    
-    /**
-     * {@inheritDoc}
-     * @see \interfaces\model\method\action\move\MovingInterface::setPosition()
-     */
-    public function setPosition(PositionInterface $position): void
-    {
-        /**
-         * @var GuestInterface $guest
-         */
-        foreach ($this->getValues() as $guest){
-            $guest->setPosition($position);
-        }
-    }
-
-    /**
-     * Returns the Position of the first guest
-     * {@inheritDoc}
-     * @see \interfaces\model\method\action\move\TargetInterface::getPosition()
-     */
-    public function getPosition(): PositionInterface
-    {
-        return $this->get(0)->getPosition();
     }
     
     /**
