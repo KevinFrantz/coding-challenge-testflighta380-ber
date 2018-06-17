@@ -1,12 +1,14 @@
 <?php
 namespace model\method\material\person;
 
+use interfaces\model\method\material\person\MajorInterface;
+
 /**
  *
  * @author kevinfrantz
  *        
  */
-class Major extends Person
+final class Major extends Person implements MajorInterface
 {
 }
 
