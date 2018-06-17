@@ -29,8 +29,8 @@ class CliCollection extends ActorCollection
         $this->set(self::AIRCRAFT_TRACTOR,new AircraftTractor($origin->getAircraftTractor()));
         $this->set(self::AIRPORT,new Airport($origin->getAirport()));
         $this->set(self::PLANE,new A380($origin->getPlane()));
-        $this->set(self::GUESTS, new GuestCollection($this->origin->getGuests()));
-        $this->set(self::JOURNALISTS, new JournalistCollection($origin));
+        $this->set(self::GUESTS, new GuestCollection($origin->getGuests()));
+        $this->set(self::JOURNALISTS, new JournalistCollection($origin->getJournalists()));
     }
 }
 

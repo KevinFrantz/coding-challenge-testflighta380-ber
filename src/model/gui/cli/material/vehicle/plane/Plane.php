@@ -3,7 +3,7 @@ namespace model\gui\cli\material\vehicle\plane;
 
 use model\data\collection\PassengerCollection;
 use model\gui\cli\material\vehicle\AbstractVehicle;
-use interfaces\model\data\material\vehicle\plane\PlaneInterface;
+use interfaces\model\method\material\vehicle\plane\PlaneInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
 
 /**

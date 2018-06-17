@@ -2,15 +2,15 @@
 namespace model\gui\cli;
 
 use model\gui\AbstractGui;
-use interfaces\model\gui\GuiInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
+use interfaces\model\gui\cli\CliInterface;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-abstract class AbstractCli extends AbstractGui implements GuiInterface
+abstract class AbstractCli extends AbstractGui implements CliInterface
 {
     /**
      * @var PrintRepositoryInterface

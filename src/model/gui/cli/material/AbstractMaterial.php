@@ -27,7 +27,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
     public function __construct(MaterialInterface $origin, ?PrintRepositoryInterface $repository = NULL)
     {
         parent::__construct($origin, $repository);
-        $this->repository->addOutput('Material "' . $this->origin->getName() . '" initialized.');
+        $this->repository->addOutput('Material initialized.');
     }
 
     /**
@@ -47,9 +47,8 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function getName(): string
     {
-        $name = $this->origin->getName();
-        $this->repository->addOutput("Name \"$name\" requested.");
-        return $name;
+        $this->repository->addOutput("Name requested.");
+        return $this->origin->getName();
     }
 
     /**
@@ -58,8 +57,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function getPosition(): PositionInterface
     {
-        $position = $this->origin->getPosition();
-        $this->repository->addOutput('Position of ' . $this->origin->getName() . ' requested.');
-        return $position;
+        $this->repository->addOutput('Position requested.');
+        return $this->origin->getPosition();
     }
 }

@@ -32,7 +32,7 @@ class PersonCollection extends AbstractCollection implements PersonCollectionInt
      */
     public function add($element){
         parent::add($element);
-        $this->repository->addOutput("Person ".$element->getName()." added to group.");
+        $this->repository->addOutput("Person added to group.");
     }
 }
 

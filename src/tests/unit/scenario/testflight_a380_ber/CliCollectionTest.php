@@ -9,9 +9,9 @@ use interfaces\model\gui\cli\CliInterface;
 use interfaces\model\method\material\person\MajorInterface;
 use interfaces\model\method\collection\GuestCollectionInterface;
 use interfaces\model\method\collection\JournalistCollectionInterface;
-use model\method\material\vehicle\plane\Plane;
 use interfaces\model\method\material\vehicle\car\AircraftTractorInterface;
 use interfaces\model\method\material\building\airport\AirportInterface;
+use interfaces\model\method\material\vehicle\plane\PlaneInterface;
 
 /**
  *
@@ -20,67 +20,82 @@ use interfaces\model\method\material\building\airport\AirportInterface;
  */
 class CliCollectionTest extends TestCase
 {
+
     /**
+     *
      * @var ActorCollection
      */
     protected $actors;
-    
+
     /**
+     *
      * @var CliCollection
      */
     protected $cli;
-        
-    protected function setUp():void{
+
+    protected function setUp(): void
+    {
         $this->actors = new ActorCollection(new DataCollection());
         $this->cli = new CliCollection($this->actors);
-        
     }
-    
-    public function testMajorCli():void{
+
+    public function testMajorCli(): void
+    {
         $this->assertInstanceOf(CliInterface::class, $this->cli->getMajor());
     }
-    
-    public function testGuestCli():void{
+
+    public function testGuestCli(): void
+    {
         $this->assertInstanceOf(CliInterface::class, $this->cli->getGuests());
     }
-    
-    public function testJournalistsCli():void{
+
+    public function testJournalistsCli(): void
+    {
         $this->assertInstanceOf(CliInterface::class, $this->cli->getJournalists());
     }
-    
-    public function testPlaneCli():void{
+
+    public function testPlaneCli(): void
+    {
         $this->assertInstanceOf(CliInterface::class, $this->cli->getPlane());
     }
-    
-    public function testAircraftTractorCli():void{
+
+    public function testAircraftTractorCli(): void
+    {
         $this->assertInstanceOf(CliInterface::class, $this->cli->getAircraftTractor());
     }
-    
-    public function testAirportCli():void{
+
+    public function testAirportCli(): void
+    {
         $this->assertInstanceOf(CliInterface::class, $this->cli->getAirport());
     }
-    
-    public function testMajorMethod():void{
+
+    public function testMajorMethod(): void
+    {
         $this->assertInstanceOf(MajorInterface::class, $this->cli->getMajor());
     }
-    
-    public function testGuestMethod():void{
+
+    public function testGuestMethod(): void
+    {
         $this->assertInstanceOf(GuestCollectionInterface::class, $this->cli->getGuests());
     }
-    
-    public function testJournalistsMethod():void{
+
+    public function testJournalistsMethod(): void
+    {
         $this->assertInstanceOf(JournalistCollectionInterface::class, $this->cli->getJournalists());
     }
-    
-    public function testPlaneMethod():void{
-        $this->assertInstanceOf(Plane::class, $this->cli->getPlane());
+
+    public function testPlaneMethod(): void
+    {
+        $this->assertInstanceOf(PlaneInterface::class, $this->cli->getPlane());
     }
-    
-    public function testAircraftTractorMethod():void{
+
+    public function testAircraftTractorMethod(): void
+    {
         $this->assertInstanceOf(AircraftTractorInterface::class, $this->cli->getAircraftTractor());
     }
-    
-    public function testAirportMethod():void{
+
+    public function testAirportMethod(): void
+    {
         $this->assertInstanceOf(AirportInterface::class, $this->cli->getAirport());
     }
 }

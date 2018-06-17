@@ -12,15 +12,18 @@ use model\method\material\person\Journalist;
  */
 final class JournalistCollection extends AbstractCollection implements JournalistCollectionInterface
 {
+
     /**
-     * {@inheritDoc}
+     *
+     * {@inheritdoc}
      * @see \interfaces\model\method\collection\CollectionInterface::initOriginCollection()
      */
-    public function initOriginCollection(DataCollectionInterface $origin):void
+    public function initOriginCollection(DataCollectionInterface $origin): void
     {
         $this->clear();
-        foreach ($origin->getValues() as $journalist){
+        foreach ($origin->getValues() as $journalist) {
             $this->add(new Journalist($journalist));
         }
+        $this->origin = $origin;
     }
 }

@@ -19,6 +19,7 @@ final class JournalistCollection extends PersonCollection implements JournalistC
      */
     public function initOriginCollection(CollectionInterface $origin):void
     {
+        $this->repository->addOutput('Initialize journalists.');
         $this->clear();
         /**
          * @var Journalist $journalist
