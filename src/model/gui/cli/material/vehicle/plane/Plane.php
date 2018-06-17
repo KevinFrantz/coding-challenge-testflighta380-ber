@@ -18,7 +18,7 @@ class Plane extends AbstractVehicle implements PlaneInterface
      */
     protected $origin;
     
-    public function __construct(PlaneInterface $origin, ?PrintRepositoryInterface $repository){
+    public function __construct(PlaneInterface $origin, ?PrintRepositoryInterface $repository=null){
         parent::__construct($origin, $repository);    
     }
     

@@ -9,7 +9,7 @@ use interfaces\repository\output\PrintRepositoryInterface;
  * @author kevinfrantz
  *        
  */
-class GlobalPrintRepository implements PrintRepositoryInterface
+final class GlobalPrintRepository implements PrintRepositoryInterface
 {
     /**
      * @var $this
@@ -17,7 +17,6 @@ class GlobalPrintRepository implements PrintRepositoryInterface
     static $instance;
     
     public function __construct(){
-        parent::__construct();
         if(!self::$instance){
             self::$instance = new PrintRepository();
         }
