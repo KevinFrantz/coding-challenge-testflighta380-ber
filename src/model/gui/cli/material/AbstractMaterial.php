@@ -57,7 +57,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function getName(): string
     {
-        $this->repository->addOutput("Name requested.");
+        $this->repository->addVarOutput('Name of "{0}" requested.',[(new \ReflectionClass($this))->getShortName(),$this->origin->getName()]);
         return $this->origin->getName();
     }
 
