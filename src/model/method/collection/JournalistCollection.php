@@ -18,6 +18,7 @@ class JournalistCollection extends AbstractCollection implements JournalistColle
      */
     public function initOriginCollection(DataCollectionInterface $origin)
     {
+        $this->clear();
         foreach ($origin->getValues() as $journalist){
             $journalists->add(new Journalist($journalist));
         }

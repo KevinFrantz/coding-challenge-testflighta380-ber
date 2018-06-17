@@ -51,8 +51,13 @@ class GuestCollection extends PersonCollection implements ApplaudInterface,Movin
         return $this->get(0)->getPosition();
     }
     
-    protected function initOriginCollection(DataCollectionInterface $origin)
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\method\collection\CollectionInterface::initOriginCollection()
+     */
+    public function initOriginCollection(DataCollectionInterface $origin)
     {
+        $this->clear();
         foreach($origin->getValues() as $guest){
             $this->add(new Guest($guest));
         }
