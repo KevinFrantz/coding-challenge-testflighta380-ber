@@ -40,8 +40,9 @@ class ActorCollection extends AbstractActorCollection implements TestflightA380B
     }
     
     private function initPlane():void{
-        $this->plane = new A380();
-        $this->plane->setName('Wright Brothers Flight');
+        $plane = new A380();
+        $plane->setName('Wright Brothers Flight');
+        $this->set(self::PLANE,$plane);
     }
     
     private function initJournalistCollection():void{

@@ -4,7 +4,7 @@ namespace interfaces\scenario\actors;
 use interfaces\model\data\material\building\airport\AirportInterface;
 use interfaces\model\data\material\person\MajorInterface;
 use model\data\collection\GuestCollection;
-use interfaces\model\data\collection\JournalistCollection;
+use interfaces\model\data\collection\JournalistCollectionInterface;
 use interfaces\model\data\material\vehicle\car\AircraftTractorInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
 
@@ -21,7 +21,7 @@ interface TestflightA380Ber extends ActorCollectionInterface
     
     public function getGuests(): GuestCollection;
     
-    public function getJournalists(): JournalistCollection;
+    public function getJournalists(): JournalistCollectionInterface;
     
     public function getAircraftTractor(): AircraftTractorInterface;
     
