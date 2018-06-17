@@ -39,7 +39,13 @@ class Guest extends Person implements GuestInterface
     
     public function applaud(): void
     {
-        $this->repository->addOutput('Person'.$this->origin->getName().' applaud:'.$this->applaudController->getApplaudString());
+        $this->repository->addVarOutput(
+            'Person {0} applaud: {1}',
+            [
+                $this->origin->getName(),
+                $this->applaudController->getApplaudString()
+            ]
+            );
     }
 }
 

@@ -20,5 +20,18 @@ class PrintRepository extends AbstractOutputRepository implements PrintRepositor
             print($outputElement."\n");            
         }
     }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\repository\output\PrintRepositoryInterface::addVarOutput()
+     */
+    public function addVarOutput(string $output, array $variables): void
+    {
+        foreach($variables as $key => $value){
+            $output = str_replace('{'.strtoupper($key).'}', $value, $output);
+        }
+        $this->addOutput($output);
+    }
+
 
 }
