@@ -10,5 +10,9 @@ use interfaces\model\method\material\person\MajorInterface;
  */
 class Major extends Person implements MajorInterface
 {
+    /**
+     * @var string
+     */
+    protected $initializationMessage = 'Major created';
 }
 

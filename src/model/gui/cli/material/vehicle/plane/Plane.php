@@ -19,6 +19,11 @@ class Plane extends AbstractVehicle implements PlaneInterface
     protected $origin;
     
     /**
+     * @var string
+     */
+    protected $initializationMessage = 'Plane initialized';
+    
+    /**
      * @param PlaneInterface $origin
      * @param PrintRepositoryInterface $repository
      */

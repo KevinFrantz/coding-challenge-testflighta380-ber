@@ -8,5 +8,9 @@ namespace model\gui\cli\material\vehicle\plane;
  */
 final class A380 extends Plane
 {
+    /**
+     * @var string
+     */
+    protected $initializationMessage = 'A380 created';
 }
 

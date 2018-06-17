@@ -17,7 +17,7 @@ class PrintRepository extends AbstractOutputRepository implements PrintRepositor
     public function printOutput(): void
     {
         foreach ($this->outputElements->getValues() as $outputElement){
-            print($outputElement);            
+            print($outputElement."\n");            
         }
     }
 

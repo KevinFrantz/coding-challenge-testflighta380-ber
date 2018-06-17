@@ -13,6 +13,11 @@ use interfaces\model\method\material\person\PersonInterface;
  */
 class Person extends AbstractMaterial implements PersonInterface
 {
+    /**
+     * @var string
+     */
+    protected $initializationMessage = 'Person created.';
+    
     /** 
      * @var PersonInterface
      */

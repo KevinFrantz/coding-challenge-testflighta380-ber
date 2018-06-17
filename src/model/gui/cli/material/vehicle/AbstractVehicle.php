@@ -19,6 +19,11 @@ class AbstractVehicle extends AbstractMaterial implements VehicleInterface
     protected $origin;
     
     /**
+     * @var string
+     */
+    protected $initializationMessage = 'Vehicle initialized.';
+    
+    /**
      * @param VehicleInterface $origin
      * @param PrintRepositoryInterface $repository
      */

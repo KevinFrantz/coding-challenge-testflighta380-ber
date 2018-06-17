@@ -18,6 +18,12 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      * @var MaterialInterface
      */
     protected $origin;
+    
+    /**
+     * The message which will be send by the initialization of the object
+     * @var string 
+     */
+    protected $initializationMessage ='Material initialized.';
 
     /**
      *
@@ -27,7 +33,11 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
     public function __construct(MaterialInterface $origin, ?PrintRepositoryInterface $repository = NULL)
     {
         parent::__construct($origin, $repository);
-        $this->repository->addOutput('Material initialized.');
+        $this->initializationMessage();
+    }
+    
+    private function initializationMessage():void{
+        $this->repository->addOutput($this->initializationMessage);
     }
 
     /**

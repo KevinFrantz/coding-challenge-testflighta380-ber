@@ -2,6 +2,8 @@
 namespace scenario\TestflightA380Ber;
 
 use scenario\AbstractScenario;
+use interfaces\scenario\model\actor\TestflightA380Ber as ActorsTestflightA380Ber;
+use repository\output\GlobalPrintRepository;
 
 /**
  *
@@ -10,13 +12,15 @@ use scenario\AbstractScenario;
  */
 final class TestflightA380Ber extends AbstractScenario
 {
+    /**
+     * @var ActorsTestflightA380Ber
+     */
     protected $actors;
     
-    protected $controllers;
-    
     public function __construct(){
-        $this->actors = new CLIActors();
-        $this->controllers = new Controllers($this->actors);
+        $data = new DataCollection();
+        $actors = new ActorCollection($data);
+        $this->actors = new CliCollection($actors);
     }
        
     public function play(): void
@@ -27,18 +31,22 @@ final class TestflightA380Ber extends AbstractScenario
         $this->moveToGate();
         $this->moveOverGateToTerminal();
         $this->publicWelcome();
+       
+    }
+    
+    public function print():void{
+        $repository = new GlobalPrintRepository();
+        $repository->printOutput();
     }
     
     private function flyToAirport():void{
-        $this->controllers->flight->moveTo(
-            $this->actors->airport
-            );
+        $this->actors->getPlane();
     }
     
     private function waitForLandingPermission():void{
-        do{
-            echo "Plane ". $this->actors->plane->getName()." is waiting for permission to land...";   
-        }while(!$this->controllers->tower->getPermissionToLand());
+        #do{
+        #    echo "Plane ". $this->actors->plane->getName()." is waiting for permission to land...";   
+        #}while(!$this->controllers->tower->getPermissionToLand());
     }
     
     private function land():void{

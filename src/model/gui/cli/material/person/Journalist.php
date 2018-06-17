@@ -10,5 +10,9 @@ use interfaces\model\method\material\person\JournalistInterface;
  */
 class Journalist extends Person implements JournalistInterface
 {
+    /**
+     * @var string
+     */
+    protected $initializationMessage = 'Journalist created';
 }
 

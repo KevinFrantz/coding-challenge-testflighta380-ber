@@ -13,6 +13,11 @@ use interfaces\repository\output\PrintRepositoryInterface;
 class Guest extends Person implements GuestInterface
 {
     /**
+     * @var string
+     */
+    protected $initializationMessage = 'Guest created';
+    
+    /**
      * @var MethodGuest
      */
     protected $origin;

@@ -20,11 +20,16 @@ final class AircraftTractor extends AbstractVehicle implements AircraftTractorIn
     protected $origin;
     
     /**
+     * @var string
+     */
+    protected $initializationMessage = 'Aircraft tractor initialized.';
+    
+    /**
      * @param DataAircraftTractorInterface $origin
      * @param PrintRepositoryInterface $repository
      */
     public function __construct(DataAircraftTractorInterface $origin, ?PrintRepositoryInterface$repository=NULL){
-        parent::__construct($origin, $repository);    
+        parent::__construct($origin, $repository);
     }
     
     /**
@@ -33,7 +38,7 @@ final class AircraftTractor extends AbstractVehicle implements AircraftTractorIn
      */
     public function setPlane(PlaneInterface $plane): void
     {
-        $this->repository->addOutput('Plane '.$plane->getName().' hooked in too '.$this->origin->getName());
+        $this->repository->addOutput('Plane hooked in to aircraft tractor.');
     }
 
     /**
