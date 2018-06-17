@@ -40,9 +40,13 @@ abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
      */
     public function setPilot($pilot): void
     {
-        $this->setPilot($pilot);
+        $this->pilot = $pilot;
     }
 
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPilot()
+     */
     public function getPilot(): PilotInterface
     {
         return $this->pilot;
