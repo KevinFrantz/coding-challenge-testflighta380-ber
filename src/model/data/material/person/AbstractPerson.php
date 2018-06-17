@@ -9,7 +9,8 @@ use model\data\position\Sky;
 abstract class AbstractPerson extends AbstractMaterialModel implements PersonInterface
 {
     public function __construct(){
-        $this->position = new Sky();   
+        $this->position = new Sky();
+        $this->name = "unnamed person";
     }
     
     /**
