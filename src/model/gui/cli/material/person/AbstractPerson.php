@@ -22,7 +22,7 @@ class AbstractPerson extends AbstractMaterial implements PersonInterface
      * @param PersonInterface $origin
      * @param PrintRepositoryInterface $repository
      */
-    public function __construct(PersonInterface $origin, ?PrintRepositoryInterface $repository){
+    public function __construct(PersonInterface $origin, ?PrintRepositoryInterface $repository=NULL){
         parent::__construct($origin, $repository);
     }
     
@@ -32,6 +32,6 @@ class AbstractPerson extends AbstractMaterial implements PersonInterface
     public function setPosition(PositionInterface $position): void
     {
         $this->repository->addOutput('Set Position for '.$this->origin->getName().'.');
-        return $this->origin->getPosition();
+        $this->origin->getPosition();
     }
 }

@@ -1,18 +1,18 @@
 <?php
-namespace model\gui;
+namespace model\gui\cli\collection;
 
-use interfaces\model\gui\GuiInterface;
+use interfaces\model\method\collection\CollectionInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use interfaces\model\gui\cli\CliInterface;
 use interfaces\repository\RepositoryInterface;
-use model\method\AbstractMethod;
-use interfaces\model\data\DataInterface;
+use interfaces\model\method\MethodInterface;
 use repository\output\GlobalPrintRepository;
 
 /**
- *
  * @author kevinfrantz
  *        
  */
-class AbstractGui extends AbstractMethod implements GuiInterface
+abstract class AbstractCollection extends ArrayCollection implements CollectionInterface, CliInterface
 {
     /**
      * @var RepositoryInterface
@@ -20,19 +20,19 @@ class AbstractGui extends AbstractMethod implements GuiInterface
     protected $repository;
     
     /**
-     * @var DataInterface
+     * @var MethodInterface
      */
     protected $origin;
     
     /**
      * Set origin source and define an standart repository
-     * @param DataInterface $origin
+     * @param MethodInterface $origin
      */
-    public function __construct(DataInterface $origin, ?RepositoryInterface $repository=NULL){
-        parent::__construct($origin);
+    public function __construct(MethodInterface $origin, ?RepositoryInterface $repository=NULL){
         if(!$repository){
             $this->setRepository(new GlobalPrintRepository());
         }
+        $this->initOriginCollection($origin);
     }
     
     /**
@@ -41,7 +41,7 @@ class AbstractGui extends AbstractMethod implements GuiInterface
      */
     public function setRepository(RepositoryInterface $repository)
     {
-        $this->repository = $repository;    
+        $this->repository = $repository;
     }
 }
 

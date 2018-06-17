@@ -22,7 +22,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      * @param MaterialInterface $origin
      * @param PrintRepositoryInterface $repository
      */
-    public function __construct(MaterialInterface $origin, ?PrintRepositoryInterface $repository){
+    public function __construct(MaterialInterface $origin, ?PrintRepositoryInterface $repository=NULL){
         parent::__construct($origin, $repository);
         $this->repository->addOutput('Material "'.$this->origin->getName().'" initialized.');
     }
@@ -39,7 +39,6 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
 
     public function getName(): string
     {
-        $name = $this->origin->getName();
         $this->repository->addOutput("Name \"$name\" requested.");
         return $name;
     }

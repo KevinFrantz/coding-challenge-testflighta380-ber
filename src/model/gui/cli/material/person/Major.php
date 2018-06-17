@@ -1,13 +1,14 @@
 <?php
 namespace model\gui\cli\material\person;
 
-use model\method\material\person\Major as OriginMajor;
+use interfaces\model\method\material\person\MajorInterface;
+
 /**
  *
  * @author kevinfrantz
  *        
  */
-class Major extends OriginMajor
+class Major extends AbstractPerson implements MajorInterface
 {
 }
 
