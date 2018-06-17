@@ -3,6 +3,7 @@ namespace model\gui\cli\material\vehicle\plane;
 
 use model\data\collection\PassengerCollection;
 use model\gui\cli\material\vehicle\AbstractVehicle;
+use interfaces\model\data\material\person\PilotInterface;
 use interfaces\model\method\material\vehicle\plane\PlaneInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
 
@@ -47,8 +48,28 @@ class Plane extends AbstractVehicle implements PlaneInterface
      */
     public function setPassengers(PassengerCollection $passengers): void
     {
-        $this->repository->addOutput('Set Passengers.');
+        $this->repository->addOutput('Set passengers.');
         $this->origin->setPassengers($passengers);
+    }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::setPilot()
+     */
+    public function setPilot($pilot): void
+    {
+        $this->repository->addOutput('Set pilot.');
+        $this->origin->setPilot($pilot);
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPilot()
+     */
+    public function getPilot(): PilotInterface
+    {
+        $this->repository->addOutput('Pilot requested.');
+        return $this->origin->getPilot();
     }
 }
 

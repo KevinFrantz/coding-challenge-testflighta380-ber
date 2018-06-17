@@ -4,6 +4,7 @@ namespace model\method\material\vehicle\plane;
 use model\data\collection\PassengerCollection;
 use model\method\material\vehicle\AbstractVehicle;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface as DataPlaneInterface;
+use interfaces\model\data\material\person\PilotInterface;
 use interfaces\model\method\material\vehicle\plane\PlaneInterface;
 
 /**
@@ -35,5 +36,24 @@ class Plane extends AbstractVehicle implements PlaneInterface
     {
        $this->origin->setPassengers($passengers);   
     }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::setPilot()
+     */
+    public function setPilot($pilot): void
+    {
+       $this->origin->setPilot($pilot); 
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPilot()
+     */
+    public function getPilot(): PilotInterface
+    {
+        return $this->origin->getPilot();
+    }
+
 }
 

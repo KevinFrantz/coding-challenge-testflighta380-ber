@@ -1,7 +1,7 @@
 <?php
 namespace model\method\material\person;
 
-use interfaces\model\data\material\person\PilotInterface;
+use interfaces\model\method\material\person\PilotInterface;
 
 /**
  *

@@ -5,7 +5,6 @@ use interfaces\model\data\material\building\RunwayInterface;
 use interfaces\model\data\material\building\gate\GateInterface;
 use model\gui\cli\material\building\AbstractBuilding;
 use interfaces\model\method\material\building\tower\AirportTowerInterface;
-use model\gui\AbstractGui;
 use interfaces\repository\output\PrintRepositoryInterface;
 
 /**
