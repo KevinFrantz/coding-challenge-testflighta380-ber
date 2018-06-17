@@ -88,7 +88,7 @@ final class TestflightA380Ber extends AbstractScenario
 
     private function moveToGate(): void
     {
-        $this->repository->addOutput('Moving procedure starts...');
+        $this->repository->addOutput('Moving plane to gate procedure starts...');
         $plane = $this->actors->getPlane();
         $aircraftTractor = $this->actors->getAircraftTractor();
         $aircraftTractor->setPlane($plane);
