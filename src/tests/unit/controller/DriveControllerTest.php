@@ -3,6 +3,7 @@ namespace tests\unit\controller;
 
 use PHPUnit\Framework\TestCase;
 use model\method\collection\GuestCollection;
+use model\data\collection\GuestCollection as DataGuestCollection;
 use model\method\material\building\terminal\BerAirportTerminal as BerAirportTerminalOrigin;
 use model\method\material\building\terminal\BerAirportTerminal;
 use controller\move\DriveController;
@@ -38,7 +39,7 @@ class DriveControllerTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->movingElement = new GuestCollection();
+        $this->movingElement = new GuestCollection(new DataGuestCollection());
         $this->movingElement->setPosition(new Geo());
         $this->target = new BerAirportTerminal(new BerAirportTerminalOrigin(new BER()));
         $this->controller = new DriveController($this->movingElement);
