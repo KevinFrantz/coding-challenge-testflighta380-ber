@@ -10,7 +10,7 @@ use interfaces\model\method\material\person\PersonInterface;
  * @author kevinfrantz
  *        
  */
-abstract class Person extends AbstractMaterial implements PersonInterface
+class Person extends AbstractMaterial implements PersonInterface
 {
     /**
      * @var PersonInterface
@@ -22,7 +22,7 @@ abstract class Person extends AbstractMaterial implements PersonInterface
      */
     public function setPosition(PositionInterface $position): void
     {
-        $this->setPosition($position);
+        $this->origin->setPosition($position);
     }
 }
 
