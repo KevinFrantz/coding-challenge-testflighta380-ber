@@ -9,7 +9,7 @@ namespace repository\output;
  */
 class PrettyPrintRepositoy extends PrintRepository
 {
-    const FRAME_WIDTH = 90;
+    const FRAME_WIDTH = 120;
     
     /**
      * This attribute is defined by lazy loading. 

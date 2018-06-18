@@ -68,7 +68,7 @@ final class TestflightA380Ber extends AbstractScenario
     private function waitForLandingPermission(): void
     {
         do {
-            $this->repository->addString("Plane {0} is waiting for permission to land...", [
+            $this->repository->addSubHeadline("Plane {0} is waiting for permission to land...", [
                 $this->actors->getPlane()
                     ->getName()
             ]);
@@ -79,7 +79,7 @@ final class TestflightA380Ber extends AbstractScenario
 
     private function land(): void
     {
-        $this->repository->addOutput('Landing procedure starts...');
+        $this->repository->addSubHeadline('Landing procedure starts...');
         $landingTarget = $this->actors->getAirport()
             ->getTower()
             ->getFreeRunway();
@@ -93,7 +93,7 @@ final class TestflightA380Ber extends AbstractScenario
 
     private function moveToGate(): void
     {
-        $this->repository->addOutput('Moving plane to gate procedure starts...');
+        $this->repository->addSubHeadline('Moving plane to gate procedure starts...');
         $plane = $this->actors->getPlane();
         $aircraftTractor = $this->actors->getAircraftTractor();
         $aircraftTractor->setPlane($plane);
@@ -112,11 +112,11 @@ final class TestflightA380Ber extends AbstractScenario
 
     private function moveOverGateToTerminal(): void
     {
-        
+        $this->repository->addSubHeadline('Guests move to terminal...');
     }
 
     private function publicWelcome(): void
     {
-        
+        $this->repository->addSubHeadline('Public welcome starts...');
     }
 }
