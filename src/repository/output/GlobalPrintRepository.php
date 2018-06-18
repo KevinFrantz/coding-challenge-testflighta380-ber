@@ -49,7 +49,7 @@ final class GlobalPrintRepository implements PrintRepositoryInterface
      * {@inheritDoc}
      * @see \interfaces\repository\output\PrintRepositoryInterface::addString()
      */
-    public function addString(string $output, array $variables): void
+    public function addString(string $output, ?array $variables=[]): void
     {
         self::$instance->addString($output, $variables);
     }
