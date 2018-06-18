@@ -5,13 +5,14 @@ use interfaces\model\data\collection\CollectionInterface;
 use interfaces\model\method\collection\PersonCollectionInterface;
 use model\gui\cli\material\person\Person;
 use interfaces\model\method\material\person\PersonInterface;
+use interfaces\model\method\action\speak\SpeakInterface;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-class PersonCollection extends AbstractCollection implements PersonCollectionInterface
+class PersonCollection extends AbstractCollection implements PersonCollectionInterface,SpeakInterface
 {
     public function initOriginCollection(CollectionInterface $origin):void
     {
@@ -34,5 +35,19 @@ class PersonCollection extends AbstractCollection implements PersonCollectionInt
         parent::add($element);
         $this->repository->addOutput("Person added to group.");
     }
+    
+    /**
+     * @param string $sentence
+     */
+    public function speak(string $sentence): void
+    {
+        /**
+         * @var PersonInterface $person
+         */
+        foreach ($this->getValues() as $person){
+            $person->speak($sentence);
+        }
+    }
+
 }
 

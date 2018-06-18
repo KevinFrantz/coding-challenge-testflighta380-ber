@@ -5,13 +5,14 @@ use model\gui\cli\material\AbstractMaterial;
 use interfaces\model\data\position\PositionInterface;
 use interfaces\repository\output\PrintRepositoryInterface;
 use interfaces\model\method\material\person\PersonInterface;
+use interfaces\model\method\action\speak\SpeakInterface;
 
 /**
  *
  * @author kevinfrantz
  *        
  */
-class Person extends AbstractMaterial implements PersonInterface
+class Person extends AbstractMaterial implements PersonInterface, SpeakInterface
 {
     /**
      * @var string
@@ -39,4 +40,14 @@ class Person extends AbstractMaterial implements PersonInterface
         $this->repository->addString('Set Position for {0} "{1}".',[$this->getClassShortName(),$this->origin->getName()]);
         $this->origin->getPosition();
     }
+    
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\method\action\speak\SpeakInterface::speak()
+     */
+    public function speak(string $sentence): void
+    {
+        $this->repository->addString($sentence);
+    }
+
 }
