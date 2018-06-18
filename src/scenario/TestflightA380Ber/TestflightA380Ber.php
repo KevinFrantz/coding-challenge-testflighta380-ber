@@ -5,6 +5,7 @@ use scenario\AbstractScenario;
 use interfaces\scenario\model\actor\TestflightA380Ber as ActorsTestflightA380Ber;
 use interfaces\repository\output\PrintRepositoryInterface;
 use repository\output\PrettyPrintRepositoy;
+use model\gui\cli\collection\GuestCollection;
 
 /**
  *
@@ -110,13 +111,32 @@ final class TestflightA380Ber extends AbstractScenario
         ]);
     }
 
+    /**
+     * This function is not clean implemented
+     */
     private function moveOverGateToTerminal(): void
     {
         $this->repository->addSubHeadline('Guests move to terminal...');
+        /**
+         * @var GuestCollection
+         */
+        $guests = $this->actors->getPlane()->getPassengers();
+        foreach ($guests as $guest){
+            $guest->setPosition($this->actors->getAirport()->getGates()->get(0)->getPosition());
+        }
+        foreach ($guests as $guest){
+            $guest->setPosition($this->actors->getAirport()->getTerminal()->getPosition());
+        }
+        $this->repository->addOutput('Guests arrive in terminal.');
     }
 
+    /**
+     * This function is not clean implemented
+     */
     private function publicWelcome(): void
     {
         $this->repository->addSubHeadline('Public welcome starts...');
+        $this->actors->getMajor()->publicWelcome();
+        $this->actors->getJournalists()->publicWelcome();
     }
 }

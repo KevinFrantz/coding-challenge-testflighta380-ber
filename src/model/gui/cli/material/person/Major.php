@@ -14,5 +14,12 @@ class Major extends Person implements MajorInterface
      * @var string
      */
     protected $initializationMessage = 'Major created';
+    
+    /**
+     * Bad Implementation
+     */
+    public function publicWelcome():void{
+        $this->repository->addOutput('Welcome!');
+    }
 }
 
