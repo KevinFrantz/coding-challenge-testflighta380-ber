@@ -3,7 +3,6 @@ namespace scenario\TestflightA380Ber;
 
 use scenario\AbstractScenario;
 use interfaces\scenario\model\actor\TestflightA380Ber as ActorsTestflightA380Ber;
-use repository\output\GlobalPrintRepository;
 use interfaces\repository\output\PrintRepositoryInterface;
 use repository\output\PrettyPrintRepositoy;
 
@@ -32,7 +31,7 @@ final class TestflightA380Ber extends AbstractScenario
     public function __construct()
     {
         $this->repository = new PrettyPrintRepositoy();
-        $this->repository->addOutput('Initialization of objects...');
+        $this->repository->addHeadline('Initialization of objects...');
         $data = new DataCollection();
         $actors = new ActorCollection($data);
         $this->actors = new CliCollection($actors,$this->repository);
@@ -40,7 +39,7 @@ final class TestflightA380Ber extends AbstractScenario
 
     public function play(): void
     {
-        $this->repository->addVarOutput('Play "{0}" starts.', [
+        $this->repository->addHeadline('Play "{0}" starts.', [
             self::PLAY_NAME
         ]);
         $this->flyToAirport();
