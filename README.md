@@ -23,33 +23,63 @@ Entwickle für mindestens einen relevanten Bereich die notwendigen Tests.
 ## Designhinweise
 
 ### Programmiersprache
-Als Programmiersprache wurde PHP verwendet. Um die PHP Skills zu zeigen.
-In Python wäre das ganze einfacher und schneller gegangen z.B. da Python keine Interfaces kennt und ich nur abstrakte Klassen verwendet hätte.
-
-### Modelle
-Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ordner ./tests abgelegt.
-
-Jede konkrete Klasse erbt von einer abstrakten Klasse, welche sich im entsprechenden Überordner befindet.
+Als Programmiersprache wurde PHP verwendet.
 
 ### Architektur
-Unter ./src/Model findet sich ein Datalayer.
-Auf die Implementierung eines seperaten Functional-Layers wurde aus Zeitgründen verzichtet. 
+#### Layers
+Alle Objekte welche in der obigen Aufgabenstellung beschrieben sind, sind im Ordner ./src/modele abgelegt.
 
-### Tests
-Für folgende Modelle wurden keine Tests geschrieben:
-- Collections
+##### Data
+Das Datalayer represäntiert die Werte der Modelle
 
-## Methodische Erläuterung
-Der Code wurde hauptsächlich nach TDD entwickelt
+##### Method
+Das Methodlayer fügt den Modellen Funktionen hinzu.
 
-## Reflektion
-### Offene Fragen
-- Ist die hierachiche Organisation der Modelle in dieser Form sinnvoll?
-- Ich habe immer noch keine genaue Vorstellung davon was DDD ist. Wo spiegelt sich dies hier im Softwaredesign wieder und wo nicht.
-- Ich denke, dass manchmal die Bezeichnung der Namespaces\\Ordner nicht den Best Practices entspricht. Für Anregungen bin ich offen ;)
-- Wie detailliert müssen die UnitTests sein?
-- Ist es ok, dass UnitTests von anderen UnitTests erben?
-### Selbstkritik
-- PHPDocs wurden nicht verwendet, auch wenn diese für die automatische Generation von Dokumentationen sehr hilfreich sind.
-- Im Regelfall arbeite ich mit PHPStorm und kann mir sicher sein, dass den aktuellen PSR-Standarts gefolgt wird. In diesem Fall verwendete ich Eclipse und hab das ganze nicht noch einmal manuell auf PSR Standarts gegengecheckt.
-- Auf der Model-Ebene erben Gui und Functions von data bzw. method. Dies ist keine gute Kapselung. Diese Vererbung wurde lediglich aus Zeitgründen gewählt.  
+##### Gui
+Das Gui Layer implementiert eine grafische Ausgabe beim Methodenaufruf
+
+#### Controller
+Die Controller stellen dem Method Layer Methoden zur Verfügung
+
+#### Repository
+Repositories werden vom Gui Layer verwendet um grafische Ausgaben zu tätigen.
+
+#### Interfaces
+Die Interfaces beschreiben die öffentlichen Funktionen aller Klassen. Beim Typehinting wurde versucht ausschließlich Interfaces zu verwenden um Polymorphie zu gewährleisten.
+
+### Scenario
+Unter scenario ist das obige Szenario abgelegt.
+
+#### Tests
+Diverse Unit Tests finden sich unter ./src/tests
+
+
+#### Unsaubere Implementierungen
+Die privaten Funktionen
+- moveOverGateToTerminal()
+- publicWelcome()
+
+in dem Szenario TestflightA380Ber sind nicht ordentlich implementiert.
+
+Zudem sind wenige Controller implementiert. Es wären mehr Controller nötig gewesen um eine ordentliche Implementierungen zu gewährleisten. Dies macht sich insbesondere bei den beiden obigen Funktionen bemerkbar.
+
+Aus Zeitgründen waren weitere Implementierungen allerdings nicht möglich.
+
+
+### Start
+#### Native PHP
+Bei installiertem PHP auf dem host System muss lediglich
+
+php ./src/cli.php
+
+ausgeführt werden. Damit werden zunächst die Tests und anschließend das Programm ausgeführt.
+
+Zuvor muss composer noch geupdatet werden. 
+
+#### Docker
+
+Der Dockercontainer wird mit
+
+bash ./start.sh
+
+gestartet.

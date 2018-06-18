@@ -5,7 +5,6 @@ use scenario\AbstractScenario;
 use interfaces\scenario\model\actor\TestflightA380Ber as ActorsTestflightA380Ber;
 use interfaces\repository\output\PrintRepositoryInterface;
 use repository\output\PrettyPrintRepositoy;
-use model\gui\cli\collection\GuestCollection;
 
 /**
  *
