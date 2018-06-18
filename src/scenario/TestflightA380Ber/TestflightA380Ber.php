@@ -135,7 +135,7 @@ final class TestflightA380Ber extends AbstractScenario
     private function publicWelcome(): void
     {
         $this->repository->addSubHeadline('Public welcome starts...');
-        $this->actors->getMajor()->publicWelcome();
+        $this->actors->getMajor()->speak('Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.');
         $this->actors->getJournalists()->publicWelcome();
     }
 }

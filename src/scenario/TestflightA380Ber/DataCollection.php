@@ -42,12 +42,18 @@ class DataCollection extends AbstractDataCollection implements TestflightA380Ber
 
     public function __construct()
     {
-        $this->set(self::MAJOR, new Major());
         $this->set(self::AIRCRAFT_TRACTOR, new AircraftTractor());
         $this->set(self::AIRPORT, new BER());
         $this->initJournalistCollection();
         $this->initGuestCollection();
         $this->initPlane();
+        $this->initMajor();
+    }
+    
+    private function initMajor():void{
+        $major = new Major();
+        $major->setName('Edward Snowden');
+        $this->set(self::MAJOR, $major);
     }
 
     private function initPlane(): void

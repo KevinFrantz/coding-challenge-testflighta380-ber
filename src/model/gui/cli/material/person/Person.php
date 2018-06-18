@@ -47,6 +47,7 @@ class Person extends AbstractMaterial implements PersonInterface, SpeakInterface
      */
     public function speak(string $sentence): void
     {
+        $this->repository->addString('{0} {1} speaks:',[$this->getClassShortName(),$this->origin->getName()]);
         $this->repository->addString($sentence);
     }
 
