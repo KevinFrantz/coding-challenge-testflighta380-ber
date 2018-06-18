@@ -47,11 +47,11 @@ final class GlobalPrintRepository implements PrintRepositoryInterface
     
     /**
      * {@inheritDoc}
-     * @see \interfaces\repository\output\PrintRepositoryInterface::addVarOutput()
+     * @see \interfaces\repository\output\PrintRepositoryInterface::addString()
      */
-    public function addVarOutput(string $output, array $variables): void
+    public function addString(string $output, array $variables): void
     {
-        self::$instance->addVarOutput($output, $variables);
+        self::$instance->addString($output, $variables);
     }
 }
 

@@ -16,6 +16,6 @@ interface PrintRepositoryInterface extends OutputRepositoryInterface
      * @param string $output
      * @param array $variables
      */
-    public function addVarOutput(string $output,array $variables):void;
+    public function addString(string $output, ?array $variables=[]):void;
 }
 

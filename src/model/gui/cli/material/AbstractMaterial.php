@@ -57,7 +57,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function getName(): string
     {
-        #$this->repository->addVarOutput('Name of "{0}" requested.',[(new \ReflectionClass($this))->getShortName(),$this->origin->getName()]);
+        #$this->repository->addString('Name of "{0}" requested.',[(new \ReflectionClass($this))->getShortName(),$this->origin->getName()]);
         return $this->origin->getName();
     }
 
@@ -67,7 +67,7 @@ class AbstractMaterial extends AbstractCli implements MaterialInterface
      */
     public function getPosition(): PositionInterface
     {
-        $this->repository->addVarOutput('Position of "{0} {1}" requested.',[$this->getClassShortName(),$this->origin->getName()]);
+        $this->repository->addString('Position of "{0} {1}" requested.',[$this->getClassShortName(),$this->origin->getName()]);
         return $this->origin->getPosition();
     }
 }

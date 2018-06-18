@@ -57,7 +57,7 @@ final class TestflightA380Ber extends AbstractScenario
 
     private function flyToAirport(): void
     {
-        $this->repository->addVarOutput(
+        $this->repository->addSubHeadline(
             'Plane {0} is flying to "{1}"', 
             [$this->actors->getPlane()->getName(),$this->actors->getAirport()->getName()]
             );
@@ -68,7 +68,7 @@ final class TestflightA380Ber extends AbstractScenario
     private function waitForLandingPermission(): void
     {
         do {
-            $this->repository->addVarOutput("Plane {0} is waiting for permission to land...", [
+            $this->repository->addString("Plane {0} is waiting for permission to land...", [
                 $this->actors->getPlane()
                     ->getName()
             ]);
@@ -105,7 +105,7 @@ final class TestflightA380Ber extends AbstractScenario
         do {
             $aircraftTractor->moveTo($movingTarget);
         } while ($plane->getPosition() != $movingTarget->getPosition());
-        $this->repository->addVarOutput('Plane "{0}" arrived at Terminal', [
+        $this->repository->addString('Plane "{0}" arrived at Terminal', [
             $plane->getName()
         ]);
     }

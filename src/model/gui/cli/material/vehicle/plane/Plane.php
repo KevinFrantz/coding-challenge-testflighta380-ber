@@ -79,7 +79,7 @@ class Plane extends AbstractVehicle implements PlaneInterface
      */
     public function setMoveController(MoveControllerInterface $controller): void
     {
-        $this->repository->addVarOutput('Plane changes movement controller to: {0}', [(new \ReflectionClass($controller))->getShortName()]);
+        $this->repository->addString('Plane changes movement controller to: {0}', [(new \ReflectionClass($controller))->getShortName()]);
         $this->origin->setMoveController($controller);   
     }
 }

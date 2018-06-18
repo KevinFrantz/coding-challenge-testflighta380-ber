@@ -36,7 +36,7 @@ class Person extends AbstractMaterial implements PersonInterface
      */
     public function setPosition(PositionInterface $position): void
     {
-        $this->repository->addVarOutput('Set Position for {0} "{1}".',[$this->getClassShortName(),$this->origin->getName()]);
+        $this->repository->addString('Set Position for {0} "{1}".',[$this->getClassShortName(),$this->origin->getName()]);
         $this->origin->getPosition();
     }
 }

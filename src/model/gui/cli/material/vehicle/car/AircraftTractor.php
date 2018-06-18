@@ -36,7 +36,7 @@ final class AircraftTractor extends Car implements AircraftTractorInterface
      */
     public function setPlane(PlaneInterface $plane): void
     {
-        $this->repository->addVarOutput('Plane "{0}" hooked in to aircraft tractor "{1}".',[$plane->getName(),$this->origin->getName()]);
+        $this->repository->addString('Plane "{0}" hooked in to aircraft tractor "{1}".',[$plane->getName(),$this->origin->getName()]);
         $this->origin->setPlane($plane);
     }
 
@@ -47,7 +47,7 @@ final class AircraftTractor extends Car implements AircraftTractorInterface
     public function getPlane(): ?PlaneInterface
     {
         $plane = $this->origin->getPlane();
-        $this->repository->addVarOutput('Plane "{0}" from aircraft tractor "{1}" requested.',[$plane->getName(),$this->origin->getName()]);
+        $this->repository->addString('Plane "{0}" from aircraft tractor "{1}" requested.',[$plane->getName(),$this->origin->getName()]);
         return $plane;
     }
     
@@ -57,7 +57,7 @@ final class AircraftTractor extends Car implements AircraftTractorInterface
      */
     public function hasPlane(): bool
     {
-        $this->repository->addVarOutput('Requested if plane is hooked in aircraft tractor "{0}".', [$this->origin->getName()]);
+        $this->repository->addString('Requested if plane is hooked in aircraft tractor "{0}".', [$this->origin->getName()]);
         return $this->origin->hasPlane();
     }
 }

@@ -2,7 +2,8 @@
 namespace repository\output;
 
 /**
- *
+ * This class allows you to print nice stuff on the cli.
+ * BE AWARE THAT THIS CLASS CONTAINES MULTIPLE LAZY LOADING FUNCTIONS!
  * @author kevinfrantz
  *        
  */
@@ -29,7 +30,7 @@ class PrettyPrintRepositoy extends PrintRepository
     public function addHeadline(string $output,array $values=[]):void{
         $this->linebreak();
         $this->addLine();
-        $this->addVarOutput($output,$values);
+        $this->addString($output,$values);
         $this->addLine();
     }
     
@@ -39,11 +40,14 @@ class PrettyPrintRepositoy extends PrintRepository
      */
     public function addSubheadLine(string $output,array $values=[]):void{
         $this->linebreak();
-        $this->addVarOutput($output, $variables);
+        $this->addString($output, $values);
         $this->addWave();
     }
     
     public function addWave():void{
+        if($this->wave === ''){
+            $this->setWave();
+        }
         $this->addOutput($this->wave);
     }
     
