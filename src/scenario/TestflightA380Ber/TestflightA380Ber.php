@@ -120,11 +120,13 @@ final class TestflightA380Ber extends AbstractScenario
          * @var GuestCollection
          */
         $guests = $this->actors->getPlane()->getPassengers();
+        $targetPosition=$this->actors->getAirport()->getGates()->get(0)->getPosition();
         foreach ($guests as $guest){
-            $guest->setPosition($this->actors->getAirport()->getGates()->get(0)->getPosition());
+            $guest->setPosition($targetPosition);
         }
+        $targetPosition = $this->actors->getAirport()->getTerminal()->getPosition();
         foreach ($guests as $guest){
-            $guest->setPosition($this->actors->getAirport()->getTerminal()->getPosition());
+            $guest->setPosition($targetPosition);
         }
         $this->repository->addOutput('Guests arrive in terminal.');
     }

@@ -14,6 +14,10 @@ use interfaces\model\method\action\speak\SpeakInterface;
  */
 class PersonCollection extends AbstractCollection implements PersonCollectionInterface,SpeakInterface
 {
+    /**
+     * {@inheritDoc}
+     * @see \interfaces\model\method\collection\CollectionInterface::initOriginCollection()
+     */
     public function initOriginCollection(CollectionInterface $origin):void
     {
         $this->clear();
