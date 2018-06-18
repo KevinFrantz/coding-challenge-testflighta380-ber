@@ -4,7 +4,8 @@ namespace tests\unit\model\data\material\vehicle;
 use PHPUnit\Framework\TestCase;
 use model\data\material\vehicle\plane\A380;
 use model\data\position\Sky;
-use model\data\collection\PassengerCollection;
+use model\data\collection\PersonCollection;
+use interfaces\model\data\collection\PersonCollectionInterface;
 
 /**
  *
@@ -33,8 +34,8 @@ class A380Test extends TestCase
     }
     
     public function testPassengersAccessors():void{
-        $this->a380->setPassengers(new PassengerCollection());
-        $this->assertInstanceOf(PassengerCollection::class,$this->a380->getPassengers());
+        $this->a380->setPassengers(new PersonCollection());
+        $this->assertInstanceOf(PersonCollectionInterface::class,$this->a380->getPassengers());
     }
 }
 

@@ -1,9 +1,9 @@
 <?php
 namespace interfaces\model\data\material\vehicle\plane;
 
-use model\data\collection\PassengerCollection;
 use interfaces\model\data\material\vehicle\VehicleInterface;
 use interfaces\model\data\material\person\PilotInterface;
+use model\data\collection\PersonCollection;
 
 /**
  *
@@ -12,9 +12,9 @@ use interfaces\model\data\material\person\PilotInterface;
  */
 interface PlaneInterface extends VehicleInterface
 {   
-    public function setPassengers(PassengerCollection $passengers):void;
+    public function setPassengers(PersonCollection $passengers):void;
     
-    public function getPassengers():PassengerCollection;
+    public function getPassengers():PersonCollection;
     
     public function getPilot():PilotInterface;
     

@@ -45,9 +45,9 @@ class DataCollection extends AbstractDataCollection implements TestflightA380Ber
         $this->set(self::MAJOR, new Major());
         $this->set(self::AIRCRAFT_TRACTOR, new AircraftTractor());
         $this->set(self::AIRPORT, new BER());
-        $this->initPlane();
         $this->initJournalistCollection();
         $this->initGuestCollection();
+        $this->initPlane();
     }
 
     private function initPlane(): void
@@ -55,6 +55,7 @@ class DataCollection extends AbstractDataCollection implements TestflightA380Ber
         $plane = new A380();
         $plane->setName('Wright Brothers Flight');
         $plane->setPilot($this->generatePilot());
+        $plane->setPassengers($this->getGuests());
         $this->set(self::PLANE, $plane);
     }
 

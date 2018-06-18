@@ -1,7 +1,7 @@
 <?php
 namespace model\gui\cli\material\vehicle\plane;
 
-use model\data\collection\PassengerCollection;
+use model\data\collection\PersonCollection;
 use model\gui\cli\material\vehicle\AbstractVehicle;
 use interfaces\controller\move\MoveControllerInterface;
 use interfaces\model\data\material\person\PilotInterface;
@@ -37,7 +37,7 @@ class Plane extends AbstractVehicle implements PlaneInterface
      * {@inheritDoc}
      * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPassengers()
      */
-    public function getPassengers(): PassengerCollection
+    public function getPassengers(): PersonCollection
     {
         $this->repository->addOutput('Passengers requested.');
         return $this->origin->getPassengers();
@@ -47,7 +47,7 @@ class Plane extends AbstractVehicle implements PlaneInterface
      * {@inheritDoc}
      * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::setPassengers()
      */
-    public function setPassengers(PassengerCollection $passengers): void
+    public function setPassengers(PersonCollection $passengers): void
     {
         $this->repository->addOutput('Set passengers.');
         $this->origin->setPassengers($passengers);

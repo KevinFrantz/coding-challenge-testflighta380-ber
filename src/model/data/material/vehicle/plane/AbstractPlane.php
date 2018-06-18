@@ -3,13 +3,13 @@ namespace model\data\material\vehicle\plane;
 
 use interfaces\model\data\material\person\PilotInterface;
 use interfaces\model\data\material\vehicle\plane\PlaneInterface;
-use model\data\collection\PassengerCollection;
+use model\data\collection\PersonCollection;
 use model\data\material\vehicle\AbstractVehicle;
 
 abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
 {
     /**
-     * @var PassengerCollection
+     * @var PersonCollection
      */
     private $passengers;
     
@@ -22,7 +22,7 @@ abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
      * {@inheritDoc}
      * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::setPassengers()
      */
-    public function setPassengers(PassengerCollection $passengers):void{
+    public function setPassengers(PersonCollection $passengers):void{
         $this->passengers= $passengers;
     }
     
@@ -30,7 +30,7 @@ abstract class AbstractPlane extends AbstractVehicle implements PlaneInterface
      * {@inheritDoc}
      * @see \interfaces\model\data\material\vehicle\plane\PlaneInterface::getPassengers()
      */
-    public function getPassengers():PassengerCollection{
+    public function getPassengers():PersonCollection{
         return $this->passengers;
     }
     
