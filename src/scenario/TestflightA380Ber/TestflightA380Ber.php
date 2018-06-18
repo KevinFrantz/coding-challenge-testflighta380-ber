@@ -5,6 +5,7 @@ use scenario\AbstractScenario;
 use interfaces\scenario\model\actor\TestflightA380Ber as ActorsTestflightA380Ber;
 use repository\output\GlobalPrintRepository;
 use interfaces\repository\output\PrintRepositoryInterface;
+use repository\output\PrettyPrintRepositoy;
 
 /**
  *
@@ -27,14 +28,14 @@ final class TestflightA380Ber extends AbstractScenario
      * @var PrintRepositoryInterface
      */
     protected $repository;
-
+    
     public function __construct()
     {
-        $this->repository = new GlobalPrintRepository();
+        $this->repository = new PrettyPrintRepositoy();
         $this->repository->addOutput('Initialization of objects...');
         $data = new DataCollection();
         $actors = new ActorCollection($data);
-        $this->actors = new CliCollection($actors);
+        $this->actors = new CliCollection($actors,$this->repository);
     }
 
     public function play(): void
@@ -57,7 +58,12 @@ final class TestflightA380Ber extends AbstractScenario
 
     private function flyToAirport(): void
     {
+        $this->repository->addVarOutput(
+            'Plane {0} is flying to "{1}"', 
+            [$this->actors->getPlane()->getName(),$this->actors->getAirport()->getName()]
+            );
         $this->actors->getPlane();
+        $this->actors->getPlane()->moveTo($this->actors->getAirport());
     }
 
     private function waitForLandingPermission(): void

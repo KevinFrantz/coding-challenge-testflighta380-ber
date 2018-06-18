@@ -38,7 +38,7 @@ class AbstractVehicle extends AbstractMaterial implements VehicleInterface
      */
     public function setPosition(PositionInterface $position): void
     {
-        $this->repository->addOutput('Set Position for '.$this->origin->getName().'.');
+        $this->repository->addVarOutput('Set Position for {0} "{1}".',[$this->getClassShortName(),$this->origin->getName()]);
         $this->origin->setPosition($position);
     }
     /**
@@ -55,8 +55,9 @@ class AbstractVehicle extends AbstractMaterial implements VehicleInterface
      */
     public function moveTo(TargetInterface $target): void
     {
-        $this->repository->addVarOutput('Move for vehicle {0} to "{1}{2}" requested.',
+        $this->repository->addVarOutput('Move for {0} "{1}" to "{2}{3}" requested.',
             [
+                $this->getClassShortName(),
                 $this->getName(),
                 $this->getClassShortName($target),
                 method_exists($target, 'getName') ? ' '.$target->getName():''
